@@ -15,10 +15,10 @@ const Header = () => (
         maxWidth: 960,
         display: 'flex',
         justifyContent: 'center',
-        padding: '1.45rem 1.0875rem',
+        padding: '1rem 1.0875rem',
       }}
     >
-      <h1>Aryora</h1>
+      <h2>Aryora</h2>
     </div>
   </header>
 )

@@ -4,6 +4,8 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import './index.css'
+import 'typeface-montserrat'
+import 'typeface-playfair-display'
 
 const TemplateWrapper = ({ children }) => (
   <div>
