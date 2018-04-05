@@ -57,7 +57,6 @@ p {
 .align-items-center {
   align-items: center;
 }
-
 .g-c6 {
   width: 50%;
   min-width: 50%;
@@ -75,4 +74,30 @@ p {
     max-width: 100%;
     flex: 0 0 100%;
   }
+}
+
+.prelaunch-form {
+  position: relative;
+  background-color: #f9f9fa;
+  border-radius: 25px;
+  border: 1px solid #f9f9fa;
+  align-items: center;
+  margin: 20px 0 12px;
+  padding: 0 10px 0 25px;
+}
+.prelaunch-form__email {
+  background-color: #f9f9fa;
+  border: 0;
+  flex: 1;
+  color: #aaa;
+  height: 50px;
+  outline: 0;
+}
+.prelaunch-form__submit-btn {
+  color: #fff;
+  border-radius: 20px;
+  margin-left: 10px;
+  height: 40px;
+  background-color: rgb(36, 16, 168);
+  border-color: rgb(36, 16, 168);
 }
