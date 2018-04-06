@@ -16,10 +16,16 @@
     "gatsby-transformer-sharp": "^1.6.22",
     "react-emotion": "^9.1.0",
     "react-helmet": "^5.2.0",
+    "typeface-cardo": "0.0.54",
+    "typeface-crimson-text": "0.0.54",
+    "typeface-karla": "0.0.54",
+    "typeface-libre-baskerville": "0.0.54",
     "typeface-montserrat": "0.0.54",
     "typeface-playfair-display": "0.0.54"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

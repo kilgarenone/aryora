@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  line-height: 1.77;
+  line-height: 1.5;
   background-color: #fff;
   margin: 0;
   height: 100%;
@@ -25,15 +25,16 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Playfair Display', sans-serif;
-  line-height: 1.5;
+  font-family: 'Crimson Text', sans-serif;
+  line-height: 1.2;
   margin: 0;
 }
 p {
 }
 .hero-headline {
-  font-size: 3.2rem;
-  line-height: 1.05;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
   margin-bottom: 2rem;
 }
 .hero-subheadline {
@@ -84,6 +85,7 @@ p {
   align-items: center;
   margin: 20px 0 12px;
   padding: 0 10px 0 25px;
+  max-width: 60%;
 }
 .prelaunch-form__email {
   background-color: #f9f9fa;
