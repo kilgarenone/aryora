@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import axios from 'axios'
-import { mailChimp } from './../config'
 
 class IndexPage extends Component {
   state = {
@@ -24,7 +23,7 @@ class IndexPage extends Component {
 
     try {
       const res = await axios.post(
-        'https://8ophlv7iw2.execute-api.us-east-1.amazonaws.com/dev/addToBetaUserList',
+        'https://exrosqik52.execute-api.ap-southeast-1.amazonaws.com/dev/addToBetaUserList',
         { emailAddress: this.state.prelaunchEmail }
       )
       this.setState({ prelaunchEmailSuccess: true })
