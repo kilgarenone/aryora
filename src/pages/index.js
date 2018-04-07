@@ -5,27 +5,32 @@ import axios from 'axios'
 import { mailChimp } from './../config'
 
 class IndexPage extends Component {
-  state = { prelaunchEmail: '' }
+  state = {
+    prelaunchEmail: '',
+    prelaunchEmailSuccess: false,
+    prelaunchEmailFail: false,
+  }
 
   handlePrelaunchEmailChange = event => {
-    this.setState({ prelaunchEmail: event.target.value })
+    this.setState({
+      prelaunchEmail: event.target.value,
+      prelaunchEmailSuccess: false,
+      prelaunchEmailFail: false,
+    })
   }
-  handlePrelaunchEmailSubmit = event => {
+
+  handlePrelaunchEmailSubmit = async event => {
     event.preventDefault()
-    const user = {
-      email_address: 'urist.mcvankab@freddiesjokes.com',
-      status: 'subscribed',
-      merge_fields: {
-        FNAME: 'Urist',
-        LNAME: 'McVankab',
-      },
+
+    try {
+      const res = await axios.post(
+        'https://8ophlv7iw2.execute-api.us-east-1.amazonaws.com/dev/addToBetaUserList',
+        { emailAddress: this.state.prelaunchEmail }
+      )
+      this.setState({ prelaunchEmailSuccess: true })
+    } catch (e) {
+      this.setState({ prelaunchEmailSuccess: false, prelaunchEmailFail: true })
     }
-    const header = { headers: { Authentication: mailChimp.apiKey } }
-    axios.post(
-      `${mailChimp.apiUrl}lists/${mailChimp.preLaunchListId}/members/`,
-      user,
-      header
-    )
   }
   render() {
     const { data } = this.props
@@ -48,8 +53,6 @@ class IndexPage extends Component {
                   onSubmit={this.handlePrelaunchEmailSubmit}
                   className="flex-row prelaunch-form"
                   autoComplete="off"
-                  name="Pre-Launch Beta User List"
-                  netlify
                 >
                   <input
                     type="email"
@@ -64,6 +67,12 @@ class IndexPage extends Component {
                     Get Notified
                   </button>
                 </form>
+                {this.state.prelaunchEmailSuccess && (
+                  <p>Neato! We'll be in touch soon. 🎉</p>
+                )}
+                {this.state.prelaunchEmailFail && (
+                  <p>Please try with another email address. 😖</p>
+                )}
               </div>
             </div>
             <div className="g-c6 g-c6--md">
