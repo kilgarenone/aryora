@@ -7,6 +7,9 @@ import './index.css'
 import 'typeface-montserrat'
 import 'typeface-crimson-text'
 import 'typeface-cardo'
+import 'typeface-domine'
+import 'typeface-neuton'
+import 'typeface-karla'
 
 const TemplateWrapper = ({ children }) => (
   <div>

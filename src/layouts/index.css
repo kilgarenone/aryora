@@ -1,13 +1,14 @@
-html {
-  font-family: Montserrat, sans-serif;
-  box-sizing: border-box;
-  font-size: 18px;
-  color: #323648;
-}
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+html {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: #323648;
 }
 body {
   max-width: 100%;
@@ -25,7 +26,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Crimson Text', sans-serif;
+  font-family: 'Domine', Helvetica, Arial, sans-serif;
   line-height: 1.2;
   margin: 0;
 }
@@ -35,6 +36,7 @@ p {
   font-size: 3.5rem;
   line-height: 1.2;
   font-weight: 700;
+  font-style: bold;
   margin-bottom: 2rem;
 }
 .hero-subheadline {
@@ -85,9 +87,9 @@ p {
   align-items: center;
   margin: 20px 0 12px;
   padding: 0 10px 0 25px;
-  max-width: 60%;
+  max-width: 70%;
 }
-.prelaunch-form__email {
+.prelaunch-form__email-input {
   background-color: #f9f9fa;
   border: 0;
   flex: 1;

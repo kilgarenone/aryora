@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import axios from 'axios'
+import Button from '../components/Button'
 
 class IndexPage extends Component {
   state = {
     prelaunchEmail: '',
     prelaunchEmailSuccess: false,
     prelaunchEmailFail: false,
+    letUsHelpYou: false,
   }
 
   handlePrelaunchEmailChange = event => {
@@ -26,9 +28,21 @@ class IndexPage extends Component {
         'https://exrosqik52.execute-api.ap-southeast-1.amazonaws.com/dev/addToBetaUserList',
         { emailAddress: this.state.prelaunchEmail }
       )
-      this.setState({ prelaunchEmailSuccess: true })
+      this.setState({ prelaunchEmailSuccess: true, prelaunchEmail: '' })
     } catch (e) {
-      this.setState({ prelaunchEmailSuccess: false, prelaunchEmailFail: true })
+      const errStatusCode = e.response.status
+      if (errStatusCode === 400) {
+        this.setState({
+          prelaunchEmailSuccess: false,
+          prelaunchEmailFail: true,
+        })
+      } else {
+        this.setState({
+          prelaunchEmailSuccess: false,
+          prelaunchEmailFail: false,
+          letUsHelpYou: true,
+        })
+      }
     }
   }
   render() {
@@ -38,13 +52,10 @@ class IndexPage extends Component {
         <div className="container">
           <div className="flex-row align-items-center">
             <div className="g-c6 g-c6--md">
-              <h1 className="hero-headline">
-                Where your money grows in your best interest
-              </h1>
+              <h1 className="hero-headline">Grow your Wealth here.</h1>
               <p className="hero-subheadline">
-                A place that effectively keeps your costs and taxes to an
-                absolute minimum to guarantee your fair share of stock market
-                returns.
+                A place that strives to keep your costs and taxes low to
+                guarantee your fair share of stock market returns.
               </p>
               <div>
                 <p>Subscribe below to get early access to the beta.</p>
@@ -55,22 +66,36 @@ class IndexPage extends Component {
                 >
                   <input
                     type="email"
-                    className="prelaunch-form__email"
+                    className="prelaunch-form__email-input"
                     name="email"
                     required
                     placeholder="Enter your email"
                     value={this.state.prelaunchEmail}
                     onChange={this.handlePrelaunchEmailChange}
                   />
-                  <button className="prelaunch-form__submit-btn" type="submit">
+                  <Button
+                    style={{
+                      borderRadius: '30px',
+                    }}
+                    className="prelaunch-form__submit-btn"
+                    type="submit"
+                  >
                     Get Notified
-                  </button>
+                  </Button>
                 </form>
                 {this.state.prelaunchEmailSuccess && (
                   <p>Neato! We'll be in touch soon. 🎉</p>
                 )}
                 {this.state.prelaunchEmailFail && (
-                  <p>Please try with another email address. 😖</p>
+                  <p>Please try a different email address. 😖</p>
+                )}
+                {this.state.letUsHelpYou && (
+                  <p>
+                    Let us help you.{' '}
+                    <a href="mailto:kwei88@gmail.com?subject=Trouble with signing up to the Aryora beta release">
+                      Contact us.
+                    </a>
+                  </p>
                 )}
               </div>
             </div>
