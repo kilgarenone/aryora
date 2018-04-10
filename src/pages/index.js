@@ -118,7 +118,7 @@ export default IndexPage
 
 export const heroImgQuery = graphql`
   query HeroImgQuery {
-    heroImg: imageSharp(id: { regex: "/heroImage/" }) {
+    heroImg: imageSharp(id: { regex: "/itsgonnabeokay/" }) {
       sizes(maxWidth: 1240) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }

@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Muli', Helvetica, Arial, sans-serif;
   box-sizing: border-box;
   font-size: 18px;
   color: #323648;
@@ -26,7 +26,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Domine', Helvetica, Arial, sans-serif;
+  font-family: 'Muli', Helvetica, Arial, sans-serif;
   line-height: 1.2;
   margin: 0;
 }
@@ -40,7 +40,7 @@ p {
   margin-bottom: 2rem;
 }
 .hero-subheadline {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 .container {
   margin-left: auto;

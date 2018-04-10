@@ -1,7 +1,7 @@
 import styled from 'react-emotion'
 
 const Button = styled('button')`
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   background-color: #1e1f23;
