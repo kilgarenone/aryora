@@ -5,10 +5,6 @@ import axios from 'axios'
 import Button from '../components/Button'
 
 class IndexPage extends Component {
-  constructor(props) {
-    super(props)
-    this.handlePrelaunchEmailSubmit = this.handlePrelaunchEmailSubmit.bind(this)
-  }
   state = {
     prelaunchEmail: '',
     prelaunchEmailSuccess: false,
@@ -24,7 +20,7 @@ class IndexPage extends Component {
     })
   }
 
-  async handlePrelaunchEmailSubmit(event) {
+  handlePrelaunchEmailSubmit = async event => {
     event.preventDefault()
 
     try {
