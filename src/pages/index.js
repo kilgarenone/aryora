@@ -116,6 +116,14 @@ class IndexPage extends Component {
                 sizes={data.heroImg2.sizes}
                 outerWrapperClassName="hero-img-2"
               />
+              <Img
+                fadeIn={false}
+                // imgStyle={{ transform: 'translate3d(-40px, -100%, 0px)' }}
+                title="travelling the world"
+                alt="Life is about leisure"
+                sizes={data.heroImg3.sizes}
+                outerWrapperClassName="hero-img-3"
+              />
             </div>
           </div>
         </div>
@@ -134,6 +142,11 @@ export const heroImgQuery = graphql`
       }
     }
     heroImg2: imageSharp(id: { regex: "/beautifulday/" }) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+    }
+    heroImg3: imageSharp(id: { regex: "/itsgonnabeokay/" }) {
       sizes(maxWidth: 1240) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
