@@ -50,7 +50,7 @@ class IndexPage extends Component {
     return (
       <section>
         <div className="container">
-          <div className="flex-row align-items-center">
+          <div className="flex-row">
             <div className="g-c6 g-c6--md">
               <h1 className="hero-headline">Grow your Wealth here.</h1>
               <p className="hero-subheadline">
@@ -99,12 +99,22 @@ class IndexPage extends Component {
                 )}
               </div>
             </div>
-            <div className="g-c6 g-c6--md">
+            <div className="g-c6 g-c6--md" style={{ position: 'relative' }}>
               <Img
                 fadeIn={false}
-                title="hero image"
-                alt="An atomic family in a wonderful future"
-                sizes={data.heroImg.sizes}
+                title="wholesome hug"
+                alt="Hugging with your significant other"
+                sizes={data.heroImg1.sizes}
+                imgStyle={{ zIndex: 10 }}
+                outerWrapperClassName="hero-img-1"
+              />
+              <Img
+                fadeIn={false}
+                // imgStyle={{ transform: 'translate3d(-40px, -100%, 0px)' }}
+                title="travelling the world"
+                alt="Life is about leisure"
+                sizes={data.heroImg2.sizes}
+                outerWrapperClassName="hero-img-2"
               />
             </div>
           </div>
@@ -118,7 +128,12 @@ export default IndexPage
 
 export const heroImgQuery = graphql`
   query HeroImgQuery {
-    heroImg: imageSharp(id: { regex: "/itsgonnabeokay/" }) {
+    heroImg1: imageSharp(id: { regex: "/futureprimitive/" }) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+    }
+    heroImg2: imageSharp(id: { regex: "/beautifulday/" }) {
       sizes(maxWidth: 1240) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }

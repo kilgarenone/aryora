@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kheoh Yee Wei <kwei88@gmail.com>",
   "dependencies": {
+    "axios": "^0.18.0",
     "emotion": "^9.1.0",
     "emotion-server": "^9.1.0",
     "gatsby": "^1.9.241",
