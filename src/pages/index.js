@@ -5,7 +5,8 @@ import axios from 'axios'
 import Button from '../components/Button'
 
 class IndexPage extends Component {
-  constructor() {
+  constructor(props) {
+    super(props)
     this.handlePrelaunchEmailSubmit = this.handlePrelaunchEmailSubmit.bind(this)
   }
   state = {
