@@ -67,6 +67,11 @@ p {
   font-style: bold;
   margin-bottom: 2rem;
 }
+.hero-section {
+  height: calc(100vh - 100px);
+  background-color: #e0f2f1;
+  padding-top: 72px;
+}
 .hero-subheadline {
   font-size: 1.25rem;
 }
@@ -115,18 +120,18 @@ p {
   align-items: center;
   margin: 20px 0 12px;
   padding: 0 10px 0 25px;
-  max-width: 70%;
+  max-width: 76%;
 }
 .prelaunch-form__email-input {
   background-color: #f9f9fa;
   border: 0;
-  flex: 1;
+  flex: 0 1 auto;
   color: #aaa;
   height: 50px;
-  outline: 0;
 }
 .prelaunch-form__submit-btn {
   color: #fff;
+  flex: 0 1 auto;
   border-radius: 20px;
   margin-left: 10px;
   height: 40px;

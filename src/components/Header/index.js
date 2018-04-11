@@ -1,22 +1,20 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'react-emotion'
+import styled, { css } from 'react-emotion'
 
 const Header = () => (
   <header
-    style={{
-      background: '#fff',
-      marginBottom: '1.45rem',
-    }}
+    className={css`
+      background-color: #e0f2f1;
+    `}
   >
     <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        display: 'flex',
-        justifyContent: 'center',
-        padding: '1rem 1.0875rem',
-      }}
+      className={css`
+        margin: 0 auto;
+        max-width: 1280px;
+        display: flex;
+        padding: 1rem 1.0875rem;
+      `}
     >
       <h2>Aryora</h2>
     </div>
