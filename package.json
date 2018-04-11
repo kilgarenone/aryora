@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "emotion": "^9.1.0",
     "emotion-server": "^9.1.0",
     "gatsby": "^1.9.241",
