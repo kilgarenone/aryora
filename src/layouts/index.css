@@ -141,9 +141,43 @@ h5 {
   background-color: #f1ece4;
 }
 .one-of-us-container {
-  padding: 7.6rem 0 5.1rem;
+  padding: 7.6rem 0 7.6rem;
 }
-.spiva-fact {
+.cost-matters-section {
+  position: relative;
+  background-color: #fafafa;
+  min-height: 780px;
+}
+/* .cost-matters-ornament-bg {
+  position: absolute;
+  top: -80px;
+  background: #b3e5fc;
+  height: 100%;
+  max-height: 636px;
+  width: 60%;
+  max-width: 816px;
+  z-index: 1;
+} */
+.cost-matters-container {
+  position: relative;
+  max-width: 1000px;
+  z-index: 2;
+}
+.cost-matters-title {
+  position: relative;
+  top: -30px;
+  display: inline-block;
+}
+.cost-matters-title:after {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -20px;
+  height: 7px;
+  width: 70%;
+  background-color: #323648;
+}
+.p-quote {
   font-size: 1.78rem;
   font-weight: 100;
 }

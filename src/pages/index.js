@@ -139,24 +139,31 @@ class IndexPage extends Component {
             </div>
             <div>
               <h4 className="f-w-600">You are not missing out</h4>
-              <p className="spiva-fact">
+              <p className="p-quote">
                 90% of actively managed funds underperformed their benchmark
                 indexes from 2001 to 2016.
               </p>
             </div>
           </div>
         </section>
+        <section className="cost-matters-section">
+          <div className="container cost-matters-container">
+            <h1 className="f-size-3 cost-matters-title mb-0">Cost Matters.</h1>
+            <p className="p-quote">
+              low-cost Index Funds vs high-cost Unit Trust Funds
+            </p>
+            <LineChart width={500} height={300} data={data}>
+              <XAxis dataKey="name" />
+              <YAxis />
+              <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+              <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+              <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
+            </LineChart>
+          </div>
+        </section>
       </Fragment>
     )
   }
-  // <section>
-  //   <p>You are losing your money to your high-cost Unit Trust fund</p>
-  //   <p>
-  //     Simply investing in low-cost Index Funds will put, up to 30%, more
-  //     money back to your pocket over the long term. [THEN PUT THE ANIMATED
-  //     CHART HERE]
-  //   </p>
-  // </section>
 }
 
 export default IndexPage
