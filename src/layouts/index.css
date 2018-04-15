@@ -4,17 +4,22 @@
   box-sizing: inherit;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 html {
   font-family: 'Muli', Helvetica, Arial, sans-serif;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 1.1em;
   color: #323648;
 }
 body {
   max-width: 100%;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
   line-height: 1.5;
   background-color: #fff;
   margin: 0;
@@ -58,8 +63,7 @@ h5 {
   line-height: 1.2;
   margin: 0;
 }
-p {
-}
+
 .hero-headline {
   font-size: 3.5rem;
   line-height: 1.2;
@@ -79,16 +83,19 @@ p {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  z-index: 2;
   padding-left: 20px;
   padding-right: 20px;
   max-width: 1300px;
 }
+
+.container-narrower {
+  max-width: 800px;
+}
 .flex-row {
   display: flex;
-  flex: 0 1 auto;
+  /* flex: 0 1 auto; */
   flex-wrap: wrap;
-  margin: -20px;
+  /* margin: -20px; */
 }
 .align-items-center {
   align-items: center;
@@ -113,28 +120,68 @@ p {
 }
 
 .prelaunch-form {
-  position: relative;
-  background-color: #f9f9fa;
-  border-radius: 25px;
-  border: 1px solid #f9f9fa;
+  border: 1px solid #212121;
   align-items: center;
-  margin: 20px 0 12px;
-  padding: 0 10px 0 25px;
-  max-width: 76%;
+  justify-content: space-between;
+  max-width: 420px;
 }
 .prelaunch-form__email-input {
   background-color: #f9f9fa;
   border: 0;
-  flex: 0 1 auto;
-  color: #aaa;
-  height: 50px;
+  flex: 1 1 auto;
+  color: #212121;
 }
 .prelaunch-form__submit-btn {
   color: #fff;
-  flex: 0 1 auto;
-  border-radius: 20px;
-  margin-left: 10px;
-  height: 40px;
-  background-color: rgb(36, 16, 168);
-  border-color: rgb(36, 16, 168);
+  flex: 1 1 auto;
+  border-radius: 0 !important;
+}
+
+.one-of-us-section {
+  background-color: #f1ece4;
+}
+.one-of-us-container {
+  padding: 7.6rem 0 5.1rem;
+}
+.spiva-fact {
+  font-size: 1.78rem;
+  font-weight: 100;
+}
+.mini-box {
+  max-width: 550px;
+}
+.mb-0 {
+  margin-bottom: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1.5rem;
+}
+.mb-2 {
+  margin-bottom: 2.25rem;
+}
+.mb-3 {
+  margin-bottom: 3.37rem;
+}
+
+.pt-4 {
+  padding-top: 5.1rem;
+}
+.pt-5 {
+  padding-top: 7.6rem;
+}
+.f-w-600 {
+  font-weight: 600;
+}
+
+.f-size-1 {
+  font-size: 1.33rem;
+}
+.f-size-2 {
+  font-size: 1.78rem;
+}
+.f-size-3 {
+  font-size: 2.33rem;
+}
+.f-size-4 {
+  font-size: 3.1rem;
 }

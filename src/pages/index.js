@@ -54,36 +54,34 @@ class IndexPage extends Component {
           <div className="container">
             <div className="flex-row">
               <div className="g-c6 g-c6--md">
-                <h1 className="hero-headline">Grow your Wealth here.</h1>
-                <p className="hero-subheadline">
-                  A place that strives to keep your costs and taxes low to
-                  guarantee your fair share of stock market returns.
+                <h1 className="hero-headline">Keep more of your money</h1>
+                <p className="mb-3 hero-subheadline">
+                  A place that guarantees your fair share of stock market
+                  returns by purposely keeping your costs and taxes low.
                 </p>
                 <div>
                   <p>Subscribe below to get early access to the beta.</p>
                   <form
                     onSubmit={this.handlePrelaunchEmailSubmit}
-                    className="flex-row prelaunch-form"
                     autoComplete="off"
                   >
-                    <Input
-                      type="email"
-                      className="prelaunch-form__email-input"
-                      name="email"
-                      required
-                      placeholder="Enter your email"
-                      value={this.state.prelaunchEmail}
-                      onChange={this.handlePrelaunchEmailChange}
-                    />
-                    <Button
-                      style={{
-                        borderRadius: '30px',
-                      }}
-                      className="prelaunch-form__submit-btn"
-                      type="submit"
-                    >
-                      Get Notified
-                    </Button>
+                    <div className="flex-row prelaunch-form">
+                      <Input
+                        type="email"
+                        className="prelaunch-form__email-input"
+                        name="email"
+                        required
+                        placeholder="Enter your email"
+                        value={this.state.prelaunchEmail}
+                        onChange={this.handlePrelaunchEmailChange}
+                      />
+                      <Button
+                        className="prelaunch-form__submit-btn"
+                        type="submit"
+                      >
+                        Get Notified
+                      </Button>
+                    </div>
                   </form>
                   {this.state.prelaunchEmailSuccess && (
                     <p>Neato! We'll be in touch soon. 🎉</p>
@@ -130,12 +128,35 @@ class IndexPage extends Component {
             </div>
           </div>
         </section>
-        <section style={{ minHeight: '768px' }}>
-          <p>HELLO WORLD</p>
+        <section className="one-of-us-section">
+          <div className="container container-narrower one-of-us-container">
+            <div className="">
+              <h1 className="f-size-3">Not a stock picker wizard,</h1>
+              <h1 className="mb-0 f-size-3">
+                but need to achieve financial security?
+              </h1>
+              <h2 className="mb-3 f-size-2">Now you are one of us.</h2>
+            </div>
+            <div>
+              <h4 className="f-w-600">You are not missing out</h4>
+              <p className="spiva-fact">
+                90% of actively managed funds underperformed their benchmark
+                indexes from 2001 to 2016.
+              </p>
+            </div>
+          </div>
         </section>
       </Fragment>
     )
   }
+  // <section>
+  //   <p>You are losing your money to your high-cost Unit Trust fund</p>
+  //   <p>
+  //     Simply investing in low-cost Index Funds will put, up to 30%, more
+  //     money back to your pocket over the long term. [THEN PUT THE ANIMATED
+  //     CHART HERE]
+  //   </p>
+  // </section>
 }
 
 export default IndexPage
