@@ -5,6 +5,28 @@ import axios from 'axios'
 import Button from '../components/Button'
 import Input from '../components/Input'
 
+const HIGHCOST = 0.0575
+const LOWCOST = 0.078
+const initialFundVal = 1000
+const years = 31
+
+function fundPerf() {
+  const results = []
+  for (let i = 0; i < years; i++) {
+    const data = { name: i, lowCost: 0, highCost: 0, amt: 0 }
+    if (!results[i - 1]) {
+      data.highCost = initialFundVal * (1 - HIGHCOST)
+      data.lowCost = initialFundVal
+    } else {
+      data.highCost = Math.round(results[i - 1].highCost * (1 + HIGHCOST))
+      data.lowCost = Math.round(results[i - 1].lowCost * (1 + LOWCOST))
+    }
+    data.amt = data.highCost + data.lowCost
+    results.push(data)
+  }
+  console.log(results)
+  return results
+}
 class IndexPage extends Component {
   state = {
     prelaunchEmail: '',
@@ -135,7 +157,7 @@ class IndexPage extends Component {
               <h1 className="mb-0 f-size-3">
                 but need to achieve financial security?
               </h1>
-              <h2 className="mb-3 f-size-2">Now you are one of us.</h2>
+              <h2 className="mb-3 f-size-2">Good, now you are one of us.</h2>
             </div>
             <div>
               <h4 className="f-w-600">You are not missing out</h4>
