@@ -8,25 +8,30 @@ import Input from '../components/Input'
 const HIGHCOST = 0.0575
 const LOWCOST = 0.078
 const initialFundVal = 1000
-const years = 31
+const years = 30
 
 function fundPerf() {
   const results = []
-  for (let i = 0; i < years; i++) {
+  let futureValueLowCost = initialFundVal
+  let futureValueHighCost = initialFundVal
+
+  for (let i = 0; i <= years; i++) {
     const data = { name: i, lowCost: 0, highCost: 0, amt: 0 }
-    if (!results[i - 1]) {
-      data.highCost = initialFundVal * (1 - HIGHCOST)
-      data.lowCost = initialFundVal
+    if (i === 0) {
+      futureValueHighCost = futureValueHighCost * (1 - HIGHCOST) // simulate saleload
     } else {
-      data.highCost = Math.round(results[i - 1].highCost * (1 + HIGHCOST))
-      data.lowCost = Math.round(results[i - 1].lowCost * (1 + LOWCOST))
+      futureValueHighCost = Math.round(futureValueHighCost * (1 + HIGHCOST))
+      futureValueLowCost = Math.round(futureValueLowCost * (1 + LOWCOST))
     }
+    data.highCost = futureValueHighCost
+    data.lowCost = futureValueLowCost
     data.amt = data.highCost + data.lowCost
     results.push(data)
   }
   console.log(results)
   return results
 }
+
 class IndexPage extends Component {
   state = {
     prelaunchEmail: '',
@@ -123,7 +128,6 @@ class IndexPage extends Component {
               </div>
               <div className="g-c6 g-c6--md" style={{ position: 'relative' }}>
                 <Img
-                  fadeIn={false}
                   title="wholesome hug"
                   alt="Hugging with your significant other"
                   sizes={data.heroImg1.sizes}
@@ -131,7 +135,6 @@ class IndexPage extends Component {
                   outerWrapperClassName="hero-img-1"
                 />
                 <Img
-                  fadeIn={false}
                   // imgStyle={{ transform: 'translate3d(-40px, -100%, 0px)' }}
                   title="travelling the world"
                   alt="Life is about leisure"
@@ -139,7 +142,6 @@ class IndexPage extends Component {
                   outerWrapperClassName="hero-img-2"
                 />
                 <Img
-                  fadeIn={false}
                   // imgStyle={{ transform: 'translate3d(-40px, -100%, 0px)' }}
                   title="travelling the world"
                   alt="Life is about leisure"
