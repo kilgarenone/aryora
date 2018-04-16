@@ -1,6 +1,17 @@
 import React, { Component, Fragment } from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from 'recharts'
+
 import axios from 'axios'
 import Button from '../components/Button'
 import Input from '../components/Input'
@@ -28,7 +39,6 @@ function fundPerf() {
     data.amt = data.highCost + data.lowCost
     results.push(data)
   }
-  console.log(results)
   return results
 }
 
@@ -173,16 +183,62 @@ class IndexPage extends Component {
         <section className="cost-matters-section">
           <div className="container cost-matters-container">
             <h1 className="f-size-3 cost-matters-title mb-0">Cost Matters.</h1>
-            <p className="p-quote">
-              low-cost Index Funds vs high-cost Unit Trust Funds
-            </p>
-            <LineChart width={500} height={300} data={data}>
-              <XAxis dataKey="name" />
-              <YAxis />
-              <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-              <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-              <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
-            </LineChart>
+            <ResponsiveContainer width="100%" height={500}>
+              <LineChart
+                data={fundPerf()}
+                margin={{ top: 40, right: 40, left: 40, bottom: 40 }}
+              >
+                <XAxis
+                  hide
+                  // tickLine={false}
+                  // label={{
+                  //   value: 'Years',
+                  //   position: 'bottom',
+                  //   offset: 10,
+                  // }}
+                  // // interval={9}
+                  // dataKey="name"
+                />
+                <YAxis
+                  hide
+                  // label={{
+                  //   value: 'Value (RM)',
+                  //   position: 'left',
+                  //   offset: 20,
+                  //   angle: -90,
+                  // }}
+                  // // interval={1}
+                  // tickLine={false}
+                />
+                <Tooltip labelFormatter={year => `Year: ${year}`} offset={25} />
+                <CartesianGrid strokeDasharray="8 8" />
+                <Legend
+                  iconType="rect"
+                  iconSize={35}
+                  width={700}
+                  verticalAlign="top"
+                  wrapperStyle={{ top: 0, left: 40 }}
+                />
+                <Line
+                  dot={false}
+                  name="Low-cost Index Funds"
+                  type="monotone"
+                  dataKey="lowCost"
+                  stroke="#8884d8"
+                  activeDot={{ r: 8 }}
+                  strokeWidth={6}
+                />
+                <Line
+                  strokeWidth={6}
+                  dot={false}
+                  name="High-cost Unit Trust Funds"
+                  type="monotone"
+                  dataKey="highCost"
+                  stroke="#82ca9d"
+                  activeDot={{ r: 8 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
           </div>
         </section>
       </Fragment>

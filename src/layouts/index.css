@@ -181,6 +181,12 @@ h5 {
   font-size: 1.78rem;
   font-weight: 100;
 }
+.recharts-xAxis .recharts-cartesian-axis-tick:first-child {
+  display: none;
+}
+.recharts-legend-item:not(:last-child) {
+  margin-right: 30px !important;
+}
 .mini-box {
   max-width: 550px;
 }
