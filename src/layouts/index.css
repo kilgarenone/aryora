@@ -146,7 +146,7 @@ h5 {
 .cost-matters-section {
   position: relative;
   background-color: #fafafa;
-  min-height: 780px;
+  /* min-height: 780px; */
 }
 /* .cost-matters-ornament-bg {
   position: absolute;
@@ -158,14 +158,27 @@ h5 {
   max-width: 816px;
   z-index: 1;
 } */
-.cost-matters-container {
-  position: relative;
-  max-width: 1000px;
-  z-index: 2;
+/* .cost-matters-container {
+  max-width: 1300px;
+} */
+.cost-chart-container {
+  /* max-width: 700px; */
+  flex: 1 1 700px;
+  padding-top: 60px;
+}
+.cost-matters-materials {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cost-matters-materials-blurb {
+  align-self: center;
+  flex: 1 1 400px;
+  /* padding-right: 40px; */
 }
 .cost-matters-title {
   position: relative;
   top: -30px;
+  left: 50px;
   display: inline-block;
 }
 .cost-matters-title:after {
@@ -181,8 +194,18 @@ h5 {
   font-size: 1.78rem;
   font-weight: 100;
 }
-.recharts-xAxis .recharts-cartesian-axis-tick:first-child {
+.recharts-xAxis
+  .recharts-cartesian-axis-tick:not(:first-child):not(:last-child) {
   display: none;
+}
+.low-cost-label:first-child {
+  transform: translate(-57px, -10px);
+}
+.high-cost-label:first-child {
+  transform: translate(-57px, 15px);
+}
+.recharts-label {
+  fill: #666;
 }
 .recharts-legend-item:not(:last-child) {
   margin-right: 30px !important;
@@ -212,6 +235,9 @@ h5 {
 .f-w-600 {
   font-weight: 600;
 }
+.f-w-300 {
+  font-weight: 300;
+}
 
 .f-size-1 {
   font-size: 1.33rem;
@@ -223,5 +249,8 @@ h5 {
   font-size: 2.33rem;
 }
 .f-size-4 {
-  font-size: 3.1rem;
+  font-size: 2.78rem;
 }
+/* .f-size-4 {
+  font-size: 3.1rem;
+} */

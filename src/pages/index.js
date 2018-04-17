@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import {
   ResponsiveContainer,
   LineChart,
+  LabelList,
   Line,
   XAxis,
   YAxis,
@@ -15,6 +16,7 @@ import {
 import axios from 'axios'
 import Button from '../components/Button'
 import Input from '../components/Input'
+import { numberWithCommas } from '../utils/functions'
 
 const HIGHCOST = 0.0575
 const LOWCOST = 0.078
@@ -31,11 +33,11 @@ function fundPerf() {
     if (i === 0) {
       futureValueHighCost = futureValueHighCost * (1 - HIGHCOST) // simulate saleload
     } else {
-      futureValueHighCost = Math.round(futureValueHighCost * (1 + HIGHCOST))
-      futureValueLowCost = Math.round(futureValueLowCost * (1 + LOWCOST))
+      futureValueHighCost = futureValueHighCost * (1 + HIGHCOST)
+      futureValueLowCost = futureValueLowCost * (1 + LOWCOST)
     }
-    data.highCost = futureValueHighCost
-    data.lowCost = futureValueLowCost
+    data.highCost = Math.round(futureValueHighCost)
+    data.lowCost = Math.round(futureValueLowCost)
     data.amt = data.highCost + data.lowCost
     results.push(data)
   }
@@ -181,64 +183,98 @@ class IndexPage extends Component {
           </div>
         </section>
         <section className="cost-matters-section">
-          <div className="container cost-matters-container">
-            <h1 className="f-size-3 cost-matters-title mb-0">Cost Matters.</h1>
-            <ResponsiveContainer width="100%" height={500}>
-              <LineChart
-                data={fundPerf()}
-                margin={{ top: 40, right: 40, left: 40, bottom: 40 }}
-              >
-                <XAxis
-                  hide
-                  // tickLine={false}
-                  // label={{
-                  //   value: 'Years',
-                  //   position: 'bottom',
-                  //   offset: 10,
-                  // }}
-                  // // interval={9}
-                  // dataKey="name"
-                />
-                <YAxis
-                  hide
-                  // label={{
-                  //   value: 'Value (RM)',
-                  //   position: 'left',
-                  //   offset: 20,
-                  //   angle: -90,
-                  // }}
-                  // // interval={1}
-                  // tickLine={false}
-                />
-                <Tooltip labelFormatter={year => `Year: ${year}`} offset={25} />
-                <CartesianGrid strokeDasharray="8 8" />
-                <Legend
-                  iconType="rect"
-                  iconSize={35}
-                  width={700}
-                  verticalAlign="top"
-                  wrapperStyle={{ top: 0, left: 40 }}
-                />
-                <Line
-                  dot={false}
-                  name="Low-cost Index Funds"
-                  type="monotone"
-                  dataKey="lowCost"
-                  stroke="#8884d8"
-                  activeDot={{ r: 8 }}
-                  strokeWidth={6}
-                />
-                <Line
-                  strokeWidth={6}
-                  dot={false}
-                  name="High-cost Unit Trust Funds"
-                  type="monotone"
-                  dataKey="highCost"
-                  stroke="#82ca9d"
-                  activeDot={{ r: 8 }}
-                />
-              </LineChart>
-            </ResponsiveContainer>
+          <div className="container">
+            <div className="container-sd">
+              <h1 className="f-size-3 cost-matters-title mb-0">
+                Cost Matters.
+              </h1>
+            </div>
+            <div className="cost-matters-materials">
+              <h1 className="f-size-4 f-w-300 cost-matters-materials-blurb">
+                Keep over 50% more of your money if you were to invest in Index
+                Funds
+              </h1>
+              <div className="cost-chart-container">
+                <ResponsiveContainer width="100%" height={500}>
+                  <LineChart
+                    data={fundPerf()}
+                    margin={{ top: 40, right: 60, left: 60, bottom: 40 }}
+                  >
+                    <XAxis
+                      // hide
+                      tickLine={false}
+                      label={{
+                        value: 'Years',
+                        position: 'bottom',
+                        offset: -5,
+                      }}
+                      axisLine={false}
+                      // interval={29}
+                      // dataKey="name"
+                    />
+                    <YAxis
+                      hide
+                      // label={{
+                      //   value: 'Value (RM)',
+                      //   position: 'left',
+                      //   offset: 20,
+                      //   angle: -90,
+                      // }}
+                      // interval={0.2}
+                      // tickLine={false}
+                    />
+                    <Tooltip
+                      formatter={(a, b, c) => numberWithCommas(a)}
+                      labelFormatter={year => `Year: ${year}`}
+                      offset={25}
+                    />
+                    <CartesianGrid strokeDasharray="8 8" />
+                    <Legend
+                      iconType="square"
+                      iconSize={25}
+                      verticalAlign="top"
+                      wrapperStyle={{ top: 0, left: 0 }}
+                    />
+                    <Line
+                      dot={false}
+                      name="Low-cost Index Funds"
+                      type="monotone"
+                      dataKey="lowCost"
+                      stroke="#8884d8"
+                      activeDot={{ r: 8 }}
+                      strokeWidth={6}
+                    >
+                      <LabelList
+                        className="low-cost-label"
+                        dataKey="lowCost"
+                        position="right"
+                        formatter={v =>
+                          v === 9518 || v === 1000 ? numberWithCommas(v) : ''
+                        }
+                      />
+                    </Line>
+                    <Line
+                      strokeWidth={6}
+                      dot={false}
+                      name="High-cost Unit Trust Funds"
+                      type="monotone"
+                      dataKey="highCost"
+                      stroke="#82ca9d"
+                      activeDot={{ r: 8 }}
+                    >
+                      <LabelList
+                        className="high-cost-label"
+                        dataKey="highCost"
+                        position="right"
+                        formatter={v =>
+                          v === 943 || v === 5043 ? numberWithCommas(v) : ''
+                        }
+                      />
+                    </Line>
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
           </div>
         </section>
       </Fragment>
