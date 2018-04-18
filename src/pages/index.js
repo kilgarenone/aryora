@@ -190,10 +190,6 @@ class IndexPage extends Component {
               </h1>
             </div>
             <div className="cost-matters-materials">
-              <h1 className="f-size-4 f-w-300 cost-matters-materials-blurb">
-                Keep over 50% more of your money if you were to invest in Index
-                Funds
-              </h1>
               <div className="cost-chart-container">
                 <ResponsiveContainer width="100%" height={500}>
                   <LineChart
@@ -209,7 +205,7 @@ class IndexPage extends Component {
                         offset: -5,
                       }}
                       axisLine={false}
-                      // interval={29}
+                      interval={1}
                       // dataKey="name"
                     />
                     <YAxis
@@ -274,6 +270,29 @@ class IndexPage extends Component {
                   </LineChart>
                 </ResponsiveContainer>
               </div>
+              <h1 className="f-size-4 f-w-100 cost-matters-materials-blurb">
+                Up to <b>50%</b> more of your money would have stayed in your
+                pocket if you were to invest in <b>Index Funds</b>
+              </h1>
+            </div>
+          </div>
+        </section>
+        <section className="features-section">
+          <h1>We make it nice and easy for your wealth</h1>
+          <div>
+            <div>
+              <h4>Painless Onboarding</h4>
+              <p>
+                From opening an account to your first deposit and investment, it
+                will be so delightful that you would want to do it again.
+              </p>
+            </div>
+            <div>
+              <h4>Time-tested Principles</h4>
+              <p>
+                Asset allocation. Low cost index funds. Buy-and-hold. Stay the
+                course. Don't panic.
+              </p>
             </div>
           </div>
         </section>
