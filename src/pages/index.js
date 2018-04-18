@@ -288,7 +288,7 @@ class IndexPage extends Component {
               </p>
             </div>
             <div>
-              <h4>Time-tested Principles</h4>
+              <h4>Reduce Risk</h4>
               <p>
                 Asset allocation. Low cost index funds. Buy-and-hold. Stay the
                 course. Don't panic.
