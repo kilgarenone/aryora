@@ -278,7 +278,7 @@ class IndexPage extends Component {
           </div>
         </section>
         <section className="features-section">
-          <h1>We make it nice and easy for your wealth</h1>
+          <h1>We mean it when we say</h1>
           <div>
             <div>
               <h4>Painless Onboarding</h4>
@@ -288,10 +288,18 @@ class IndexPage extends Component {
               </p>
             </div>
             <div>
-              <h4>Reduce Risk</h4>
+              <h4>Asset Allocation</h4>
               <p>
-                Asset allocation. Low cost index funds. Buy-and-hold. Stay the
-                course. Don't panic.
+                Easily invest in your target low cost stock/bond portfolio based
+                on your risk tolerance and goals.
+              </p>
+            </div>
+            <div>
+              <h4>We got your back</h4>
+              <p>
+                We will advise if it's best to tax-loss havesting and
+                rebalancing to your target portfolio in order to maximize your
+                after-tax returns.
               </p>
             </div>
           </div>
