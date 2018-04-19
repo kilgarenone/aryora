@@ -290,16 +290,17 @@ class IndexPage extends Component {
             <div>
               <h4>Asset Allocation</h4>
               <p>
-                Easily invest in your target low cost stock/bond portfolio based
-                on your risk tolerance and goals.
+                Based on your risk tolerance and goals, you can easily invest in
+                your target portfolio that's made up of low cost stock and bond
+                funds.
               </p>
             </div>
             <div>
-              <h4>We got your back</h4>
+              <h4>Benevolent Advisor</h4>
               <p>
-                We will advise if it's best to tax-loss havesting and
-                rebalancing to your target portfolio in order to maximize your
-                after-tax returns.
+                We are tax-smart and cost conscious here. From tax-loss
+                havesting to rebalancing your portfolio, we want to maximize
+                your after-tax returns.
               </p>
             </div>
           </div>
