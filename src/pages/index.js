@@ -278,30 +278,35 @@ class IndexPage extends Component {
           </div>
         </section>
         <section className="features-section">
-          <h1>We mean it when we say</h1>
-          <div>
-            <div>
-              <h4>Painless Onboarding</h4>
-              <p>
-                From opening an account to your first deposit and investment, it
-                will be so delightful that you would want to do it again.
-              </p>
-            </div>
-            <div>
-              <h4>Asset Allocation</h4>
-              <p>
-                Based on your risk tolerance and goals, you can easily invest in
-                your target portfolio that's made up of low cost stock and bond
-                funds.
-              </p>
-            </div>
-            <div>
-              <h4>Benevolent Advisor</h4>
-              <p>
-                We are tax-smart and cost conscious here. From tax-loss
-                havesting to rebalancing your portfolio, we want to maximize
-                your after-tax returns.
-              </p>
+          <div className="container">
+            <h1 className="mission-statement">
+              Our mission is to help you start investing early and make the most
+              of your money.
+            </h1>
+            <div className="flex-row">
+              <div className="feature">
+                <h3 className="feature-title">Painless Onboarding</h3>
+                <p>
+                  From opening an account to your first deposit and investment,
+                  it will be so delightful that you would want to do it again.
+                </p>
+              </div>
+              <div className="feature">
+                <h3 className="feature-title">Asset Allocation</h3>
+                <p>
+                  Based on your risk tolerance and goals, you can easily invest
+                  in your target portfolio that's made up of low cost stock and
+                  bond funds.
+                </p>
+              </div>
+              <div className="feature">
+                <h3 className="feature-title">Benevolent Advisor</h3>
+                <p>
+                  We are tax-smart and cost conscious. From tax-loss havesting
+                  to rebalancing your portfolio, we want to maximize your
+                  returns.
+                </p>
+              </div>
             </div>
           </div>
         </section>
