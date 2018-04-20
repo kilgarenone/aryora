@@ -167,11 +167,9 @@ class IndexPage extends Component {
         <section className="one-of-us-section">
           <div className="container container-narrower one-of-us-container">
             <div className="">
-              <h1 className="f-size-3">Not a stock picker wizard,</h1>
-              <h1 className="mb-0 f-size-3">
-                but need to achieve financial security?
-              </h1>
-              <h2 className="mb-3 f-size-2">Good, now you are one of us.</h2>
+              <h1>Not a stock picker wizard,</h1>
+              <h1 className="mb-1">but need to achieve financial security?</h1>
+              <h2 className="mb-3">Good, now you are one of us.</h2>
             </div>
             <div>
               <h4 className="f-w-600">You are not missing out</h4>
@@ -185,9 +183,7 @@ class IndexPage extends Component {
         <section className="cost-matters-section">
           <div className="container">
             <div className="container-sd">
-              <h1 className="f-size-3 cost-matters-title mb-0">
-                Cost Matters.
-              </h1>
+              <h1 className="cost-matters-title mb-0">Cost Matters.</h1>
             </div>
             <div className="cost-matters-materials">
               <div className="cost-chart-container">
@@ -270,7 +266,7 @@ class IndexPage extends Component {
                   </LineChart>
                 </ResponsiveContainer>
               </div>
-              <h1 className="f-size-4 f-w-100 cost-matters-materials-blurb">
+              <h1 className="f-w-100 cost-matters-materials-blurb">
                 Up to <b>50%</b> more of your money would have stayed in your
                 pocket if you were to invest in <b>Index Funds</b>
               </h1>

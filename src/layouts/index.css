@@ -1,3 +1,5 @@
+@import '../css/variables.css';
+
 *,
 *:before,
 *:after {
@@ -12,15 +14,20 @@ p {
 }
 
 html {
-  font-family: 'Muli', Helvetica, Arial, sans-serif;
+  font-family: var(--bodyFont);
   box-sizing: border-box;
-  font-size: 1.1em;
-  color: #323648;
+  color: var(--fontColor);
+  font-size: var(--baseFontSizeSm);
+  line-height: var(--lineHeight);
+
+  @media (--break-md) {
+    font-size: var(--baseFontSizeMd);
+  }
 }
+
 body {
-  max-width: 100%;
+  /* max-width: 100%; */
   overflow-x: hidden;
-  line-height: 1.5;
   background-color: #fff;
   margin: 0;
   height: 100%;
@@ -54,14 +61,48 @@ body {
   width: 500px;
   z-index: 1;
 }
+
+h1 {
+  font-size: var(--stepUp4Sm);
+  @media (--break-lg) {
+    font-size: var(--stepUp4Lg);
+  }
+}
+
+h2 {
+  font-size: var(--stepUp3Sm);
+  @media (--break-lg) {
+    font-size: var(--stepUp3Lg);
+  }
+}
+
+h3 {
+  font-size: var(--stepUp2Sm);
+  @media (--break-lg) {
+    font-size: var(--stepUp2Lg);
+  }
+}
+h4 {
+  font-size: var(--stepUp1Sm);
+  @media (--break-lg) {
+    font-size: var(--stepUp1Lg);
+  }
+}
+
+small {
+  font-size: var(--stepDown1Sm);
+  @media (--break-lg) {
+    font-size: var(--stepDown1Lg);
+  }
+}
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Muli', Helvetica, Arial, sans-serif;
+  margin: var(--stepUp1Sm) 0 0.5em;
+  font-family: var(--headerFont);
   line-height: 1.2;
-  margin: 0;
 }
 
 .hero-headline {
@@ -276,19 +317,3 @@ h5 {
 .f-w-100 {
   font-weight: 100;
 }
-
-.f-size-1 {
-  font-size: 1.33rem;
-}
-.f-size-2 {
-  font-size: 1.78rem;
-}
-.f-size-3 {
-  font-size: 2.33rem;
-}
-.f-size-4 {
-  font-size: 2.78rem;
-}
-/* .f-size-4 {
-  font-size: 3.1rem;
-} */
