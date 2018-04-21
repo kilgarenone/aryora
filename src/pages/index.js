@@ -92,7 +92,7 @@ class IndexPage extends Component {
         <section className="hero-section">
           <div className="container">
             <div className="flex-row">
-              <div className="g-c6 g-c6--md">
+              <div className="g-c6">
                 <h1 className="hero-headline">Keep more of your money</h1>
                 <p className="mb-3 hero-subheadline">
                   A place that guarantees your fair share of stock market
@@ -167,13 +167,13 @@ class IndexPage extends Component {
         <section className="one-of-us-section">
           <div className="container container-narrower one-of-us-container">
             <div className="">
-              <h1>Not a stock picker wizard,</h1>
-              <h1 className="mb-1">but need to achieve financial security?</h1>
-              <h2 className="mb-3">Good, now you are one of us.</h2>
+              <h3>Not a stock picker wizard,</h3>
+              <h3 className="mb-1">but need to achieve financial security?</h3>
+              <h4 className="mb-3">Good, now you are one of us.</h4>
             </div>
             <div>
-              <h4 className="f-w-600">You are not missing out</h4>
-              <p className="p-quote">
+              <h5 className="f-w-600">You are not missing out</h5>
+              <p className="p-quote m-none">
                 90% of actively managed funds underperformed their benchmark
                 indexes from 2001 to 2016.
               </p>
@@ -183,7 +183,7 @@ class IndexPage extends Component {
         <section className="cost-matters-section">
           <div className="container">
             <div className="container-sd">
-              <h1 className="cost-matters-title mb-0">Cost Matters.</h1>
+              <h3 className="cost-matters-title mb-0">Cost Matters.</h3>
             </div>
             <div className="cost-matters-materials">
               <div className="cost-chart-container">
@@ -266,29 +266,29 @@ class IndexPage extends Component {
                   </LineChart>
                 </ResponsiveContainer>
               </div>
-              <h1 className="f-w-100 cost-matters-materials-blurb">
+              <h3 className="f-w-100 cost-matters-materials-blurb">
                 Up to <b>50%</b> more of your money would have stayed in your
                 pocket if you were to invest in <b>Index Funds</b>
-              </h1>
+              </h3>
             </div>
           </div>
         </section>
         <section className="features-section">
           <div className="container">
-            <h1 className="mission-statement">
+            <h3 className="mission-statement">
               Our mission is to help you start investing early and make the most
               of your money.
-            </h1>
+            </h3>
             <div className="flex-row">
               <div className="feature">
-                <h3 className="feature-title">Painless Onboarding</h3>
+                <h4 className="feature-title">Painless Onboarding</h4>
                 <p>
                   From opening an account to your first deposit and investment,
                   it will be so delightful that you would want to do it again.
                 </p>
               </div>
               <div className="feature">
-                <h3 className="feature-title">Asset Allocation</h3>
+                <h4 className="feature-title">Asset Allocation</h4>
                 <p>
                   Based on your risk tolerance and goals, you can easily invest
                   in your target portfolio that's made up of low cost stock and
@@ -296,7 +296,7 @@ class IndexPage extends Component {
                 </p>
               </div>
               <div className="feature">
-                <h3 className="feature-title">Benevolent Advisor</h3>
+                <h4 className="feature-title">Benevolent Advisor</h4>
                 <p>
                   We are tax-smart and cost conscious. From tax-loss havesting
                   to rebalancing your portfolio, we want to maximize your

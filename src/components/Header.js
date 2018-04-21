@@ -16,7 +16,7 @@ const Header = () => (
         padding: 1rem 1.0875rem;
       `}
     >
-      <h2>Aryora</h2>
+      <h4>Aryora</h4>
     </div>
   </header>
 )

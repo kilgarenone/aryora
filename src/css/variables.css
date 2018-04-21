@@ -4,9 +4,11 @@
   --bodyFont: 'Muli', Helvetica, Arial, sans-serif;
   --fontColor: #323648;
   --lineHeight: 1.5;
+
   /* Base sizes */
   --baseFontSizeSm: 100%; /* 16px */
-  --baseFontSizeMd: 112.5%; /* 18px */
+  --baseFontSizeMd: 113.5%; /* 18px */
+
   /* Type scale on smaller screens */
   --ratioSm: 1.2; /* Minor third */
   --stepUp1Sm: calc(1em * var(--ratioSm));
@@ -14,6 +16,7 @@
   --stepUp3Sm: calc(var(--stepUp2Sm) * var(--ratioSm));
   --stepUp4Sm: calc(var(--stepUp3Sm) * var(--ratioSm));
   --stepDown1Sm: calc(1em / var(--ratioSm));
+
   /* Type scale on larger screens */
   --ratioLg: 1.414; /* Augmented fourth */
   --stepUp1Lg: calc(1em * var(--ratioLg));
@@ -21,6 +24,7 @@
   --stepUp3Lg: calc(var(--stepUp2Lg) * var(--ratioLg));
   --stepUp4Lg: calc(var(--stepUp3Lg) * var(--ratioLg));
   --stepDown1Lg: calc(1em / var(--ratioLg));
+
   @custom-media --break-md (width >= 36em);
   @custom-media --break-lg (width >= 48em);
 }
