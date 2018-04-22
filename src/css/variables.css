@@ -15,6 +15,7 @@
   --stepUp2Sm: calc(var(--stepUp1Sm) * var(--ratioSm));
   --stepUp3Sm: calc(var(--stepUp2Sm) * var(--ratioSm));
   --stepUp4Sm: calc(var(--stepUp3Sm) * var(--ratioSm));
+  --stepUp5Sm: calc(var(--stepUp4Sm) * var(--ratioSm));
   --stepDown1Sm: calc(1em / var(--ratioSm));
 
   /* Type scale on larger screens */
@@ -23,6 +24,7 @@
   --stepUp2Lg: calc(var(--stepUp1Lg) * var(--ratioLg));
   --stepUp3Lg: calc(var(--stepUp2Lg) * var(--ratioLg));
   --stepUp4Lg: calc(var(--stepUp3Lg) * var(--ratioLg));
+  --stepUp5Lg: calc(var(--stepUp4Lg) * var(--ratioLg));
   --stepDown1Lg: calc(1em / var(--ratioLg));
 
   @custom-media --break-md (width >= 36em);

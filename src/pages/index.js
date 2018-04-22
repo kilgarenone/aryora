@@ -92,9 +92,9 @@ class IndexPage extends Component {
         <section className="hero-section">
           <div className="container">
             <div className="flex-row">
-              <div className="g-c6">
-                <h1 className="hero-headline">Keep more of your money</h1>
-                <p className="mb-3 hero-subheadline">
+              <div className="g-c6 align-self-center ">
+                <h2 className="hero-headline">Keep more of your money</h2>
+                <p className="mb-2 hero-subheadline">
                   A place that guarantees your fair share of stock market
                   returns by purposely keeping your costs and taxes low.
                 </p>
@@ -138,52 +138,37 @@ class IndexPage extends Component {
                   )}
                 </div>
               </div>
-              <div className="g-c6 g-c6--md" style={{ position: 'relative' }}>
+              <div className="g-c6">
                 <Img
-                  title="wholesome hug"
-                  alt="Hugging with your significant other"
+                  title="Future self thank you"
+                  alt="Better future self"
                   sizes={data.heroImg1.sizes}
-                  imgStyle={{ zIndex: 10 }}
-                  outerWrapperClassName="hero-img-1"
-                />
-                <Img
-                  // imgStyle={{ transform: 'translate3d(-40px, -100%, 0px)' }}
-                  title="travelling the world"
-                  alt="Life is about leisure"
-                  sizes={data.heroImg2.sizes}
-                  outerWrapperClassName="hero-img-2"
-                />
-                <Img
-                  // imgStyle={{ transform: 'translate3d(-40px, -100%, 0px)' }}
-                  title="travelling the world"
-                  alt="Life is about leisure"
-                  sizes={data.heroImg3.sizes}
-                  outerWrapperClassName="hero-img-3"
+                  // outerWrapperClassName="hero-img-1"
                 />
               </div>
             </div>
           </div>
         </section>
         <section className="one-of-us-section">
-          <div className="container container-narrower one-of-us-container">
-            <div className="">
+          <div className="container one-of-us-container">
+            <div className="are-you-wizard">
               <h3>Not a stock picker wizard,</h3>
-              <h3 className="mb-1">but need to achieve financial security?</h3>
+              <h3 className="mb">but need to achieve financial security?</h3>
               <h4 className="mb-3">Good, now you are one of us.</h4>
             </div>
-            <div>
+            <div className="not-miss-out-fact">
               <h5 className="f-w-600">You are not missing out</h5>
               <p className="p-quote m-none">
-                90% of actively managed funds underperformed their benchmark
-                indexes from 2001 to 2016.
+                <b>90%</b> of actively managed funds underperformed their
+                benchmark indexes from 2001 to 2016.
               </p>
             </div>
           </div>
         </section>
         <section className="cost-matters-section">
           <div className="container">
-            <div className="container-sd">
-              <h3 className="cost-matters-title mb-0">Cost Matters.</h3>
+            <div className="">
+              <h3 className="cost-matters-title">Cost Matters.</h3>
             </div>
             <div className="cost-matters-materials">
               <div className="cost-chart-container">
@@ -193,7 +178,6 @@ class IndexPage extends Component {
                     margin={{ top: 40, right: 60, left: 60, bottom: 40 }}
                   >
                     <XAxis
-                      // hide
                       tickLine={false}
                       label={{
                         value: 'Years',
@@ -202,19 +186,8 @@ class IndexPage extends Component {
                       }}
                       axisLine={false}
                       interval={1}
-                      // dataKey="name"
                     />
-                    <YAxis
-                      hide
-                      // label={{
-                      //   value: 'Value (RM)',
-                      //   position: 'left',
-                      //   offset: 20,
-                      //   angle: -90,
-                      // }}
-                      // interval={0.2}
-                      // tickLine={false}
-                    />
+                    <YAxis hide />
                     <Tooltip
                       formatter={(a, b, c) => numberWithCommas(a)}
                       labelFormatter={year => `Year: ${year}`}
@@ -281,6 +254,7 @@ class IndexPage extends Component {
             </h3>
             <div className="flex-row">
               <div className="feature">
+                <img src="data:image/png;base64,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" />{' '}
                 <h4 className="feature-title">Painless Onboarding</h4>
                 <p>
                   From opening an account to your first deposit and investment,
@@ -315,18 +289,8 @@ export default IndexPage
 
 export const heroImgQuery = graphql`
   query HeroImgQuery {
-    heroImg1: imageSharp(id: { regex: "/futureprimitive/" }) {
-      sizes(maxWidth: 1240) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
-      }
-    }
-    heroImg2: imageSharp(id: { regex: "/beautifulday/" }) {
-      sizes(maxWidth: 1240) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
-      }
-    }
-    heroImg3: imageSharp(id: { regex: "/itsgonnabeokay/" }) {
-      sizes(maxWidth: 1240) {
+    heroImg1: imageSharp(id: { regex: "/futureself/" }) {
+      sizes(maxWidth: 800) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }

@@ -5,7 +5,7 @@ import styled, { css } from 'react-emotion'
 const Header = () => (
   <header
     className={css`
-      background-color: #e0f2f1;
+      // background-color: #e0f2f1;
     `}
   >
     <div
