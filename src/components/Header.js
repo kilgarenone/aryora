@@ -10,9 +10,9 @@ const Header = () => (
   >
     <div
       className={css`
-        margin: 0 auto;
-        max-width: 1280px;
-        display: flex;
+        // margin: 0 auto;
+        // max-width: 1280px;
+        // display: flex;
         padding: 1rem 1.0875rem;
       `}
     >
