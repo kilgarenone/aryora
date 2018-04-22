@@ -17,6 +17,9 @@ import axios from 'axios'
 import Button from '../components/Button'
 import Input from '../components/Input'
 import { numberWithCommas } from '../utils/functions'
+import assetAllocationIcon from '../img/assetAllocation.png'
+import advisorIcon from '../img/inGoodHand.png'
+import onboardingIcon from '../img/onboarding.png'
 
 const HIGHCOST = 0.0575
 const LOWCOST = 0.078
@@ -254,7 +257,11 @@ class IndexPage extends Component {
             </h3>
             <div className="flex-row">
               <div className="feature">
-                <img src="data:image/png;base64,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" />{' '}
+                <img
+                  className="feature-icon"
+                  src={onboardingIcon}
+                  alt="Logo for painless onboarding feature"
+                />
                 <h4 className="feature-title">Painless Onboarding</h4>
                 <p>
                   From opening an account to your first deposit and investment,
@@ -262,6 +269,11 @@ class IndexPage extends Component {
                 </p>
               </div>
               <div className="feature">
+                <img
+                  className="feature-icon"
+                  src={assetAllocationIcon}
+                  alt="Logo for asset allocation feature"
+                />
                 <h4 className="feature-title">Asset Allocation</h4>
                 <p>
                   Based on your risk tolerance and goals, you can easily invest
@@ -270,6 +282,11 @@ class IndexPage extends Component {
                 </p>
               </div>
               <div className="feature">
+                <img
+                  className="feature-icon"
+                  src={advisorIcon}
+                  alt="Logo for benevolent advisor feature"
+                />
                 <h4 className="feature-title">Benevolent Advisor</h4>
                 <p>
                   We are tax-smart and cost conscious. From tax-loss havesting

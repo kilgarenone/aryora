@@ -236,7 +236,7 @@ h5 {
   background-color: #304ffe;
 }
 .feature-title {
-  margin-bottom: 1.5rem;
+  margin: var(--stepDown1Lg) 0;
 }
 
 .mission-statement {
@@ -247,10 +247,16 @@ h5 {
 }
 
 .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
   padding: 30px;
   border-radius: 8px;
   background-color: #fafafa;
+}
+.feature-icon {
+  width: 80px;
 }
 .feature:not(:last-child) {
   margin-right: 3.37em;
