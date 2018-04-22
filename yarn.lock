@@ -9368,6 +9368,10 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
+typeface-cabin@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-cabin/-/typeface-cabin-0.0.54.tgz#35c9b527510b2bf2eb6bb43e87b7921d09cfe8a5"
+
 typeface-cardo@0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-cardo/-/typeface-cardo-0.0.54.tgz#cbab60cbb76840aeda5a8e46cc50d5e5f27747df"
@@ -9403,6 +9407,10 @@ typeface-neuton@0.0.54:
 typeface-playfair-display@0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-playfair-display/-/typeface-playfair-display-0.0.54.tgz#32a210d27e8dcbfbd6eebd63108af26d115838a0"
+
+typeface-spectral@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-spectral/-/typeface-spectral-0.0.54.tgz#1b851ad6e3e6da6a6a37e5ae54059a46f54a80b7"
 
 typescript@^2.8.3:
   version "2.8.3"

@@ -161,6 +161,11 @@ h5 {
   justify-content: space-between;
   max-width: 420px;
 }
+.prelaunch-form--no-border {
+  align-items: center;
+  justify-content: space-between;
+  max-width: 420px;
+}
 .prelaunch-form__email-input {
   background-color: #f9f9fa;
   border: 0;
@@ -210,6 +215,7 @@ h5 {
   justify-content: space-between;
 }
 .cost-matters-materials-blurb {
+  font-size: var(--stepUp2Lg);
   align-self: center;
   flex: 1 1 500px;
   /* width: 500px; */
@@ -259,7 +265,7 @@ h5 {
 .mission-statement {
   color: #fafafa;
   padding-bottom: var(--stepUp3Lg);
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 

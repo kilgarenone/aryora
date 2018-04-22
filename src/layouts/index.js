@@ -4,12 +4,6 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import './index.css'
-import 'typeface-montserrat'
-import 'typeface-crimson-text'
-import 'typeface-cardo'
-import 'typeface-domine'
-import 'typeface-neuton'
-import 'typeface-karla'
 import 'typeface-muli'
 
 const TemplateWrapper = ({ children }) => (

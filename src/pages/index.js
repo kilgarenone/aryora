@@ -96,7 +96,8 @@ class IndexPage extends Component {
           <div className="container">
             <div className="flex-row">
               <div className="g-c6 align-self-center ">
-                <h2 className="hero-headline">Keep more of your money</h2>
+                <h1 className="hero-headline m-none">Keep more of</h1>
+                <h1 className="hero-headline">your money</h1>
                 <p className="mb-2 hero-subheadline">
                   A place that guarantees your fair share of stock market
                   returns by purposely keeping your costs and taxes low.
@@ -146,7 +147,6 @@ class IndexPage extends Component {
                   title="Future self thank you"
                   alt="Better future self"
                   sizes={data.heroImg1.sizes}
-                  // outerWrapperClassName="hero-img-1"
                 />
               </div>
             </div>
@@ -160,7 +160,7 @@ class IndexPage extends Component {
               <h4 className="mb-3">Good, now you are one of us.</h4>
             </div>
             <div className="not-miss-out-fact">
-              <h5 className="f-w-600">You are not missing out</h5>
+              <span className="f-w-600">You are not missing out</span>
               <p className="p-quote m-none">
                 <b>90%</b> of actively managed funds underperformed their
                 benchmark indexes from 2001 to 2016.
@@ -192,11 +192,11 @@ class IndexPage extends Component {
                     />
                     <YAxis hide />
                     <Tooltip
-                      formatter={(a, b, c) => numberWithCommas(a)}
+                      formatter={a => numberWithCommas(a)}
                       labelFormatter={year => `Year: ${year}`}
                       offset={25}
                     />
-                    <CartesianGrid strokeDasharray="8 8" />
+                    <CartesianGrid strokeDasharray="6 10" />
                     <Legend
                       iconType="square"
                       iconSize={25}
@@ -208,9 +208,9 @@ class IndexPage extends Component {
                       name="Low-cost Index Funds"
                       type="monotone"
                       dataKey="lowCost"
-                      stroke="#8884d8"
+                      stroke="#796eff"
                       activeDot={{ r: 8 }}
-                      strokeWidth={6}
+                      strokeWidth={8}
                     >
                       <LabelList
                         className="low-cost-label"
@@ -222,12 +222,12 @@ class IndexPage extends Component {
                       />
                     </Line>
                     <Line
-                      strokeWidth={6}
+                      strokeWidth={8}
                       dot={false}
                       name="High-cost Unit Trust Funds"
                       type="monotone"
                       dataKey="highCost"
-                      stroke="#82ca9d"
+                      stroke="#ee4758 "
                       activeDot={{ r: 8 }}
                     >
                       <LabelList
@@ -242,10 +242,10 @@ class IndexPage extends Component {
                   </LineChart>
                 </ResponsiveContainer>
               </div>
-              <h3 className="f-w-100 cost-matters-materials-blurb">
+              <p className="f-w-100 cost-matters-materials-blurb">
                 Up to <b>50%</b> more of your money would have stayed in your
                 pocket if you were to invest in <b>Index Funds</b>
-              </h3>
+              </p>
             </div>
           </div>
         </section>
@@ -302,7 +302,7 @@ class IndexPage extends Component {
                 onSubmit={this.handlePrelaunchEmailSubmit}
                 autoComplete="off"
               >
-                <div className="flex-row prelaunch-form">
+                <div className="flex-row prelaunch-form--no-border">
                   <Input
                     type="email"
                     className="prelaunch-form__email-input"
@@ -345,7 +345,7 @@ export const heroImgQuery = graphql`
   query HeroImgQuery {
     heroImg1: imageSharp(id: { regex: "/futureself/" }) {
       sizes(maxWidth: 800) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
+        ...GatsbyImageSharpSizes_withWebp_tracedSVG
       }
     }
   }

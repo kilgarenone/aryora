@@ -1,13 +1,12 @@
 import styled from 'react-emotion'
 
 const Button = styled('button')`
-  font-family: 'Muli', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   background-color: #212121;
   color: #fff;
   height: 42px;
-  padding: 6px 30px;
+  padding: 0 20px;
   border-radius: 0.25rem;
   border: none;
   user-select: none;
