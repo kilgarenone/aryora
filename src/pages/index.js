@@ -255,7 +255,7 @@ class IndexPage extends Component {
               Our mission is to help you start investing early and make the most
               of your money.
             </h3>
-            <div className="flex-row">
+            <div className="flex-row mb-4">
               <div className="feature">
                 <img
                   className="feature-icon"
@@ -287,13 +287,50 @@ class IndexPage extends Component {
                   src={advisorIcon}
                   alt="Logo for benevolent advisor feature"
                 />
-                <h4 className="feature-title">Benevolent Advisor</h4>
+                <h4 className="feature-title">Compassionate Advisor</h4>
                 <p>
                   We are tax-smart and cost conscious. From tax-loss havesting
                   to rebalancing your portfolio, we want to maximize your
                   returns.
                 </p>
               </div>
+            </div>
+            <div className="call-to-action">
+              <h4>Join us for a simple, efficient, and high-probability</h4>
+              <h4 className="mb">way to build your wealth.</h4>
+              <form
+                onSubmit={this.handlePrelaunchEmailSubmit}
+                autoComplete="off"
+              >
+                <div className="flex-row prelaunch-form">
+                  <Input
+                    type="email"
+                    className="prelaunch-form__email-input"
+                    name="email"
+                    required
+                    placeholder="Enter your email"
+                    value={this.state.prelaunchEmail}
+                    onChange={this.handlePrelaunchEmailChange}
+                  />
+                  <Button className="prelaunch-form__submit-btn" type="submit">
+                    Get Notified
+                  </Button>
+                </div>
+              </form>
+              {this.state.prelaunchEmailSuccess && (
+                <p>Neato! We'll be in touch soon. 🎉</p>
+              )}
+              {this.state.prelaunchEmailFail && (
+                <p>Please try a different email address.</p>
+              )}
+              {this.state.letUsHelpYou && (
+                <p>
+                  Let us help you.{' '}
+                  <a href="mailto:kwei88@gmail.com?subject=Trouble with signing up to the Aryora beta release">
+                    Contact us.
+                  </a>
+                </p>
+              )}
             </div>
           </div>
         </section>
