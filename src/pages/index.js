@@ -155,14 +155,19 @@ class IndexPage extends Component {
         <section className="one-of-us-section">
           <div className="container one-of-us-container">
             <div className="are-you-wizard">
-              <h3>Not a stock picker wizard,</h3>
-              <h3 className="mb">but need to achieve financial security?</h3>
-              <h4 className="mb-3">Good, now you are one of us.</h4>
+              <div className="mb-3">
+                <h4>Stock picking and unit trust funds</h4>
+                <h4>are hard-work and expensive.</h4>
+              </div>
+              <div className="mb-3">
+                <h3>Achieving your financial security can actually</h3>
+                <h3>be effortless and low cost.</h3>
+              </div>
             </div>
             <div className="not-miss-out-fact">
               <span className="f-w-600">You are not missing out</span>
               <p className="p-quote m-none">
-                <b>90%</b> of actively managed funds underperformed their
+                <b>90%</b> of actively managed funds <b>underperformed</b> their
                 benchmark indexes from 2001 to 2016.
               </p>
             </div>
@@ -170,7 +175,7 @@ class IndexPage extends Component {
         </section>
         <section className="cost-matters-section">
           <div className="container">
-            <div className="">
+            <div className="mb-1">
               <h3 className="cost-matters-title">Cost Matters.</h3>
             </div>
             <div className="cost-matters-materials">
@@ -202,6 +207,7 @@ class IndexPage extends Component {
                       iconSize={25}
                       verticalAlign="top"
                       wrapperStyle={{ top: 0, left: 0 }}
+                      layout="vertical"
                     />
                     <Line
                       dot={false}
@@ -243,8 +249,8 @@ class IndexPage extends Component {
                 </ResponsiveContainer>
               </div>
               <p className="f-w-100 cost-matters-materials-blurb">
-                Up to <b>50%</b> more of your money would have stayed in your
-                pocket if you were to invest in <b>Index Funds</b>
+                Investing in low-cost <b>Index Funds</b> could snowball up to{' '}
+                <b>50%</b> more money in your pocket.
               </p>
             </div>
           </div>

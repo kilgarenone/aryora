@@ -205,7 +205,7 @@ h5 {
 
 .cost-chart-container {
   /* width: 650px; */
-  flex: 1 1 650px;
+  flex: 1;
   padding-top: var(--stepUp4Lg);
   margin-right: var(--stepUp4Lg);
 }
@@ -217,7 +217,7 @@ h5 {
 .cost-matters-materials-blurb {
   font-size: var(--stepUp2Lg);
   align-self: center;
-  flex: 1 1 500px;
+  flex: 1;
   /* width: 500px; */
   /* margin-left: 40px; */
 }
@@ -250,7 +250,7 @@ h5 {
   top: 0;
   content: '';
   display: block;
-  height: 30px;
+  height: 40px;
   left: 0;
   position: absolute;
   right: 0;
@@ -305,9 +305,9 @@ h5 {
 .recharts-label {
   fill: #666;
 }
-.recharts-legend-item:not(:last-child) {
+/* .recharts-legend-item:not(:last-child) {
   margin-right: 30px !important;
-}
+} */
 .mini-box {
   max-width: 550px;
 }
