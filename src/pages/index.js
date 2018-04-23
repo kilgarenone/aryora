@@ -156,12 +156,12 @@ class IndexPage extends Component {
           <div className="container one-of-us-container">
             <div className="are-you-wizard">
               <div className="mb-3">
-                <h4>Stock picking and unit trust funds</h4>
-                <h4>are hard-work and expensive.</h4>
+                <h4>Stock picking and unit trust funds are</h4>
+                <h4>hard-work and expensive.</h4>
               </div>
               <div className="mb-3">
-                <h3>Achieving your financial security can actually</h3>
-                <h3>be effortless and low cost.</h3>
+                <h3>Achieving your financial security can actually be</h3>
+                <h3>effortless and low cost.</h3>
               </div>
             </div>
             <div className="not-miss-out-fact">
