@@ -249,7 +249,7 @@ class IndexPage extends Component {
                 </ResponsiveContainer>
               </div>
               <p className="f-w-100 cost-matters-materials-blurb">
-                Investing in low-cost <b>Index Funds</b> could snowball up to{' '}
+                Investing in low-cost <b>Index Funds</b> could snowball to{' '}
                 <b>50%</b> more money in your pocket.
               </p>
             </div>
