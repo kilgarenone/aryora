@@ -1,7 +1,6 @@
 import styled from 'react-emotion'
 
 const Input = styled('input')`
-  font-family: 'Muli', Helvetica, Arial, sans-serif;
   padding: 0.4em 0.7em;
   font-size: 18px;
   margin: 0;

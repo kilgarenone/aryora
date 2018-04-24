@@ -2,9 +2,10 @@
   /* Font faces */
   --headerFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  --bodyFont: 'Muli', Helvetica, Arial, sans-serif;
+  --bodyFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --headerColor: rgba(0, 0, 0, 0.84);
-  --fontColor: rgb(100, 111, 121);
+  --fontColor: #5b5e6d;
   --lineHeight: 1.5;
 
   /* Base sizes */

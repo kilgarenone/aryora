@@ -98,7 +98,7 @@ class IndexPage extends Component {
               <div className="g-c6 align-self-center ">
                 <h1 className="hero-headline m-none">Keep more of</h1>
                 <h1 className="hero-headline">your money</h1>
-                <p className="mb-2 hero-subheadline">
+                <p className="mb-3 hero-subheadline">
                   A place that guarantees your fair share of stock market
                   returns by purposely keeping your costs and taxes low.
                 </p>
@@ -155,11 +155,11 @@ class IndexPage extends Component {
         <section className="one-of-us-section">
           <div className="container one-of-us-container">
             <div className="are-you-wizard">
-              <div className="mb-3">
+              <div className="mb-4">
                 <h4>Stock picking and unit trust funds are</h4>
                 <h4>hard-work and expensive.</h4>
               </div>
-              <div className="mb-3">
+              <div className="mb-4">
                 <h3>Achieving your financial security can actually be</h3>
                 <h3>effortless and low cost.</h3>
               </div>
@@ -175,7 +175,7 @@ class IndexPage extends Component {
         </section>
         <section className="cost-matters-section">
           <div className="container">
-            <div className="mb-1">
+            <div className="mb-2">
               <h3 className="cost-matters-title">Cost Matters.</h3>
             </div>
             <div className="cost-matters-materials">
@@ -261,7 +261,7 @@ class IndexPage extends Component {
               Our mission is to help you start investing early and make the most
               of your money.
             </h3>
-            <div className="flex-row mb-4">
+            <div className="flex-row mb-5">
               <div className="feature">
                 <img
                   className="feature-icon"
@@ -302,8 +302,12 @@ class IndexPage extends Component {
               </div>
             </div>
             <div className="call-to-action">
-              <h4>Join us for a simple, efficient, and high-probability</h4>
-              <h4 className="mb">way to build your wealth.</h4>
+              <h4 className="call-to-action-statement">
+                Join us for a simple, efficient, and high-probability
+              </h4>
+              <h4 className="call-to-action-statement mb-1">
+                way to build your wealth.
+              </h4>
               <form
                 onSubmit={this.handlePrelaunchEmailSubmit}
                 autoComplete="off"
