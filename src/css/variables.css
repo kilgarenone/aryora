@@ -10,7 +10,8 @@
 
   /* Base sizes */
   --baseFontSizeSm: 100%; /* 16px */
-  --baseFontSizeMd: 114%; /* 18px */
+  --baseFontSizeMd: 112%; /* 18px */
+  --baseFontSizeLg: 115%; /* 18px */
 
   /* Type scale on smaller screens */
   --ratioSm: 1.2; /* Minor third */
@@ -21,6 +22,15 @@
   --stepUp5Sm: calc(var(--stepUp4Sm) * var(--ratioSm));
   --stepDown1Sm: calc(1em / var(--ratioSm));
 
+  /* Type scale on medium screens */
+  --ratioMd: 1.33; /* Minor third */
+  --stepUp1Md: calc(1em * var(--ratioMd));
+  --stepUp2Md: calc(var(--stepUp1Md) * var(--ratioMd));
+  --stepUp3Md: calc(var(--stepUp2Md) * var(--ratioMd));
+  --stepUp4Md: calc(var(--stepUp3Md) * var(--ratioMd));
+  --stepUp5Md: calc(var(--stepUp4Md) * var(--ratioMd));
+  --stepDown1Md: calc(1em / var(--ratioMd));
+
   /* Type scale on larger screens */
   --ratioLg: 1.414; /* Augmented fourth */
   --stepUp1Lg: calc(1em * var(--ratioLg));
@@ -30,6 +40,6 @@
   --stepUp5Lg: calc(var(--stepUp4Lg) * var(--ratioLg));
   --stepDown1Lg: calc(1em / var(--ratioLg));
 
-  @custom-media --break-md (width >= 36em);
-  @custom-media --break-lg (width >= 48em);
+  @custom-media --break-md (width >= 36em); /* 576px */
+  @custom-media --break-lg (width >= 65em); /* 1048px */
 }

@@ -96,8 +96,8 @@ class IndexPage extends Component {
           <div className="container">
             <div className="flex-row">
               <div className="g-c6 align-self-center ">
-                <h1 className="hero-headline m-none">Keep more of</h1>
-                <h1 className="hero-headline">your money</h1>
+                <h2 className="hero-headline m-none">Keep more of</h2>
+                <h2 className="hero-headline">your money</h2>
                 <p className="mb-3 hero-subheadline">
                   A place that guarantees your fair share of stock market
                   returns by purposely keeping your costs and taxes low.
@@ -261,7 +261,7 @@ class IndexPage extends Component {
               Our mission is to help you start investing early and make the most
               of your money.
             </h3>
-            <div className="flex-row mb-5">
+            <div className="features">
               <div className="feature">
                 <img
                   className="feature-icon"

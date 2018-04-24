@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import './index.css'
-import 'typeface-muli'
 
 const TemplateWrapper = ({ children }) => (
   <div>
