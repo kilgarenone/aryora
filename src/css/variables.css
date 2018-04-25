@@ -41,5 +41,6 @@
   --stepDown1Lg: calc(1em / var(--ratioLg));
 
   @custom-media --break-md (width >= 36em); /* 576px */
+  @custom-media --break-md2 (width >= 49em); /* 790px */
   @custom-media --break-lg (width >= 65em); /* 1048px */
 }

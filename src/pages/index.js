@@ -95,54 +95,52 @@ class IndexPage extends Component {
         <section className="hero-section">
           <div className="container">
             <div className="flex-row">
-              <div className="g-c6 align-self-center ">
+              <div className="g-c6-md2 hero-pitch">
                 <h2 className="hero-headline m-none">Keep more of</h2>
                 <h2 className="hero-headline">your money</h2>
                 <p className="mb-3 hero-subheadline">
                   A place that guarantees your fair share of stock market
                   returns by purposely keeping your costs and taxes low.
                 </p>
-                <div>
-                  <p>Subscribe below to get early access to the beta.</p>
-                  <form
-                    onSubmit={this.handlePrelaunchEmailSubmit}
-                    autoComplete="off"
-                  >
-                    <div className="flex-row prelaunch-form">
-                      <Input
-                        type="email"
-                        className="prelaunch-form__email-input"
-                        name="email"
-                        required
-                        placeholder="Enter your email"
-                        value={this.state.prelaunchEmail}
-                        onChange={this.handlePrelaunchEmailChange}
-                      />
-                      <Button
-                        className="prelaunch-form__submit-btn"
-                        type="submit"
-                      >
-                        Get Notified
-                      </Button>
-                    </div>
-                  </form>
-                  {this.state.prelaunchEmailSuccess && (
-                    <p>Neato! We'll be in touch soon. 🎉</p>
-                  )}
-                  {this.state.prelaunchEmailFail && (
-                    <p>Please try a different email address.</p>
-                  )}
-                  {this.state.letUsHelpYou && (
-                    <p>
-                      Let us help you.{' '}
-                      <a href="mailto:kwei88@gmail.com?subject=Trouble with signing up to the Aryora beta release">
-                        Contact us.
-                      </a>
-                    </p>
-                  )}
-                </div>
+                <p>Subscribe below to get early access to the beta.</p>
+                <form
+                  onSubmit={this.handlePrelaunchEmailSubmit}
+                  autoComplete="off"
+                >
+                  <div className="flex-row prelaunch-form">
+                    <Input
+                      type="email"
+                      className="prelaunch-form__email-input"
+                      name="email"
+                      required
+                      placeholder="Enter your email"
+                      value={this.state.prelaunchEmail}
+                      onChange={this.handlePrelaunchEmailChange}
+                    />
+                    <Button
+                      className="prelaunch-form__submit-btn"
+                      type="submit"
+                    >
+                      Get Notified
+                    </Button>
+                  </div>
+                </form>
+                {this.state.prelaunchEmailSuccess && (
+                  <p>Neato! We'll be in touch soon. 🎉</p>
+                )}
+                {this.state.prelaunchEmailFail && (
+                  <p>Please try a different email address.</p>
+                )}
+                {this.state.letUsHelpYou && (
+                  <p>
+                    Let us help you.{' '}
+                    <a href="mailto:kwei88@gmail.com?subject=Trouble with signing up to the Aryora beta release">
+                      Contact us.
+                    </a>
+                  </p>
+                )}
               </div>
-              <div className="g-c6">
+              <div className="g-c6-md2">
                 <Img
                   title="Future self thank you"
                   alt="Better future self"
@@ -178,8 +176,8 @@ class IndexPage extends Component {
             <div className="mb-2">
               <h3 className="cost-matters-title">Cost Matters.</h3>
             </div>
-            <div className="cost-matters-materials">
-              <div className="cost-chart-container">
+            <div className="flex-row cost-matters-materials">
+              <div className="g-c6-md2 cost-chart-container">
                 <ResponsiveContainer width="100%" height={500}>
                   <LineChart
                     data={fundPerf()}
@@ -248,7 +246,7 @@ class IndexPage extends Component {
                   </LineChart>
                 </ResponsiveContainer>
               </div>
-              <p className="f-w-100 cost-matters-materials-blurb">
+              <p className="g-c6-md2 f-w-100 cost-matters-materials-blurb">
                 Investing in low-cost <b>Index Funds</b> could snowball to{' '}
                 <b>50%</b> more money in your pocket.
               </p>
