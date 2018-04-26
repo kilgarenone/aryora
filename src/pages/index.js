@@ -161,7 +161,11 @@ class IndexPage extends Component {
               <h3 className="cost-matters-title">Cost Matters.</h3>
             </div>
             <div className="flex-row cost-matters-materials">
-              <div className="g-c6-md2 p-2 cost-chart-container">
+              <p className="g-c6-md2 p-2 f-w-100 cost-matters-materials-blurb">
+                Investing in low-cost <b>Index Funds</b> could snowball to{' '}
+                <b>50%</b> more money in your pocket.
+              </p>
+              <div className="g-c6-md2 cost-chart-container">
                 <ResponsiveContainer width="100%" height={500}>
                   <LineChart
                     data={fundPerf()}
@@ -186,9 +190,9 @@ class IndexPage extends Component {
                     <CartesianGrid strokeDasharray="6 10" />
                     <Legend
                       iconType="square"
-                      iconSize={25}
+                      iconSize={27}
                       verticalAlign="top"
-                      wrapperStyle={{ top: 0, left: 0 }}
+                      wrapperStyle={{ top: '-10px' }}
                       layout="vertical"
                     />
                     <Line
@@ -196,7 +200,7 @@ class IndexPage extends Component {
                       name="Low-cost Index Funds"
                       type="monotone"
                       dataKey="lowCost"
-                      stroke="#796eff"
+                      stroke="#448AFF"
                       activeDot={{ r: 8 }}
                       strokeWidth={8}
                     >
@@ -230,10 +234,6 @@ class IndexPage extends Component {
                   </LineChart>
                 </ResponsiveContainer>
               </div>
-              <p className="g-c6-md2 f-w-100 cost-matters-materials-blurb">
-                Investing in low-cost <b>Index Funds</b> could snowball to{' '}
-                <b>50%</b> more money in your pocket.
-              </p>
             </div>
           </div>
         </section>
@@ -283,36 +283,35 @@ class IndexPage extends Component {
                 </p>
               </div>
             </div>
-            <div className="call-to-action">
-              <h4 className="call-to-action-statement">
-                Join us for a simple, efficient, and high-probability
-              </h4>
-              <h4 className="call-to-action-statement mb-1">
-                way to build your wealth.
-              </h4>
-              <InputButtonGroup
-                handleSubmit={this.handlePrelaunchEmailSubmit}
-                inputValue={this.state.prelaunchEmail}
-                handleInputChange={this.handlePrelaunchEmailChange}
-                customFormStyleClass={css`
-                  border: none;
-                `}
-              />
-              {this.state.prelaunchEmailSuccess && (
-                <p>Neato! We'll be in touch soon. 🎉</p>
-              )}
-              {this.state.prelaunchEmailFail && (
-                <p>Please try a different email address.</p>
-              )}
-              {this.state.letUsHelpYou && (
-                <p>
-                  Let us help you.{' '}
-                  <a href="mailto:kwei88@gmail.com?subject=Trouble with signing up to the Aryora beta release">
-                    Contact us.
-                  </a>
-                </p>
-              )}
-            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container call-to-action">
+            <h4 className="call-to-action-statement">
+              Join us for a simple, efficient, and high-probability
+            </h4>
+            <h4 className="call-to-action-statement mb-1">
+              way to build your wealth.
+            </h4>
+            <InputButtonGroup
+              handleSubmit={this.handlePrelaunchEmailSubmit}
+              inputValue={this.state.prelaunchEmail}
+              handleInputChange={this.handlePrelaunchEmailChange}
+            />
+            {this.state.prelaunchEmailSuccess && (
+              <p>Neato! We'll be in touch soon. 🎉</p>
+            )}
+            {this.state.prelaunchEmailFail && (
+              <p>Please try a different email address.</p>
+            )}
+            {this.state.letUsHelpYou && (
+              <p>
+                Let us help you.{' '}
+                <a href="mailto:kwei88@gmail.com?subject=Trouble with signing up to the Aryora beta release">
+                  Contact us.
+                </a>
+              </p>
+            )}
           </div>
         </section>
       </Fragment>
