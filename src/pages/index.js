@@ -12,7 +12,7 @@ import {
   Tooltip,
   Legend,
 } from 'recharts'
-
+import { css } from 'react-emotion'
 import axios from 'axios'
 import Button from '../components/Button'
 import Input from '../components/Input'
@@ -20,6 +20,7 @@ import { numberWithCommas } from '../utils/functions'
 import assetAllocationIcon from '../img/assetAllocation.png'
 import advisorIcon from '../img/inGoodHand.png'
 import onboardingIcon from '../img/onboarding.png'
+import InputButtonGroup from './../components/molecules/InputButtonGroup'
 
 const HIGHCOST = 0.0575
 const LOWCOST = 0.078
@@ -95,7 +96,7 @@ class IndexPage extends Component {
         <section className="hero-section">
           <div className="container">
             <div className="flex-row">
-              <div className="g-c6-md2 hero-pitch">
+              <div className="g-c6-md2 p-2 hero-pitch">
                 <h2 className="hero-headline m-none">Keep more of</h2>
                 <h2 className="hero-headline">your money</h2>
                 <p className="mb-3 hero-subheadline">
@@ -103,28 +104,11 @@ class IndexPage extends Component {
                   returns by purposely keeping your costs and taxes low.
                 </p>
                 <p>Subscribe below to get early access to the beta.</p>
-                <form
-                  onSubmit={this.handlePrelaunchEmailSubmit}
-                  autoComplete="off"
-                >
-                  <div className="flex-row prelaunch-form">
-                    <Input
-                      type="email"
-                      className="prelaunch-form__email-input"
-                      name="email"
-                      required
-                      placeholder="Enter your email"
-                      value={this.state.prelaunchEmail}
-                      onChange={this.handlePrelaunchEmailChange}
-                    />
-                    <Button
-                      className="prelaunch-form__submit-btn"
-                      type="submit"
-                    >
-                      Get Notified
-                    </Button>
-                  </div>
-                </form>
+                <InputButtonGroup
+                  handleSubmit={this.handlePrelaunchEmailSubmit}
+                  inputValue={this.state.prelaunchEmail}
+                  handleInputChange={this.handlePrelaunchEmailChange}
+                />
                 {this.state.prelaunchEmailSuccess && (
                   <p>Neato! We'll be in touch soon. 🎉</p>
                 )}
@@ -306,25 +290,14 @@ class IndexPage extends Component {
               <h4 className="call-to-action-statement mb-1">
                 way to build your wealth.
               </h4>
-              <form
-                onSubmit={this.handlePrelaunchEmailSubmit}
-                autoComplete="off"
-              >
-                <div className="flex-row prelaunch-form--no-border">
-                  <Input
-                    type="email"
-                    className="prelaunch-form__email-input"
-                    name="email"
-                    required
-                    placeholder="Enter your email"
-                    value={this.state.prelaunchEmail}
-                    onChange={this.handlePrelaunchEmailChange}
-                  />
-                  <Button className="prelaunch-form__submit-btn" type="submit">
-                    Get Notified
-                  </Button>
-                </div>
-              </form>
+              <InputButtonGroup
+                handleSubmit={this.handlePrelaunchEmailSubmit}
+                inputValue={this.state.prelaunchEmail}
+                handleInputChange={this.handlePrelaunchEmailChange}
+                customFormStyleClass={css`
+                  border: none;
+                `}
+              />
               {this.state.prelaunchEmailSuccess && (
                 <p>Neato! We'll be in touch soon. 🎉</p>
               )}
