@@ -161,7 +161,7 @@ class IndexPage extends Component {
               <h3 className="cost-matters-title">Cost Matters.</h3>
             </div>
             <div className="flex-row cost-matters-materials">
-              <div className="g-c6-md2 cost-chart-container">
+              <div className="g-c6-md2 p-2 cost-chart-container">
                 <ResponsiveContainer width="100%" height={500}>
                   <LineChart
                     data={fundPerf()}

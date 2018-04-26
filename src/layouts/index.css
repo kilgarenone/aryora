@@ -383,7 +383,10 @@ h5 {
 } */
 
 .p-2 {
-  padding: var(--stepUp2Lg);
+  padding: 0;
+  @media (--break-md) {
+    padding: var(--stepUp2Lg);
+  }
 }
 .f-w-600 {
   font-weight: 600;
