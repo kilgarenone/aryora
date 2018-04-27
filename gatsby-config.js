@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Aryora- Passive Investing',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
