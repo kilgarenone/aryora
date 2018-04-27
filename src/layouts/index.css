@@ -150,9 +150,15 @@ h5 {
 }
 
 .hero-pitch {
-  align-self: center;
+  align-self: flex-start;
   text-align: center;
   padding-bottom: var(--stepUp2Lg);
+  padding: 0;
+
+  @media (--break-md) {
+    padding: var(--stepUp2Lg);
+    padding-top: var(--stepUp5Lg);
+  }
 
   @media (--break-md2) {
     text-align: left;

@@ -96,7 +96,7 @@ class IndexPage extends Component {
         <section className="hero-section">
           <div className="container">
             <div className="flex-row">
-              <div className="g-c6-md2 p-2 hero-pitch">
+              <div className="g-c6-md2 hero-pitch">
                 <h2 className="hero-headline m-none">Keep more of</h2>
                 <h2 className="hero-headline">your money</h2>
                 <p className="mb-3 hero-subheadline">
