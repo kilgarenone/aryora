@@ -8,10 +8,10 @@ import './index.css'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Aryora - Passive Investing"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Low-cost and tax-smart passive investing ' },
+        { name: 'keywords', content: 'investing, index funds, passive investing' },
       ]}
     />
     <Header>Aryora</Header>
