@@ -12,23 +12,22 @@ module.exports = {
         path: `${__dirname}/src/img/`,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-favicon',
-    //   options: {
-    //     logo: './src/favicon.png',
-    //     icons: {
-    //       android: true,
-    //       appleIcon: true,
-    //       appleStartup: true,
-    //       favicons: true,
-    //       firefox: true,
-    //       twitter: true,
-    //       windows: true,
-    //     },
-    //   }
-    // },
     'gatsby-plugin-emotion',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-118290603-1',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        // exclude: ["/preview/**", "/do-not-track/me/too/"],
+      },
+    },
   ],
 }

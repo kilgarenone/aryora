@@ -3797,6 +3797,12 @@ gatsby-plugin-emotion@^1.1.16:
   dependencies:
     babel-runtime "^6.26.0"
 
+gatsby-plugin-google-analytics@^1.0.31:
+  version "1.0.31"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.31.tgz#eaf16e1809461b10badf12c05038c429745783c0"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-react-helmet@^2.0.8:
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-2.0.10.tgz#8eddb40ebbb03f334c119f40112b020325706735"
@@ -9367,50 +9373,6 @@ type-of@^2.0.1:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
-
-typeface-cabin@^0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-cabin/-/typeface-cabin-0.0.54.tgz#35c9b527510b2bf2eb6bb43e87b7921d09cfe8a5"
-
-typeface-cardo@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-cardo/-/typeface-cardo-0.0.54.tgz#cbab60cbb76840aeda5a8e46cc50d5e5f27747df"
-
-typeface-crimson-text@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-crimson-text/-/typeface-crimson-text-0.0.54.tgz#65641dadb39a2ad022692a8e9b2d48ab0c45663e"
-
-typeface-domine@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-domine/-/typeface-domine-0.0.54.tgz#704ebbcce58a9010f4c5134bbaf7fe21543f38a0"
-
-typeface-karla@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-karla/-/typeface-karla-0.0.54.tgz#f59d09b329a378db2161a3ecd6e6a0054699b579"
-
-typeface-libre-baskerville@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-libre-baskerville/-/typeface-libre-baskerville-0.0.54.tgz#4f9fd7e0d0812f73291e70258498d647c3af892d"
-
-typeface-montserrat@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.54.tgz#3fc338db6428d73485b75aa7bd2af8c9a55b9ab3"
-
-typeface-muli@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-muli/-/typeface-muli-0.0.54.tgz#fa9cfe6879eb50e56accf793b5eb76e60d198fb2"
-
-typeface-neuton@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-neuton/-/typeface-neuton-0.0.54.tgz#94fc989e39186d0030ff2eafd4ffd46b8b238534"
-
-typeface-playfair-display@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-playfair-display/-/typeface-playfair-display-0.0.54.tgz#32a210d27e8dcbfbd6eebd63108af26d115838a0"
-
-typeface-spectral@^0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-spectral/-/typeface-spectral-0.0.54.tgz#1b851ad6e3e6da6a6a37e5ae54059a46f54a80b7"
 
 typescript@^2.8.3:
   version "2.8.3"
