@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from 'react-emotion';
 
 const Button = styled('button')`
   font-size: 1rem;
@@ -14,6 +14,6 @@ const Button = styled('button')`
   cursor: pointer;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   text-align: center;
-`
+`;
 
-export default Button
+export default Button;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Button from '../Button'
 import Input from '../Input'
 import { css, cx } from 'react-emotion'
@@ -30,32 +30,38 @@ const btnStyle = css`
   border-radius: 0;
 `
 
-function InputButtonGroup(props) {
-  const {
-    handleSubmit,
-    inputValue,
-    handleInputChange,
-    customFormStyleClass,
-  } = props
+class InputButtonGroup extends Component {
+  constructor(props) {
+    super(props)
+    this.buttonRef = React.createRef()
+  }
 
-  return (
-    <form onSubmit={handleSubmit} autoComplete="off" className={formContStyle}>
-      <div className={cx('flex-row', formStyle, customFormStyleClass)}>
-        <Input
-          type="email"
-          className={inputStyle}
-          name="email"
-          required
-          placeholder="Enter your email"
-          value={inputValue}
-          onChange={handleInputChange}
-        />
-        <Button className={btnStyle} type="submit">
-          Get Notified
-        </Button>
-      </div>
-    </form>
-  )
+  handleButtonClicked = event => {
+    this.buttonRef.current.setAttribute('disabled', 'disabled')
+    this.props.handleSubmit(event)
+  }
+  render() {
+    const { inputValue, handleInputChange, customFormStyleClass } = this.props
+
+    return (
+      <form onSubmit={this.handleButtonClicked} autoComplete="off" className={formContStyle}>
+        <div className={cx('flex-row', formStyle, customFormStyleClass)}>
+          <Input
+            type="email"
+            className={inputStyle}
+            name="email"
+            required
+            placeholder="Enter your email"
+            value={inputValue}
+            onChange={handleInputChange}
+          />
+          <button ref={this.buttonRef} className={btnStyle} type="submit">
+            Get Notified
+          </button>
+        </div>
+      </form>
+    )
+  }
 }
 
 export default InputButtonGroup

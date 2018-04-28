@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from 'react-emotion';
 
 const Input = styled('input')`
   padding: 0.4em 0.7em;
@@ -7,6 +7,6 @@ const Input = styled('input')`
   height: 42px;
   outline: none;
   box-shadow: none;
-`
+`;
 
-export default Input
+export default Input;

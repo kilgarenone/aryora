@@ -1,9 +1,10 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled, { css } from 'react-emotion'
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import { css } from 'react-emotion';
 
 function Footer(props) {
-  const { children } = props
+  const { children } = props;
 
   return (
     <footer>
@@ -17,7 +18,14 @@ function Footer(props) {
         {children}
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
+
+Footer.propTypes = {
+  children: PropTypes.element,
+};
+Footer.defaultProps = {
+  children: PropTypes.element,
+};

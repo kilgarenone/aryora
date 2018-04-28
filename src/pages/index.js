@@ -100,8 +100,8 @@ class IndexPage extends Component {
                 <h2 className="hero-headline m-none">Keep more of</h2>
                 <h2 className="hero-headline">your money</h2>
                 <p className="mb-3 hero-subheadline">
-                  A place that guarantees your fair share of stock market
-                  returns by purposely keeping your costs and taxes low.
+                  A place that guarantees your fair share of stock market returns by purposely
+                  keeping your costs and taxes low.
                 </p>
                 <p>Subscribe below to get early access to the beta.</p>
                 <InputButtonGroup
@@ -109,12 +109,8 @@ class IndexPage extends Component {
                   inputValue={this.state.prelaunchEmail}
                   handleInputChange={this.handlePrelaunchEmailChange}
                 />
-                {this.state.prelaunchEmailSuccess && (
-                  <p>Neato! We'll be in touch soon. 🎉</p>
-                )}
-                {this.state.prelaunchEmailFail && (
-                  <p>Please try a different email address.</p>
-                )}
+                {this.state.prelaunchEmailSuccess && <p>Neato! We'll be in touch soon. 🎉</p>}
+                {this.state.prelaunchEmailFail && <p>Please try a different email address.</p>}
                 {this.state.letUsHelpYou && (
                   <p>
                     Let us help you.{' '}
@@ -149,8 +145,8 @@ class IndexPage extends Component {
             <div className="not-miss-out-fact">
               <span className="f-w-600">You are not missing out</span>
               <p className="p-quote m-none">
-                <b>90%</b> of actively managed funds <b>underperformed</b> their
-                benchmark indexes from 2001 to 2016.
+                <b>90%</b> of actively managed funds <b>underperformed</b> their benchmark indexes
+                from 2001 to 2016.
               </p>
             </div>
           </div>
@@ -162,8 +158,8 @@ class IndexPage extends Component {
             </div>
             <div className="flex-row cost-matters-materials">
               <p className="g-c6-md2 p-2 f-w-100 cost-matters-materials-blurb">
-                Investing in low-cost <b>Index Funds</b> could snowball to{' '}
-                <b>50%</b> more money in your pocket.
+                Investing in low-cost <b>Index Funds</b> could snowball to <b>50%</b> more money in
+                your pocket.
               </p>
               <div className="g-c6-md2 cost-chart-container">
                 <ResponsiveContainer width="100%" height={500}>
@@ -208,9 +204,7 @@ class IndexPage extends Component {
                         className="low-cost-label"
                         dataKey="lowCost"
                         position="right"
-                        formatter={v =>
-                          v === 9518 || v === 1000 ? numberWithCommas(v) : ''
-                        }
+                        formatter={v => (v === 9518 || v === 1000 ? numberWithCommas(v) : '')}
                       />
                     </Line>
                     <Line
@@ -226,9 +220,7 @@ class IndexPage extends Component {
                         className="high-cost-label"
                         dataKey="highCost"
                         position="right"
-                        formatter={v =>
-                          v === 943 || v === 5043 ? numberWithCommas(v) : ''
-                        }
+                        formatter={v => (v === 943 || v === 5043 ? numberWithCommas(v) : '')}
                       />
                     </Line>
                   </LineChart>
@@ -240,8 +232,7 @@ class IndexPage extends Component {
         <section className="features-section">
           <div className="container">
             <h3 className="mission-statement">
-              Our mission is to help you start investing early and make the most
-              of your money.
+              Our mission is to help you start investing early and make the most of your money.
             </h3>
             <div className="features">
               <div className="feature">
@@ -252,8 +243,8 @@ class IndexPage extends Component {
                 />
                 <h4 className="feature-title">Painless Onboarding</h4>
                 <p>
-                  From opening an account to your first deposit and investment,
-                  it will be so delightful that you would want to do it again.
+                  From opening an account to your first deposit and investment, it will be so
+                  delightful that you would want to do it again.
                 </p>
               </div>
               <div className="feature">
@@ -264,9 +255,8 @@ class IndexPage extends Component {
                 />
                 <h4 className="feature-title">Asset Allocation</h4>
                 <p>
-                  Based on your risk tolerance and goals, you can easily invest
-                  in your target portfolio that's made up of low cost stock and
-                  bond funds.
+                  Based on your risk tolerance and goals, you can easily invest in your target
+                  portfolio that's made up of low cost stock and bond funds.
                 </p>
               </div>
               <div className="feature">
@@ -277,9 +267,8 @@ class IndexPage extends Component {
                 />
                 <h4 className="feature-title">Compassionate Advisor</h4>
                 <p>
-                  We are tax-smart and cost conscious. From tax-loss havesting
-                  to rebalancing your portfolio, we want to maximize your
-                  returns.
+                  We are tax-smart and cost conscious. From tax-loss havesting to rebalancing your
+                  portfolio, we want to maximize your returns.
                 </p>
               </div>
             </div>
@@ -290,20 +279,14 @@ class IndexPage extends Component {
             <h4 className="call-to-action-statement">
               Join us for a simple, efficient, and high-probability
             </h4>
-            <h4 className="call-to-action-statement mb-1">
-              way to build your wealth.
-            </h4>
+            <h4 className="call-to-action-statement mb-1">way to build your wealth.</h4>
             <InputButtonGroup
               handleSubmit={this.handlePrelaunchEmailSubmit}
               inputValue={this.state.prelaunchEmail}
               handleInputChange={this.handlePrelaunchEmailChange}
             />
-            {this.state.prelaunchEmailSuccess && (
-              <p>Neato! We'll be in touch soon. 🎉</p>
-            )}
-            {this.state.prelaunchEmailFail && (
-              <p>Please try a different email address.</p>
-            )}
+            {this.state.prelaunchEmailSuccess && <p>Neato! We'll be in touch soon. 🎉</p>}
+            {this.state.prelaunchEmailFail && <p>Please try a different email address.</p>}
             {this.state.letUsHelpYou && (
               <p>
                 Let us help you.{' '}

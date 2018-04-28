@@ -1,24 +1,16 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled, { css } from 'react-emotion'
+import React from 'react';
+import { css } from 'react-emotion';
 
 const Header = () => (
-  <header
-    className={css`
-      // background-color: #e0f2f1;
-    `}
-  >
+  <header>
     <div
       className={css`
-        // margin: 0 auto;
-        // max-width: 1280px;
-        // display: flex;
         padding: 1rem 1.0875rem;
       `}
     >
       <h4>Aryora</h4>
     </div>
   </header>
-)
+);
 
-export default Header
+export default Header;

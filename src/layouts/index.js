@@ -1,13 +1,15 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import './index.css'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import './index.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
+      htmlAttributes={{ lang: 'en' }}
       title="Aryora - Passive Investing for Everyone"
       meta={[
         {
@@ -34,6 +36,13 @@ const TemplateWrapper = ({ children }) => (
     {children()}
     <Footer>© Copyright 2018 Aryora</Footer>
   </div>
-)
+);
 
-export default TemplateWrapper
+export default TemplateWrapper;
+
+TemplateWrapper.propTypes = {
+  children: PropTypes.element,
+};
+TemplateWrapper.defaultProps = {
+  children: PropTypes.element,
+};
