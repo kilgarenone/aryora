@@ -38,10 +38,10 @@ class InputButtonGroup extends Component {
 
   handleButtonClicked = event => {
     this.buttonRef.current.setAttribute('disabled', 'disabled')
-    this.props.handleSubmit(event)
+    this.props.handleSubmit(event, this.buttonRef.current)
   }
   render() {
-    const { inputValue, handleInputChange, customFormStyleClass } = this.props
+    const { isSubmitting, inputValue, handleInputChange, customFormStyleClass } = this.props
 
     return (
       <form onSubmit={this.handleButtonClicked} autoComplete="off" className={formContStyle}>
@@ -55,9 +55,13 @@ class InputButtonGroup extends Component {
             value={inputValue}
             onChange={handleInputChange}
           />
-          <button ref={this.buttonRef} className={btnStyle} type="submit">
+          <Button
+            innerRef={this.buttonRef}
+            className={cx(btnStyle, { isSubmitting: isSubmitting })}
+            type="submit"
+          >
             Get Notified
-          </button>
+          </Button>
         </div>
       </form>
     )

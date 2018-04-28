@@ -50,6 +50,7 @@ function fundPerf() {
 
 class IndexPage extends Component {
   state = {
+    isSubmitting: false,
     prelaunchEmail: '',
     prelaunchEmailSuccess: false,
     prelaunchEmailFail: false,
@@ -64,42 +65,52 @@ class IndexPage extends Component {
     })
   }
 
-  handlePrelaunchEmailSubmit = async event => {
+  handlePrelaunchEmailSubmit = async (event, submitBtnRef) => {
     event.preventDefault()
-
+    this.setState({ isSubmitting: !this.state.isSubmitting })
     try {
       const res = await axios.post(
         'https://exrosqik52.execute-api.ap-southeast-1.amazonaws.com/dev/addToBetaUserList',
         { emailAddress: this.state.prelaunchEmail }
       )
-      this.setState({ prelaunchEmailSuccess: true, prelaunchEmail: '' })
+      this.setState({
+        isSubmitting: !this.state.isSubmitting,
+        prelaunchEmailSuccess: true,
+        prelaunchEmail: '',
+      })
+      // re-enable the submit btn in the <InputButtonGroup />
+      submitBtnRef.removeAttribute('disabled')
     } catch (e) {
       const errStatusCode = e.response.status
       if (errStatusCode === 400) {
         this.setState({
+          isSubmitting: !this.state.isSubmitting,
           prelaunchEmailSuccess: false,
           prelaunchEmailFail: true,
         })
       } else {
         this.setState({
+          isSubmitting: !this.state.isSubmitting,
           prelaunchEmailSuccess: false,
           prelaunchEmailFail: false,
           letUsHelpYou: true,
         })
       }
+      // re-enable the submit btn in the <InputButtonGroup />
+      submitBtnRef.removeAttribute('disabled')
     }
   }
   render() {
     const { data } = this.props
     return (
       <Fragment>
-        <section className="hero-section">
+        <section role="main" aria-labelledby="aria-hero-section" className="hero-section">
           <div className="container">
             <div className="flex-row">
               <div className="g-c6-md2 hero-pitch">
                 <h2 className="hero-headline m-none">Keep more of</h2>
                 <h2 className="hero-headline">your money</h2>
-                <p className="mb-3 hero-subheadline">
+                <p id="aria-hero-section" className="mb-3 hero-subheadline">
                   A place that guarantees your fair share of stock market returns by purposely
                   keeping your costs and taxes low.
                 </p>
@@ -108,6 +119,7 @@ class IndexPage extends Component {
                   handleSubmit={this.handlePrelaunchEmailSubmit}
                   inputValue={this.state.prelaunchEmail}
                   handleInputChange={this.handlePrelaunchEmailChange}
+                  isSubmitting={this.state.isSubmitting}
                 />
                 {this.state.prelaunchEmailSuccess && <p>Neato! We'll be in touch soon. 🎉</p>}
                 {this.state.prelaunchEmailFail && <p>Please try a different email address.</p>}
@@ -284,6 +296,7 @@ class IndexPage extends Component {
               handleSubmit={this.handlePrelaunchEmailSubmit}
               inputValue={this.state.prelaunchEmail}
               handleInputChange={this.handlePrelaunchEmailChange}
+              isSubmitting={this.state.isSubmitting}
             />
             {this.state.prelaunchEmailSuccess && <p>Neato! We'll be in touch soon. 🎉</p>}
             {this.state.prelaunchEmailFail && <p>Please try a different email address.</p>}
