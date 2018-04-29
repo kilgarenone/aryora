@@ -74,7 +74,7 @@ class IndexPage extends Component {
         { emailAddress: this.state.prelaunchEmail }
       )
       this.setState({
-        isSubmitting: !this.state.isSubmitting,
+        // isSubmitting: !this.state.isSubmitting,
         prelaunchEmailSuccess: true,
         prelaunchEmail: '',
       })

@@ -1,9 +1,10 @@
 import styled from 'react-emotion';
+import { spinnerCssClass } from './Spinner';
 
 const Button = styled('button')`
+  position: relative;
   font-size: 1em;
   font-weight: 700;
-  font-style: bold;
   background-color: #212121;
   color: #fff;
   height: 42px;
@@ -16,9 +17,10 @@ const Button = styled('button')`
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   text-align: center;
 
-  &.isSubmitting {
-    background-color: red;
+  &:disabled {
+    opacity: 0.75;
   }
+  ${props => (props.isSubmitting ? spinnerCssClass : '')};
 `;
 
 export default Button;

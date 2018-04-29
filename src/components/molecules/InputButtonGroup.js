@@ -56,8 +56,9 @@ class InputButtonGroup extends Component {
             onChange={handleInputChange}
           />
           <Button
+            isSubmitting={isSubmitting}
             innerRef={this.buttonRef}
-            className={cx(btnStyle, { isSubmitting: isSubmitting })}
+            className={btnStyle}
             type="submit"
           >
             Get Notified
