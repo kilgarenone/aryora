@@ -165,11 +165,11 @@ class IndexPage extends Component {
         </section>
         <section className="cost-matters-section">
           <div className="container">
-            <div className="mb-2">
+            <div className="mb-4">
               <h3 className="cost-matters-title">Cost Matters.</h3>
             </div>
             <div className="flex-row cost-matters-materials">
-              <p className="g-c6-md2 p-2 f-w-100 cost-matters-materials-blurb">
+              <p className="g-c6-md2 p-2 p-quote f-w-100 align-self-center ">
                 Investing in low-cost <b>Index Funds</b> could snowball to <b>50%</b> more money in
                 your pocket.
               </p>
