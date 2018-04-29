@@ -288,10 +288,9 @@ class IndexPage extends Component {
         </section>
         <section>
           <div className="container call-to-action">
-            <h4 className="call-to-action-statement">
-              Join us for a simple, efficient, and high-probability
+            <h4 className="call-to-action-statement mb-1">
+              Join us for a simple, efficient, and high-probability way to build your wealth.
             </h4>
-            <h4 className="call-to-action-statement mb-1">way to build your wealth.</h4>
             <InputButtonGroup
               handleSubmit={this.handlePrelaunchEmailSubmit}
               inputValue={this.state.prelaunchEmail}

@@ -9,12 +9,12 @@
   --lineHeight: 1.5;
 
   /* Base sizes */
-  --baseFontSizeSm: 100%; /* 16px */
-  --baseFontSizeMd: 112%; /* 18px */
+  --baseFontSizeSm: 102%; /* 16px */
+  --baseFontSizeMd: 110%; /* 18px */
   --baseFontSizeLg: 115%; /* 18px */
 
   /* Type scale on smaller screens */
-  --ratioSm: 1.2; /* Minor third */
+  --ratioSm: 1.22; /* Minor third */
   --stepUp1Sm: calc(1em * var(--ratioSm));
   --stepUp2Sm: calc(var(--stepUp1Sm) * var(--ratioSm));
   --stepUp3Sm: calc(var(--stepUp2Sm) * var(--ratioSm));
@@ -23,7 +23,7 @@
   --stepDown1Sm: calc(1em / var(--ratioSm));
 
   /* Type scale on medium screens */
-  --ratioMd: 1.33; /* Minor third */
+  --ratioMd: 1.35; /* Minor third */
   --stepUp1Md: calc(1em * var(--ratioMd));
   --stepUp2Md: calc(var(--stepUp1Md) * var(--ratioMd));
   --stepUp3Md: calc(var(--stepUp2Md) * var(--ratioMd));
@@ -32,7 +32,7 @@
   --stepDown1Md: calc(1em / var(--ratioMd));
 
   /* Type scale on larger screens */
-  --ratioLg: 1.414; /* Augmented fourth */
+  --ratioLg: 1.43; /* Augmented fourth */
   --stepUp1Lg: calc(1em * var(--ratioLg));
   --stepUp2Lg: calc(var(--stepUp1Lg) * var(--ratioLg));
   --stepUp3Lg: calc(var(--stepUp2Lg) * var(--ratioLg));
@@ -40,7 +40,7 @@
   --stepUp5Lg: calc(var(--stepUp4Lg) * var(--ratioLg));
   --stepDown1Lg: calc(1em / var(--ratioLg));
 
-  /* Make sure the breakpoint values here are the same 
+  /* Make sure the breakpoint values here are the same
   in 'breakpoint.js' too */
   @custom-media --break-md (width >= 36em); /* 576px */
   @custom-media --break-md2 (width >= 49em); /* 790px */
