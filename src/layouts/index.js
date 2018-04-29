@@ -34,7 +34,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <Header>Aryora</Header>
     {children()}
-    <Footer>© Copyright 2018 Aryora</Footer>
+    <Footer>© 2018 Aryora.</Footer>
   </div>
 );
 

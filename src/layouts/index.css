@@ -98,7 +98,6 @@ h5 {
 .hero-section {
   padding-top: 30px;
   padding-bottom: 50px;
-
   @media (--break-lg) {
     padding-bottom: 0;
   }
@@ -200,6 +199,7 @@ h5 {
   flex-direction: column;
   align-items: center;
   position: relative;
+  box-shadow: 20px 20px 0 #b2ebf2;
 
   @media (--break-md2) {
     padding: var(--stepUp5Lg);
