@@ -14,11 +14,11 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         {
           name: 'description',
-          content: 'Low-cost and tax-smart passive investing ',
+          content: 'Low-cost and tax-smart passive investing with broad-based index funds',
         },
         {
           name: 'keywords',
-          content: 'investing, index funds, passive investing',
+          content: 'investing, index funds malaysia, index funds, passive investing, investing DIY, passive wealth, passive wealth management',
         },
         {
           property: 'og:title',
