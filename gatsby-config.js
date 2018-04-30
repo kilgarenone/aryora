@@ -6,9 +6,9 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `img`,
+        name: 'img',
         path: `${__dirname}/src/img/`,
       },
     },
@@ -16,7 +16,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-118290603-1',
         // Puts tracking script in the head instead of the body
@@ -29,5 +29,6 @@ module.exports = {
         // exclude: ["/preview/**", "/do-not-track/me/too/"],
       },
     },
+    'gatsby-plugin-netlify',
   ],
-}
+};
