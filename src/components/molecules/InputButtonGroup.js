@@ -15,7 +15,7 @@ const formContStyle = css`
   margin: 0 auto;
 
   ${media.md2(css`
-    margin: initial;
+    margin: 0 0;
   `)};
 `
 const formStyle = css`
