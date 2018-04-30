@@ -24,8 +24,8 @@ function Footer(props) {
 export default Footer;
 
 Footer.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 Footer.defaultProps = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
