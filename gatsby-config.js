@@ -29,6 +29,15 @@ module.exports = {
         // exclude: ["/preview/**", "/do-not-track/me/too/"],
       },
     },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        analyzerPort: 3000,
+        production: true,
+      },
+    },
+    // 'gatsby-plugin-manifest', https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/?=manifest
+    // 'gatsby-plugin-offline', https://github.com/Creatiwity/gatsby-plugin-favicon
     'gatsby-plugin-netlify',
   ],
 };
