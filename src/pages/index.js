@@ -71,7 +71,7 @@ class IndexPage extends Component {
     try {
       const res = await axios.post(
         'https://exrosqik52.execute-api.ap-southeast-1.amazonaws.com/dev/addToBetaUserList',
-        { emailAddress: this.state.prelaunchEmail }
+        { emailAddress: this.state.prelaunchEmail },
       )
       this.setState({
         // isSubmitting: !this.state.isSubmitting,
