@@ -191,12 +191,6 @@ h5 {
   }
 }
 
-.prelaunch-form--no-border {
-  align-items: center;
-  justify-content: space-between;
-  max-width: 420px;
-}
-
 .not-miss-out-fact {
   max-width: 950px;
 }
@@ -361,8 +355,7 @@ h5 {
 }
 
 .call-to-action {
-  padding-top: var(--stepUp4Lg);
-  padding-bottom: var(--stepUp4Lg);
+  padding: var(--stepUp4Lg) 0;
 }
 
 .call-to-action-statement {
@@ -393,10 +386,6 @@ h5 {
 
 .recharts-label {
   fill: #666;
-}
-
-.mini-box {
-  max-width: 550px;
 }
 
 .mb-0 {
@@ -433,10 +422,6 @@ h5 {
 
 .f-w-600 {
   font-weight: 600;
-}
-
-.f-w-300 {
-  font-weight: 300;
 }
 
 .f-w-100 {
