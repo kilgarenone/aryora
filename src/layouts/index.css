@@ -355,7 +355,8 @@ h5 {
 }
 
 .call-to-action {
-  padding: var(--stepUp4Lg) 0;
+  padding-top: var(--stepUp4Lg);
+  padding-bottom: var(--stepUp4Lg);
 }
 
 .call-to-action-statement {
