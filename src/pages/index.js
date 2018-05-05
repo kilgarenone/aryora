@@ -134,7 +134,7 @@ class IndexPage extends Component {
               </div>
               <div className="g-c6-md2">
                 <Img
-                  title="Future self thank you"
+                  title="Photo by Clique Images on Unsplash"
                   alt="Better future self"
                   sizes={data.heroImg1.sizes}
                 />
@@ -144,22 +144,28 @@ class IndexPage extends Component {
         </section>
         <section className="one-of-us-section">
           <div className="container one-of-us-container">
-            <div className="are-you-wizard">
-              <div className="mb-4">
-                <h4>Stock picking and unit trust funds are</h4>
-                <h4>hard-work and expensive.</h4>
-              </div>
-              <div className="mb-4">
-                <h3>Achieving your financial security can actually be</h3>
-                <h3>effortless and low cost.</h3>
-              </div>
+            <div className="mb-4 text-center">
+              <h4>Stock picking and unit trust funds are</h4>
+              <h4>hard-work and expensive.</h4>
             </div>
-            <div className="not-miss-out-fact">
+            <div className="not-miss-out-fact mb-4">
               <span className="f-w-600">You are not missing out</span>
               <p className="p-quote m-none">
                 <b>90%</b> of actively managed funds <b>underperformed</b> their benchmark indexes
-                from 2001 to 2016.
+                from 2001 to 2016.<cite>
+                  <a
+                    className="citation"
+                    target="_blank"
+                    href="https://us.spindices.com/documents/spiva/spiva-us-mid-year-2017.pdf"
+                  >
+                    Source
+                  </a>
+                </cite>
               </p>
+            </div>
+            <div className="text-center">
+              <h3>Achieving your financial security can actually be</h3>
+              <h3>effortless and low cost.</h3>
             </div>
           </div>
         </section>
@@ -173,23 +179,31 @@ class IndexPage extends Component {
                 Investing in low-cost <b>Index Funds</b> could snowball to <b>50%</b> more money in
                 your pocket.
               </p>
-              <div className="g-c6-md2 cost-chart-container">
+              <div className="g-c6-md2">
                 <ResponsiveContainer width="100%" height={500}>
                   <LineChart
                     data={fundPerf()}
-                    margin={{ top: 40, right: 60, left: 60, bottom: 40 }}
+                    margin={{ top: 40, right: 65, left: 65, bottom: 40 }}
                   >
                     <XAxis
                       tickLine={false}
                       label={{
                         value: 'Years',
                         position: 'bottom',
-                        offset: -5,
+                        offset: -10,
                       }}
                       axisLine={false}
                       interval={1}
                     />
-                    <YAxis hide />
+                    <YAxis
+                      tickLine={false}
+                      label={{
+                        value: 'Value',
+                        position: 'left',
+                        offset: -30,
+                      }}
+                      axisLine={false}
+                    />
                     <Tooltip
                       formatter={a => numberWithCommas(a)}
                       labelFormatter={year => `Year: ${year}`}
@@ -279,7 +293,7 @@ class IndexPage extends Component {
                 />
                 <h4 className="feature-title">Compassionate Advisor</h4>
                 <p>
-                  We are tax-smart and cost conscious. From tax-loss havesting to rebalancing your
+                  We are tax-smart and cost-conscious. From tax-loss harvesting to rebalancing your
                   portfolio, we want to maximize your returns.
                 </p>
               </div>
