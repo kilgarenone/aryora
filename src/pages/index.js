@@ -1,6 +1,7 @@
-import React, { Component, Fragment } from 'react'
-import Link from 'gatsby-link'
-import Img from 'gatsby-image'
+import React, { Component, Fragment } from 'react';
+import Link from 'gatsby-link';
+import Img from 'gatsby-image';
+// import  from 'whatwg-fetch';
 import {
   ResponsiveContainer,
   LineChart,
@@ -11,41 +12,41 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from 'recharts'
-import { css } from 'react-emotion'
-import axios from 'axios'
-import Button from '../components/Button'
-import Input from '../components/Input'
-import { numberWithCommas } from '../utils/functions'
-import assetAllocationIcon from '../img/assetAllocation.png'
-import advisorIcon from '../img/inGoodHand.png'
-import onboardingIcon from '../img/onboarding.png'
-import InputButtonGroup from './../components/molecules/InputButtonGroup'
+} from 'recharts';
+import { css } from 'react-emotion';
+import Button from '../components/Button';
+import Input from '../components/Input';
+import { numberWithCommas, checkStatus } from '../utils/functions';
+import assetAllocationIcon from '../img/assetAllocation.png';
+import advisorIcon from '../img/inGoodHand.png';
+import onboardingIcon from '../img/onboarding.png';
+import InputButtonGroup from './../components/molecules/InputButtonGroup';
+import { parseJSON } from './../utils/functions';
 
-const HIGHCOST = 0.0575
-const LOWCOST = 0.078
-const initialFundVal = 1000
-const years = 30
+const HIGHCOST = 0.0575;
+const LOWCOST = 0.078;
+const initialFundVal = 1000;
+const years = 30;
 
 function fundPerf() {
-  const results = []
-  let futureValueLowCost = initialFundVal
-  let futureValueHighCost = initialFundVal
+  const results = [];
+  let futureValueLowCost = initialFundVal;
+  let futureValueHighCost = initialFundVal;
 
   for (let i = 0; i <= years; i++) {
-    const data = { name: i, lowCost: 0, highCost: 0, amt: 0 }
+    const data = { name: i, lowCost: 0, highCost: 0, amt: 0 };
     if (i === 0) {
-      futureValueHighCost = futureValueHighCost * (1 - HIGHCOST) // simulate saleload
+      futureValueHighCost = futureValueHighCost * (1 - HIGHCOST); // simulate saleload
     } else {
-      futureValueHighCost = futureValueHighCost * (1 + HIGHCOST)
-      futureValueLowCost = futureValueLowCost * (1 + LOWCOST)
+      futureValueHighCost = futureValueHighCost * (1 + HIGHCOST);
+      futureValueLowCost = futureValueLowCost * (1 + LOWCOST);
     }
-    data.highCost = Math.round(futureValueHighCost)
-    data.lowCost = Math.round(futureValueLowCost)
-    data.amt = data.highCost + data.lowCost
-    results.push(data)
+    data.highCost = Math.round(futureValueHighCost);
+    data.lowCost = Math.round(futureValueLowCost);
+    data.amt = data.highCost + data.lowCost;
+    results.push(data);
   }
-  return results
+  return results;
 }
 
 class IndexPage extends Component {
@@ -55,53 +56,63 @@ class IndexPage extends Component {
     prelaunchEmailSuccess: false,
     prelaunchEmailFail: false,
     letUsHelpYou: false,
-  }
+  };
 
   handlePrelaunchEmailChange = event => {
     this.setState({
       prelaunchEmail: event.target.value,
       prelaunchEmailSuccess: false,
       prelaunchEmailFail: false,
-    })
-  }
+    });
+  };
 
   handlePrelaunchEmailSubmit = async (event, submitBtnRef) => {
-    event.preventDefault()
-    this.setState({ isSubmitting: !this.state.isSubmitting })
+    event.preventDefault();
+    this.setState({ isSubmitting: !this.state.isSubmitting });
     try {
-      const res = await axios.post(
+      const res = await fetch(
         'https://exrosqik52.execute-api.ap-southeast-1.amazonaws.com/dev/addToBetaUserList',
-        { emailAddress: this.state.prelaunchEmail },
-      )
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ emailAddress: this.state.prelaunchEmail }),
+        },
+      );
+
+      checkStatus(res);
+      parseJSON(res);
+
       this.setState({
         isSubmitting: !this.state.isSubmitting,
         prelaunchEmailSuccess: true,
         prelaunchEmail: '',
-      })
+      });
       // re-enable the submit btn in the <InputButtonGroup />
-      submitBtnRef.removeAttribute('disabled')
+      submitBtnRef.removeAttribute('disabled');
     } catch (e) {
-      const errStatusCode = e.response.status
+      const errStatusCode = e.response.status;
       if (errStatusCode === 400) {
         this.setState({
           isSubmitting: !this.state.isSubmitting,
           prelaunchEmailSuccess: false,
           prelaunchEmailFail: true,
-        })
+        });
       } else {
         this.setState({
           isSubmitting: !this.state.isSubmitting,
           prelaunchEmailSuccess: false,
           prelaunchEmailFail: false,
           letUsHelpYou: true,
-        })
+        });
       }
       // re-enable the submit btn in the <InputButtonGroup />
-      submitBtnRef.removeAttribute('disabled')
+      submitBtnRef.removeAttribute('disabled');
     }
-  }
+  };
   render() {
-    const { data } = this.props
+    const { data } = this.props;
     return (
       <Fragment>
         <section role="main" aria-labelledby="aria-hero-section" className="hero-section">
@@ -324,11 +335,11 @@ class IndexPage extends Component {
           </div>
         </section>
       </Fragment>
-    )
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const heroImgQuery = graphql`
   query HeroImgQuery {
@@ -338,4 +349,4 @@ export const heroImgQuery = graphql`
       }
     }
   }
-`
+`;
