@@ -7,21 +7,21 @@
 // You can delete this file if you're not using it
 exports.modifyBabelrc = ({ babelrc }) => ({
   ...babelrc,
-  ...{
+  ...(process.env.NODE_ENV !== 'development' && {
     plugins: babelrc.plugins.concat([
       'transform-regenerator',
       'transform-runtime',
       'recharts',
     ]),
     presets: ['es2015'],
-  },
+  }),
 });
-// ...(process.env.NODE_ENV !== 'development' && {
+// ...{
 //   plugins: babelrc.plugins.concat([
 //     'transform-regenerator',
 //     'transform-runtime',
 //   ]),
-// }),
+// },
 // exports.modifyWebpackConfig = ({ config, stage }) => {
 //   const program = {
 //     directory: __dirname,
