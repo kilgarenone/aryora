@@ -9,7 +9,7 @@ const Button = styled('button')`
   color: #fff;
   height: 42px;
   padding: 0 20px;
-  border-radius: 0.25em;
+  border-radius: 0.2em;
   border: none;
   user-select: none;
   text-decoration: none;
