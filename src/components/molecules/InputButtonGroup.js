@@ -5,9 +5,7 @@ import { css, cx } from 'react-emotion';
 import media from '../../css/breakpoints';
 
 const inputStyle = css`
-  background-color: #f9f9fa;
   flex: 1 1 auto;
-  color: #212121;
 `;
 const formContStyle = css`
   max-width: 420px;
