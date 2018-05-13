@@ -6,11 +6,14 @@ const Input = styled('input')`
   margin: 0;
   margin-right: 8px;
   height: 42px;
-  border: 1px solid #bdbdbd;
+  border: 2px solid #e0e0e0;
   border-radius: 0.2em;
+
   &:focus {
+    border-width: 2px;
     border-color: #2962ff;
   }
+
   &:required {
     box-shadow: none;
   }
