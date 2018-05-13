@@ -183,7 +183,7 @@ class IndexPage extends Component {
         <section className="cost-matters-section">
           <div className="container">
             <div className="mb-4">
-              <h3 className="cost-matters-title">Cost Matters.</h3>
+              <h3 className="cost-matters-title">Costs Matter</h3>
             </div>
             <div className="flex-row cost-matters-materials">
               <p className="g-c6-md2 p-2 p-quote f-w-100 align-self-center ">
