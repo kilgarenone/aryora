@@ -1,3 +1,9 @@
+/* Make sure the breakpoint values here are the same
+in 'breakpoint.js' too */
+@custom-media --break-md (width >= 36em); /* 576px */
+@custom-media --break-md2 (width >= 49em); /* 790px */
+@custom-media --break-lg (width >= 65em); /* 1048px */
+
 :root {
   /* Font faces */
   --headerFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
@@ -39,10 +45,4 @@
   --stepUp4Lg: calc(var(--stepUp3Lg) * var(--ratioLg));
   --stepUp5Lg: calc(var(--stepUp4Lg) * var(--ratioLg));
   --stepDown1Lg: calc(1em / var(--ratioLg));
-
-  /* Make sure the breakpoint values here are the same
-  in 'breakpoint.js' too */
-  @custom-media --break-md (width >= 36em); /* 576px */
-  @custom-media --break-md2 (width >= 49em); /* 790px */
-  @custom-media --break-lg (width >= 65em); /* 1048px */
 }

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Link from 'gatsby-link';
 import Img from 'gatsby-image';
+import { Link, graphql } from 'gatsby';
 // import  from 'whatwg-fetch';
 import {
   ResponsiveContainer,
@@ -21,6 +21,7 @@ import assetAllocationIcon from '../img/assetAllocation.png';
 import advisorIcon from '../img/inGoodHand.png';
 import onboardingIcon from '../img/onboarding.png';
 import InputButtonGroup from './../components/molecules/InputButtonGroup';
+import Layout from '../components/layout';
 import { parseJSON } from './../utils/functions';
 
 const HIGHCOST = 0.0575;
@@ -112,9 +113,9 @@ class IndexPage extends Component {
     }
   };
   render() {
-    const { data } = this.props;
+    const { data, location } = this.props;
     return (
-      <Fragment>
+      <Layout location={location}>
         <section role="main" aria-labelledby="aria-hero-section" className="hero-section">
           <div className="container">
             <div className="flex-row">
@@ -147,7 +148,7 @@ class IndexPage extends Component {
                 <Img
                   title="Photo by Clique Images on Unsplash"
                   alt="Better future self"
-                  sizes={data.heroImg1.sizes}
+                  fluid={data.heroImg.childImageSharp.fluid}
                 />
               </div>
             </div>
@@ -163,7 +164,8 @@ class IndexPage extends Component {
               <span className="f-w-600">You are not missing out</span>
               <p className="p-quote m-none">
                 <b>90%</b> of actively managed funds <b>underperformed</b> their benchmark indexes
-                from 2001 to 2016.<cite>
+                from 2001 to 2016.
+                <cite>
                   <a
                     className="citation"
                     target="_blank"
@@ -334,7 +336,7 @@ class IndexPage extends Component {
             )}
           </div>
         </section>
-      </Fragment>
+      </Layout>
     );
   }
 }
@@ -342,10 +344,12 @@ class IndexPage extends Component {
 export default IndexPage;
 
 export const heroImgQuery = graphql`
-  query HeroImgQuery {
-    heroImg1: imageSharp(id: { regex: "/futureself/" }) {
-      sizes(maxWidth: 800) {
-        ...GatsbyImageSharpSizes_withWebp_tracedSVG
+  query {
+    heroImg: file(relativePath: { eq: "futureself.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
       }
     }
   }

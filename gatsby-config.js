@@ -1,18 +1,20 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: 'Aryora- Passive Investing',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'img',
-        path: `${__dirname}/src/img/`,
+        path: path.join(__dirname, 'src', 'img'),
       },
     },
-    'gatsby-plugin-emotion',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -29,13 +31,13 @@ module.exports = {
         // exclude: ["/preview/**", "/do-not-track/me/too/"],
       },
     },
-    {
-      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
-      options: {
-        analyzerPort: 3000,
-        production: true,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+    //   options: {
+    //     analyzerPort: 3000,
+    //     production: true,
+    //   },
+    // },
     // 'gatsby-plugin-manifest', https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/?=manifest
     // 'gatsby-plugin-offline', https://github.com/Creatiwity/gatsby-plugin-favicon
     'gatsby-plugin-netlify',
