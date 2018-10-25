@@ -97,7 +97,7 @@ h4,
 h5 {
   margin: 0;
   font-family: var(--headerFont);
-  line-height: 1.25;
+  line-height: 1.26;
   color: var(--headerColor);
 }
 
