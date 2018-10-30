@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { css } from 'react-emotion';
+import { css } from "react-emotion";
 
 function Footer(props) {
   const { children } = props;
@@ -24,8 +24,8 @@ function Footer(props) {
 export default Footer;
 
 Footer.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 Footer.defaultProps = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };

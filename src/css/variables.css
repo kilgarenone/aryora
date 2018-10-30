@@ -16,8 +16,8 @@ in 'breakpoint.js' too */
 
   /* Base sizes */
   --baseFontSizeSm: 102%; /* 16px */
-  --baseFontSizeMd: 110%; /* 18px */
-  --baseFontSizeLg: 115%; /* 18px */
+  --baseFontSizeMd: 107%; /* 18px */
+  --baseFontSizeLg: 112%; /* 18px */
 
   /* Type scale on smaller screens */
   --ratioSm: 1.22; /* Minor third */

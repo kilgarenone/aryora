@@ -1,4 +1,4 @@
-import styled, { css } from 'react-emotion';
+import styled, { css } from "react-emotion";
 
 export const spinnerCssClass = css`
   @keyframes spinner {
@@ -8,7 +8,7 @@ export const spinnerCssClass = css`
   }
 
   &:before {
-    content: '';
+    content: "";
     box-sizing: border-box;
     position: absolute;
     top: 50%;
@@ -24,7 +24,7 @@ export const spinnerCssClass = css`
   }
 `;
 
-const Spinner = styled('span')`
+const Spinner = styled("span")`
   position: relative;
 
   @keyframes spinner {
@@ -34,7 +34,7 @@ const Spinner = styled('span')`
   }
 
   &:before {
-    content: '';
+    content: "";
     box-sizing: border-box;
     position: absolute;
     top: 50%;

@@ -1,7 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import Img from 'gatsby-image';
-import { Link, graphql } from 'gatsby';
-// import  from 'whatwg-fetch';
+import React, { Component } from "react";
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
 import {
   ResponsiveContainer,
   LineChart,
@@ -11,18 +10,14 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
-} from 'recharts';
-import { css } from 'react-emotion';
-import Button from '../components/Button';
-import Input from '../components/Input';
-import { numberWithCommas, checkStatus } from '../utils/functions';
-import assetAllocationIcon from '../img/assetAllocation.png';
-import advisorIcon from '../img/inGoodHand.png';
-import onboardingIcon from '../img/onboarding.png';
-import InputButtonGroup from './../components/molecules/InputButtonGroup';
-import Layout from '../components/layout';
-import { parseJSON } from './../utils/functions';
+  Legend
+} from "recharts";
+import { numberWithCommas, checkStatus, parseJSON } from "../utils/functions";
+import assetAllocationIcon from "../img/assetAllocation.png";
+import advisorIcon from "../img/inGoodHand.png";
+import onboardingIcon from "../img/onboarding.png";
+import InputButtonGroup from "../components/molecules/InputButtonGroup";
+import Layout from "../components/layout";
 
 const HIGHCOST = 0.0575;
 const LOWCOST = 0.078;
@@ -37,10 +32,10 @@ function fundPerf() {
   for (let i = 0; i <= years; i++) {
     const data = { name: i, lowCost: 0, highCost: 0, amt: 0 };
     if (i === 0) {
-      futureValueHighCost = futureValueHighCost * (1 - HIGHCOST); // simulate saleload
+      futureValueHighCost *= 1 - HIGHCOST; // simulate saleload
     } else {
-      futureValueHighCost = futureValueHighCost * (1 + HIGHCOST);
-      futureValueLowCost = futureValueLowCost * (1 + LOWCOST);
+      futureValueHighCost *= 1 + HIGHCOST;
+      futureValueLowCost *= 1 + LOWCOST;
     }
     data.highCost = Math.round(futureValueHighCost);
     data.lowCost = Math.round(futureValueLowCost);
@@ -53,91 +48,115 @@ function fundPerf() {
 class IndexPage extends Component {
   state = {
     isSubmitting: false,
-    prelaunchEmail: '',
+    prelaunchEmail: "",
     prelaunchEmailSuccess: false,
     prelaunchEmailFail: false,
-    letUsHelpYou: false,
+    letUsHelpYou: false
   };
 
   handlePrelaunchEmailChange = event => {
     this.setState({
       prelaunchEmail: event.target.value,
       prelaunchEmailSuccess: false,
-      prelaunchEmailFail: false,
+      prelaunchEmailFail: false
     });
   };
 
   handlePrelaunchEmailSubmit = async (event, submitBtnRef) => {
     event.preventDefault();
-    this.setState({ isSubmitting: !this.state.isSubmitting });
+    const { isSubmitting, prelaunchEmail } = this.state;
+
+    this.setState({ isSubmitting: !isSubmitting });
     try {
       const res = await fetch(
-        'https://exrosqik52.execute-api.ap-southeast-1.amazonaws.com/dev/addToBetaUserList',
+        "https://exrosqik52.execute-api.ap-southeast-1.amazonaws.com/dev/addToBetaUserList",
         {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json"
           },
-          body: JSON.stringify({ emailAddress: this.state.prelaunchEmail }),
-        },
+          body: JSON.stringify({ emailAddress: prelaunchEmail })
+        }
       );
 
       checkStatus(res);
       parseJSON(res);
 
       this.setState({
-        isSubmitting: !this.state.isSubmitting,
+        isSubmitting: !isSubmitting,
         prelaunchEmailSuccess: true,
-        prelaunchEmail: '',
+        prelaunchEmail: ""
       });
       // re-enable the submit btn in the <InputButtonGroup />
-      submitBtnRef.removeAttribute('disabled');
+      submitBtnRef.removeAttribute("disabled");
     } catch (e) {
       const errStatusCode = e.response.status;
       if (errStatusCode === 400) {
         this.setState({
-          isSubmitting: !this.state.isSubmitting,
+          isSubmitting: !isSubmitting,
           prelaunchEmailSuccess: false,
-          prelaunchEmailFail: true,
+          prelaunchEmailFail: true
         });
       } else {
         this.setState({
-          isSubmitting: !this.state.isSubmitting,
+          isSubmitting: !isSubmitting,
           prelaunchEmailSuccess: false,
           prelaunchEmailFail: false,
-          letUsHelpYou: true,
+          letUsHelpYou: true
         });
       }
       // re-enable the submit btn in the <InputButtonGroup />
-      submitBtnRef.removeAttribute('disabled');
+      submitBtnRef.removeAttribute("disabled");
     }
   };
+
   render() {
     const { data, location } = this.props;
+    const {
+      prelaunchEmail,
+      isSubmitting,
+      prelaunchEmailSuccess,
+      prelaunchEmailFail,
+      letUsHelpYou
+    } = this.state;
+
     return (
       <Layout location={location}>
-        <section role="main" aria-labelledby="aria-hero-section" className="hero-section">
+        <section
+          role="main"
+          aria-labelledby="aria-hero-section"
+          className="hero-section"
+        >
           <div className="container">
             <div className="flex-row">
               <div className="g-c6-md2 hero-pitch">
                 <h2 className="hero-headline m-none">Keep more of</h2>
                 <h2 className="hero-headline">your money</h2>
                 <p id="aria-hero-section" className="mb-3 hero-subheadline">
-                  A place that guarantees your fair share of stock market returns by purposely
-                  keeping your costs and taxes low.
+                  A place that guarantees your fair share of stock market
+                  returns by purposely keeping your costs and taxes low.
                 </p>
                 <p>Subscribe below to get early access to the beta.</p>
                 <InputButtonGroup
                   handleSubmit={this.handlePrelaunchEmailSubmit}
-                  inputValue={this.state.prelaunchEmail}
+                  inputValue={prelaunchEmail}
                   handleInputChange={this.handlePrelaunchEmailChange}
-                  isSubmitting={this.state.isSubmitting}
+                  isSubmitting={isSubmitting}
                 />
-                {this.state.prelaunchEmailSuccess && <p>Neato! We'll be in touch soon. 🎉</p>}
-                {this.state.prelaunchEmailFail && <p>Please try a different email address.</p>}
-                {this.state.letUsHelpYou && (
+                {prelaunchEmailSuccess && (
                   <p>
-                    Let us help you.{' '}
+                    Neato! We&apos;ll be in touch soon.&nbsp;
+                    <span role="img" aria-label="rejoice emoji">
+                      🎉
+                    </span>
+                  </p>
+                )}
+                {prelaunchEmailFail && (
+                  <p>Please try a different email address.</p>
+                )}
+                {letUsHelpYou && (
+                  <p>
+                    Let us help you.{" "}
                     <a href="mailto:kwei88@gmail.com?subject=Trouble with signing up to the Aryora beta release">
                       Contact us.
                     </a>
@@ -163,11 +182,12 @@ class IndexPage extends Component {
             <div className="not-miss-out-fact mb-4">
               <span className="f-w-600">You are not missing out</span>
               <p className="p-quote m-none">
-                <b>90%</b> of actively managed funds <b>underperformed</b> their benchmark indexes
-                from 2001 to 2016.
+                <b>90%</b> of actively managed funds <b>underperformed</b> their
+                benchmark indexes from 2001 to 2016.
                 <cite>
                   <a
                     className="citation"
+                    rel="noopener noreferrer"
                     target="_blank"
                     href="https://us.spindices.com/documents/spiva/spiva-us-mid-year-2017.pdf"
                   >
@@ -189,8 +209,8 @@ class IndexPage extends Component {
             </div>
             <div className="flex-row cost-matters-materials">
               <p className="g-c6-md2 p-2 p-quote f-w-100 align-self-center ">
-                Investing in low-cost <b>Index Funds</b> could snowball to <b>50%</b> more money in
-                your pocket.
+                Investing in low-cost <b>Index Funds</b> could snowball to{" "}
+                <b>50%</b> more money in your pocket.
               </p>
               <div className="g-c6-md2">
                 <ResponsiveContainer width="100%" height={500}>
@@ -201,9 +221,9 @@ class IndexPage extends Component {
                     <XAxis
                       tickLine={false}
                       label={{
-                        value: 'Years',
-                        position: 'bottom',
-                        offset: -10,
+                        value: "Years",
+                        position: "bottom",
+                        offset: -10
                       }}
                       axisLine={false}
                       interval={1}
@@ -211,9 +231,9 @@ class IndexPage extends Component {
                     <YAxis
                       tickLine={false}
                       label={{
-                        value: 'Value',
-                        position: 'left',
-                        offset: -30,
+                        value: "Value",
+                        position: "left",
+                        offset: -30
                       }}
                       axisLine={false}
                     />
@@ -227,7 +247,7 @@ class IndexPage extends Component {
                       iconType="square"
                       iconSize={27}
                       verticalAlign="top"
-                      wrapperStyle={{ top: '-10px' }}
+                      wrapperStyle={{ top: "-10px" }}
                       layout="vertical"
                     />
                     <Line
@@ -243,7 +263,9 @@ class IndexPage extends Component {
                         className="low-cost-label"
                         dataKey="lowCost"
                         position="right"
-                        formatter={v => (v === 9518 || v === 1000 ? numberWithCommas(v) : '')}
+                        formatter={v =>
+                          v === 9518 || v === 1000 ? numberWithCommas(v) : ""
+                        }
                       />
                     </Line>
                     <Line
@@ -259,7 +281,9 @@ class IndexPage extends Component {
                         className="high-cost-label"
                         dataKey="highCost"
                         position="right"
-                        formatter={v => (v === 943 || v === 5043 ? numberWithCommas(v) : '')}
+                        formatter={v =>
+                          v === 943 || v === 5043 ? numberWithCommas(v) : ""
+                        }
                       />
                     </Line>
                   </LineChart>
@@ -271,7 +295,8 @@ class IndexPage extends Component {
         <section className="features-section">
           <div className="container">
             <h3 className="mission-statement">
-              Our mission is to help you start investing early and make the most of your money.
+              Our mission is to help you start investing early and make the most
+              of your money.
             </h3>
             <div className="features">
               <div className="feature">
@@ -282,8 +307,8 @@ class IndexPage extends Component {
                 />
                 <h4 className="feature-title">Painless Onboarding</h4>
                 <p>
-                  From opening an account to your first deposit and investment, it will be so
-                  delightful that you would want to do it again.
+                  From opening an account to your first deposit and investment,
+                  it will be so delightful that you would want to do it again.
                 </p>
               </div>
               <div className="feature">
@@ -294,8 +319,9 @@ class IndexPage extends Component {
                 />
                 <h4 className="feature-title">Asset Allocation</h4>
                 <p>
-                  Based on your risk tolerance and goals, you can easily invest in your target
-                  portfolio that's made up of low cost stock and bond funds.
+                  Based on your risk tolerance and goals, you can easily invest
+                  in your target portfolio that&apos;s made up of low cost stock
+                  and bond funds.
                 </p>
               </div>
               <div className="feature">
@@ -306,8 +332,9 @@ class IndexPage extends Component {
                 />
                 <h4 className="feature-title">Compassionate Advisor</h4>
                 <p>
-                  We are tax-smart and cost-conscious. From tax-loss harvesting to rebalancing your
-                  portfolio, we want to maximize your returns.
+                  We are tax-smart and cost-conscious. From tax-loss harvesting
+                  to rebalancing your portfolio, we want to maximize your
+                  returns.
                 </p>
               </div>
             </div>
@@ -316,19 +343,27 @@ class IndexPage extends Component {
         <section>
           <div className="container call-to-action">
             <h4 className="call-to-action-statement mb-1">
-              Join us for a simple, efficient, and high-probability way to build your wealth.
+              Join us for a simple, efficient, and high-probability way to build
+              your wealth.
             </h4>
             <InputButtonGroup
               handleSubmit={this.handlePrelaunchEmailSubmit}
-              inputValue={this.state.prelaunchEmail}
+              inputValue={prelaunchEmail}
               handleInputChange={this.handlePrelaunchEmailChange}
-              isSubmitting={this.state.isSubmitting}
+              isSubmitting={isSubmitting}
             />
-            {this.state.prelaunchEmailSuccess && <p>Neato! We'll be in touch soon. 🎉</p>}
-            {this.state.prelaunchEmailFail && <p>Please try a different email address.</p>}
-            {this.state.letUsHelpYou && (
+            {prelaunchEmailSuccess && (
               <p>
-                Let us help you.{' '}
+                Neato! We&apos;ll be in touch soon.&nbsp;
+                <span role="img" aria-label="rejoice emoji">
+                  🎉
+                </span>
+              </p>
+            )}
+            {prelaunchEmailFail && <p>Please try a different email address.</p>}
+            {letUsHelpYou && (
+              <p>
+                Let us help you.{" "}
                 <a href="mailto:kwei88@gmail.com?subject=Trouble with signing up to the Aryora beta release">
                   Contact us.
                 </a>

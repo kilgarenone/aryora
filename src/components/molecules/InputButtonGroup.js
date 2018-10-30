@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Button from '../Button';
-import Input from '../Input';
-import { css, cx } from 'react-emotion';
-import media from '../../css/breakpoints';
+import React, { Component } from "react";
+import { css, cx } from "react-emotion";
+import Button from "../Button";
+import Input from "../Input";
+import media from "../../css/breakpoints";
 
 const inputStyle = css`
   flex: 1 1 auto;
@@ -32,15 +32,25 @@ class InputButtonGroup extends Component {
   }
 
   handleButtonClicked = event => {
-    this.buttonRef.current.setAttribute('disabled', 'disabled');
+    this.buttonRef.current.setAttribute("disabled", "disabled");
     this.props.handleSubmit(event, this.buttonRef.current);
   };
+
   render() {
-    const { isSubmitting, inputValue, handleInputChange, customFormStyleClass } = this.props;
+    const {
+      isSubmitting,
+      inputValue,
+      handleInputChange,
+      customFormStyleClass
+    } = this.props;
 
     return (
-      <form onSubmit={this.handleButtonClicked} autoComplete="off" className={formContStyle}>
-        <div className={cx('flex-row', formStyle, customFormStyleClass)}>
+      <form
+        onSubmit={this.handleButtonClicked}
+        autoComplete="off"
+        className={formContStyle}
+      >
+        <div className={cx("flex-row", formStyle, customFormStyleClass)}>
           <Input
             type="email"
             className={inputStyle}
