@@ -6,6 +6,11 @@ import media from "../../css/breakpoints";
 
 const inputStyle = css`
   flex: 1 1 auto;
+  margin-right: 0;
+
+  ${media.md2(css`
+    margin-right: 8px;
+  `)};
 `;
 const formContStyle = css`
   max-width: 420px;

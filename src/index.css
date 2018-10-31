@@ -1,4 +1,4 @@
-@import './css/variables.css';
+@import "./css/variables.css";
 
 *,
 *::before,
@@ -15,7 +15,7 @@ html {
   font-style: normal;
   line-height: var(--lineHeight);
   text-rendering: optimizeLegibility;
-  -moz-font-feature-settings: 'liga' on;
+  -moz-font-feature-settings: "liga" on;
 
   @media (--break-md) {
     font-size: var(--baseFontSizeMd);
@@ -202,7 +202,6 @@ h5 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  box-shadow: 20px 20px 0 #b2ebf2;
 
   @media (--break-md2) {
     padding: var(--stepUp5Lg);
@@ -239,7 +238,7 @@ h5 {
 }
 
 .cost-matters-title::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -5%;
@@ -258,7 +257,7 @@ h5 {
 .features-section::after {
   background: linear-gradient(to top, #286efa, #304ffe);
   top: 0;
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   left: 0;
@@ -272,7 +271,7 @@ h5 {
 .features-section::before {
   background: linear-gradient(175deg, #304ffe 40%, #286efa 70%);
   bottom: 0;
-  content: '';
+  content: "";
   display: block;
   height: 70%;
   left: 0;

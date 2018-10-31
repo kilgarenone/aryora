@@ -176,8 +176,8 @@ class IndexPage extends Component {
         <section className="one-of-us-section">
           <div className="container one-of-us-container">
             <div className="mb-4 text-center">
-              <h4>Stock picking and unit trust funds are</h4>
-              <h4>hard-work and expensive.</h4>
+              <h3>Achieving your financial security can actually be</h3>
+              <h3>effortless and low cost.</h3>
             </div>
             <div className="not-miss-out-fact mb-4">
               <span className="f-w-600">You are not missing out</span>
@@ -196,16 +196,12 @@ class IndexPage extends Component {
                 </cite>
               </p>
             </div>
-            <div className="text-center">
-              <h3>Achieving your financial security can actually be</h3>
-              <h3>effortless and low cost.</h3>
-            </div>
           </div>
         </section>
         <section className="cost-matters-section">
           <div className="container">
             <div className="mb-4">
-              <h3 className="cost-matters-title">Costs Matter</h3>
+              <h3 className="cost-matters-title">Cost Matters</h3>
             </div>
             <div className="flex-row cost-matters-materials">
               <p className="g-c6-md2 p-2 p-quote f-w-100 align-self-center ">
