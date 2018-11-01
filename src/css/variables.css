@@ -6,10 +6,10 @@ in 'breakpoint.js' too */
 
 :root {
   /* Font faces */
-  --headerFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  --bodyFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --headerFont: "Inter UI", "Helvetica Neue", HelveticaNeue, Helvetica, Arial,
+    sans-serif, sans-serif;
+  --bodyFont: "Inter UI", "Helvetica Neue", HelveticaNeue, Helvetica, Arial,
+    sans-serif, sans-serif;
   --headerColor: rgba(0, 0, 0, 0.84);
   --fontColor: #5b5e6d;
   --lineHeight: 1.5;
@@ -20,7 +20,7 @@ in 'breakpoint.js' too */
   --baseFontSizeLg: 112%; /* 18px */
 
   /* Type scale on smaller screens */
-  --ratioSm: 1.22; /* Minor third */
+  --ratioSm: 1.15; /* Minor third */
   --stepUp1Sm: calc(1em * var(--ratioSm));
   --stepUp2Sm: calc(var(--stepUp1Sm) * var(--ratioSm));
   --stepUp3Sm: calc(var(--stepUp2Sm) * var(--ratioSm));
@@ -29,7 +29,7 @@ in 'breakpoint.js' too */
   --stepDown1Sm: calc(1em / var(--ratioSm));
 
   /* Type scale on medium screens */
-  --ratioMd: 1.35; /* Minor third */
+  --ratioMd: 1.28; /* Minor third */
   --stepUp1Md: calc(1em * var(--ratioMd));
   --stepUp2Md: calc(var(--stepUp1Md) * var(--ratioMd));
   --stepUp3Md: calc(var(--stepUp2Md) * var(--ratioMd));
@@ -38,7 +38,7 @@ in 'breakpoint.js' too */
   --stepDown1Md: calc(1em / var(--ratioMd));
 
   /* Type scale on larger screens */
-  --ratioLg: 1.43; /* Augmented fourth */
+  --ratioLg: 1.36; /* Augmented fourth */
   --stepUp1Lg: calc(1em * var(--ratioLg));
   --stepUp2Lg: calc(var(--stepUp1Lg) * var(--ratioLg));
   --stepUp3Lg: calc(var(--stepUp2Lg) * var(--ratioLg));
