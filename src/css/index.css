@@ -112,6 +112,18 @@ h4 {
   }
 }
 
+.g-h4 {
+  font-size: var(--stepUp1Sm);
+
+  @media (--break-md) {
+    font-size: var(--stepUp1Md);
+  }
+
+  @media (--break-lg) {
+    font-size: var(--stepUp1Lg);
+  }
+}
+
 small {
   font-size: var(--stepDown1Sm);
 
@@ -181,7 +193,7 @@ h5 {
   max-width: 1300px;
 }
 
-.g-margin-auto {
+.g-m-auto {
   margin: 0 auto;
 }
 
@@ -218,6 +230,14 @@ h5 {
 
   @media (--break-md) {
     padding: var(--stepUp2Lg);
+  }
+}
+
+.g-p-t-3 {
+  padding-top: var(--stepUp3Sm);
+
+  @media (--break-md) {
+    padding-top: var(--stepUp3Lg);
   }
 }
 

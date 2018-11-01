@@ -12,19 +12,22 @@ const inputStyle = css`
     margin-right: 8px;
   `)};
 `;
+
 const formContStyle = css`
   max-width: 420px;
   margin: 0 auto;
 
-  ${media.md2(css`
+  /* ${media.md2(css`
     margin: 0 0;
-  `)};
+  `)}; */
 `;
+
 const formStyle = css`
   align-items: center;
   justify-content: space-between;
   max-width: 420px;
 `;
+
 const btnStyle = css`
   color: #fff;
   flex: 1 1 auto;

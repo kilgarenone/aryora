@@ -45,15 +45,10 @@ function fundPerf() {
 }
 
 class IndexPage extends Component {
+  state = {};
+
   render() {
     const { data, location } = this.props;
-    const {
-      prelaunchEmail,
-      isSubmitting,
-      prelaunchEmailSuccess,
-      prelaunchEmailFail,
-      letUsHelpYou
-    } = this.state;
 
     return (
       <Layout location={location}>
