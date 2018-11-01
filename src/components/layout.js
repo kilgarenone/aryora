@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 
 import Header from "./Header";
 import Footer from "./Footer";
-import "../index.css";
 
 const TemplateWrapper = ({ children, location }) => (
   <div>

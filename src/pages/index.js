@@ -13,11 +13,12 @@ import {
   Legend
 } from "recharts";
 import { numberWithCommas, checkStatus, parseJSON } from "../utils/functions";
-import assetAllocationIcon from "../img/assetAllocation.png";
-import advisorIcon from "../img/inGoodHand.png";
-import onboardingIcon from "../img/onboarding.png";
+// import assetAllocationIcon from "../img/assetAllocation.png";
+// import advisorIcon from "../img/inGoodHand.png";
+// import onboardingIcon from "../img/onboarding.png";
 import InputButtonGroup from "../components/molecules/InputButtonGroup";
 import Layout from "../components/layout";
+import HomePageHero from "../components/indexPage/HomePageHero";
 
 const HIGHCOST = 0.0575;
 const LOWCOST = 0.078;
@@ -122,7 +123,8 @@ class IndexPage extends Component {
 
     return (
       <Layout location={location}>
-        <section
+        <HomePageHero />
+        {/* <section
           role="main"
           aria-labelledby="aria-hero-section"
           className="hero-section"
@@ -366,7 +368,7 @@ class IndexPage extends Component {
               </p>
             )}
           </div>
-        </section>
+        </section> */}
       </Layout>
     );
   }
