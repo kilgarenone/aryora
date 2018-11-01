@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { css, cx } from "react-emotion";
-import Button from "../Button";
-import Input from "../Input";
-import media from "../../css/breakpoints";
+import Button from "./Button";
+import Input from "./Input";
+import media from "../css/breakpoints";
 
 const inputStyle = css`
   flex: 1 1 auto;
