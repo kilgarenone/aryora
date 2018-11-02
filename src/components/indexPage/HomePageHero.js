@@ -2,10 +2,18 @@ import React from "react";
 import { css } from "react-emotion";
 import BetaSignup from "../BetaSignup";
 import InputButtonGroup from "../InputButtonGroup";
+import Container from "../Container";
+import spacing from "../../styles/spacing";
+import { marginBottom4, marginBottom3 } from "../../styles/utilities";
+import Heading from "../Heading";
+// import { marginBottom3 } from "../../css/utilities";
 
-const styles = css`
+const sectionCss = css`
   & {
     position: relative;
+    padding: ${spacing.space4} 0;
+    background-color: #fff1e5;
+    height: 95vh;
   }
 
   &::before {
@@ -16,19 +24,18 @@ const styles = css`
     height: 600px;
     width: 500px;
     border-radius: 19% 71% 38% 36% / 38% 44% 56% 27%;
-    background: rgb(232, 243, 236);
+    background: rgb(250, 250, 250);
     background: linear-gradient(
-      107deg,
-      rgba(232, 243, 236, 1) 0%,
-      rgba(250, 250, 250, 1) 66%
+      346deg,
+      rgba(250, 250, 250, 1) 45%,
+      rgba(232, 243, 236, 1) 68%
     );
   }
 
   &::after {
     content: "";
-    z-index: -1;
     position: absolute;
-    right: -50px;
+    right: 0;
     top: -76px;
     height: 700px;
     width: 600px;
@@ -40,26 +47,36 @@ const styles = css`
       rgba(250, 250, 250, 1) 61%
     );
   }
-  .hero {
-    text-align: center;
-    max-width: 60%;
-    margin: 0 auto;
-  }
+`;
 
-  .hero-copy {
-    max-width: 85%;
-  }
+const heroCss = css`
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
+`;
+
+const heroCopy = css`
+  max-width: 85%;
+  margin: 0 auto;
+  ${marginBottom3};
 `;
 
 function HomePageHero() {
   return (
-    <section className={`${styles} g-p-t-3`}>
-      <div className="container">
-        <div className="hero">
-          <h1 className="g-font-serif g-mb-3">
+    <section className={sectionCss}>
+      <Container>
+        <div className={heroCss}>
+          <Heading
+            tag="h1"
+            isSerifFont
+            isLineHeightReduced
+            className={marginBottom3}
+          >
             A simple, low-cost place that builds your long-term wealth
-          </h1>
-          <p className="g-h4 hero-copy g-mb-2 g-m-auto">
+          </Heading>
+          <p className={heroCopy}>
             Get the most out of market returns by investing in broad-based index
             funds and rebalance automatically.
           </p>
@@ -79,7 +96,7 @@ function HomePageHero() {
             )}
           </BetaSignup>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -15,7 +15,7 @@ import {
 // import assetAllocationIcon from "../img/assetAllocation.png";
 // import advisorIcon from "../img/inGoodHand.png";
 // import onboardingIcon from "../img/onboarding.png";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import HomePageHero from "../components/indexPage/HomePageHero";
 
 const HIGHCOST = 0.0575;
