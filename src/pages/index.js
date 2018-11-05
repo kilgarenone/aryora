@@ -17,6 +17,7 @@ import {
 // import onboardingIcon from "../img/onboarding.png";
 import Layout from "../components/Layout";
 import HomePageHero from "../components/indexPage/HomePageHero";
+import Headline from "../components/indexPage/Headline";
 
 const HIGHCOST = 0.0575;
 const LOWCOST = 0.078;
@@ -53,6 +54,7 @@ class IndexPage extends Component {
     return (
       <Layout location={location}>
         <HomePageHero />
+        <Headline />
         {/* <section
           role="main"
           aria-labelledby="aria-hero-section"

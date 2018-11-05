@@ -17,6 +17,12 @@ const lowLineHeight = css`
   line-height: 1.2;
 `;
 
+function fontWeightClass(weight) {
+  return css`
+    font-weight: ${weight};
+  `;
+}
+
 const styles = {
   headingXL: css`
     font-size: ${fontSize.headingXL};
@@ -50,14 +56,20 @@ function Heading({
   className,
   isSerifFont = false,
   isLineHeightReduced = false,
+  weight = null,
   ...props
 }) {
   return (
     <Tag
-      className={cx(styles[tagMapping[Tag]], className, {
-        [serifFont]: isSerifFont,
-        [lowLineHeight]: isLineHeightReduced
-      })}
+      className={cx(
+        styles[tagMapping[Tag]],
+        className,
+        fontWeightClass(weight),
+        {
+          [serifFont]: isSerifFont,
+          [lowLineHeight]: isLineHeightReduced
+        }
+      )}
       {...props}
     >
       {children}

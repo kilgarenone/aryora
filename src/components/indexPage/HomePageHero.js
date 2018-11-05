@@ -77,7 +77,7 @@ function HomePageHero() {
             A simple, low-cost place that builds your long-term wealth
           </Heading>
           <p className={heroCopy}>
-            Get the most out of market returns by investing in broad-based index
+            Get the most out of stock market return by investing in broad-based index
             funds and rebalance automatically.
           </p>
           <BetaSignup>
