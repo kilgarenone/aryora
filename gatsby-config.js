@@ -13,7 +13,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'img',
-        path: path.join(__dirname, 'src', 'assets','img'),
+        path: path.join(__dirname, 'src','img'),
       },
     },
     'gatsby-transformer-sharp',

@@ -3,34 +3,33 @@ import { css } from "react-emotion";
 import BetaSignup from "../BetaSignup";
 import InputButtonGroup from "../InputButtonGroup";
 import Container from "../Container";
-import spacing from "../../styles/spacing";
-import { marginBottom4, marginBottom3 } from "../../styles/utilities";
+import spacing from "../../css/spacing";
+import { marginBottom3 } from "../../css/utilities";
 import Heading from "../Heading";
-// import { marginBottom3 } from "../../css/utilities";
 
 const sectionCss = css`
   & {
     position: relative;
     padding: ${spacing.space5} 0 0;
-    background-color: #fff1e5;
+    /* background-color: #fff1e5; */
     height: calc(100vh - 54px);
   }
 
-  /* &::before {
+  &::before {
     content: "";
     position: absolute;
     left: -47px;
     top: 0;
     height: 90%;
-    width: 70%;
+    width: 25%;
     border-radius: 19% 71% 38% 36% / 38% 44% 56% 27%;
     border: 1px solid lightgrey;
-    background: rgb(250, 250, 250);
+    /* background: rgb(250, 250, 250);
     background: linear-gradient(
       346deg,
       rgba(250, 250, 250, 1) 45%,
       rgba(232, 243, 236, 1) 68%
-    );
+    ); */
   }
 
   &::after {
@@ -42,20 +41,20 @@ const sectionCss = css`
     width: 50%;
     border-radius: 73% 28% 14% 44% / 40% 34% 43% 72%;
     border: 1px solid lightgrey;
-    background: rgb(252, 231, 221);
+    /* background: rgb(252, 231, 221);
     background: linear-gradient(
       236deg,
       rgba(252, 231, 221, 1) 0%,
       rgba(250, 250, 250, 1) 61%
-    );
-  } */
+    ); */
+  }
 `;
 
 const heroCss = css`
   position: relative;
   z-index: 1;
   text-align: center;
-  max-width: 57%;
+  max-width: 60%;
   margin: 0 auto;
 `;
 

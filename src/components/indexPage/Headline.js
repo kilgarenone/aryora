@@ -1,9 +1,11 @@
 import React from "react";
 import { css } from "react-emotion";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import Container from "../Container";
 import Heading from "../Heading";
 
-function Headline() {
+function Headline({ data }) {
   return (
     <section>
       <Container
@@ -16,7 +18,11 @@ function Headline() {
             flex: 1 0 30%;
           `}
         >
-          Dope image here
+          <Img
+            title="Photo by Clique Images on Unsplash"
+            alt="Better future self"
+            fluid={data.headlineImg.childImageSharp.fluid}
+          />
         </div>
         <div
           className={css`

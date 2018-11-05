@@ -307,7 +307,7 @@ class IndexPage extends Component {
 
 export default IndexPage;
 
-export const heroImgQuery = graphql`
+const heroImgQuery = graphql`
   query {
     heroImg: file(relativePath: { eq: "futureself.jpg" }) {
       childImageSharp {
@@ -316,5 +316,24 @@ export const heroImgQuery = graphql`
         }
       }
     }
+    headlineImg: file(relativePath: { eq: "headline.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
   }
 `;
+
+// const headlineImgQuery = graphql`
+//   query {
+//     headlineImg: file(relativePath: { eq: "headline.png" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 1000) {
+//           ...GatsbyImageSharpFluid_withWebp_tracedSVG
+//         }
+//       }
+//     }
+//   }
+// `;
