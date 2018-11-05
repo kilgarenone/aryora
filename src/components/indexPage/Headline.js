@@ -13,11 +13,18 @@ function Headline() {
       >
         <div
           className={css`
+            flex: 1 0 30%;
+          `}
+        >
+          Dope image here
+        </div>
+        <div
+          className={css`
             flex: 1 0 60%;
           `}
         >
           <Heading weight="500" tag="h3">
-            Become simpler investment strategy in a complex world
+            Simplest winning investment strategy in a most complex world
           </Heading>
           <div
             className={css`
@@ -28,7 +35,7 @@ function Headline() {
             <div
               className={css`
                 flex: 1 0 50%;
-                padding-right: 20px;
+                padding-right: 60px;
               `}
             >
               <Heading tag="h5">Blah blah blah</Heading>
@@ -40,6 +47,7 @@ function Headline() {
             <div
               className={css`
                 flex: 1 0 50%;
+                padding-right: 60px;
               `}
             >
               <Heading tag="h5">Blah blah blah</Heading>
@@ -51,6 +59,7 @@ function Headline() {
             <div
               className={css`
                 flex: 1 0 50%;
+                padding-right: 60px;
               `}
             >
               <Heading tag="h5">Blah blah blah</Heading>
@@ -62,6 +71,7 @@ function Headline() {
             <div
               className={css`
                 flex: 1 0 50%;
+                padding-right: 60px;
               `}
             >
               <Heading tag="h5">Blah blah blah</Heading>
@@ -71,13 +81,6 @@ function Headline() {
               </p>
             </div>
           </div>
-        </div>
-        <div
-          className={css`
-            flex: 1 0 30%;
-          `}
-        >
-          Dope image here
         </div>
       </Container>
     </section>

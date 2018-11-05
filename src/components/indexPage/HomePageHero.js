@@ -11,19 +11,20 @@ import Heading from "../Heading";
 const sectionCss = css`
   & {
     position: relative;
-    padding: ${spacing.space4} 0;
+    padding: ${spacing.space5} 0 0;
     background-color: #fff1e5;
-    height: 95vh;
+    height: calc(100vh - 54px);
   }
 
-  &::before {
+  /* &::before {
     content: "";
     position: absolute;
     left: -47px;
-    bottom: -250px;
-    height: 600px;
-    width: 500px;
+    top: 0;
+    height: 90%;
+    width: 70%;
     border-radius: 19% 71% 38% 36% / 38% 44% 56% 27%;
+    border: 1px solid lightgrey;
     background: rgb(250, 250, 250);
     background: linear-gradient(
       346deg,
@@ -36,24 +37,25 @@ const sectionCss = css`
     content: "";
     position: absolute;
     right: 0;
-    top: -76px;
-    height: 700px;
-    width: 600px;
+    top: -10%;
+    height: 100%;
+    width: 50%;
     border-radius: 73% 28% 14% 44% / 40% 34% 43% 72%;
+    border: 1px solid lightgrey;
     background: rgb(252, 231, 221);
     background: linear-gradient(
       236deg,
       rgba(252, 231, 221, 1) 0%,
       rgba(250, 250, 250, 1) 61%
     );
-  }
+  } */
 `;
 
 const heroCss = css`
   position: relative;
   z-index: 1;
   text-align: center;
-  max-width: 60%;
+  max-width: 57%;
   margin: 0 auto;
 `;
 
@@ -77,8 +79,8 @@ function HomePageHero() {
             A simple, low-cost place that builds your long-term wealth
           </Heading>
           <p className={heroCopy}>
-            Get the most out of stock market return by investing in broad-based index
-            funds and rebalance automatically.
+            Get the most out of stock market return by investing in broad-based
+            index funds and rebalance automatically.
           </p>
           <BetaSignup>
             {({
