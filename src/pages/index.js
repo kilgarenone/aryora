@@ -54,7 +54,7 @@ class IndexPage extends Component {
     return (
       <Layout location={location}>
         <HomePageHero />
-        <Headline />
+        <Headline headlineImg={data.headlineImg.childImageSharp.fluid} />
         {/* <section
           role="main"
           aria-labelledby="aria-hero-section"
@@ -307,15 +307,8 @@ class IndexPage extends Component {
 
 export default IndexPage;
 
-const heroImgQuery = graphql`
+export const query = graphql`
   query {
-    heroImg: file(relativePath: { eq: "futureself.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
     headlineImg: file(relativePath: { eq: "headline.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
@@ -326,9 +319,9 @@ const heroImgQuery = graphql`
   }
 `;
 
-// const headlineImgQuery = graphql`
+// export const heroImgQuery = graphql`
 //   query {
-//     headlineImg: file(relativePath: { eq: "headline.png" }) {
+//     heroImg: file(relativePath: { eq: "futureself.jpg" }) {
 //       childImageSharp {
 //         fluid(maxWidth: 1000) {
 //           ...GatsbyImageSharpFluid_withWebp_tracedSVG

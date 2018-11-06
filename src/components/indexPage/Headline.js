@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import Container from "../Container";
 import Heading from "../Heading";
 
-function Headline({ data }) {
+function Headline({ headlineImg }) {
   return (
     <section>
       <Container
@@ -21,7 +21,7 @@ function Headline({ data }) {
           <Img
             title="Photo by Clique Images on Unsplash"
             alt="Better future self"
-            fluid={data.headlineImg.childImageSharp.fluid}
+            fluid={headlineImg}
           />
         </div>
         <div
