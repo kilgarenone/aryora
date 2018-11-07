@@ -37,11 +37,11 @@ html {
   color: #5b5e6d;
 
   @media (--break-md) {
-    font-size: 107%;
+    font-size: 103%;
   }
 
   @media (--break-lg) {
-    font-size: 112%;
+    font-size: 106%;
   }
 }
 

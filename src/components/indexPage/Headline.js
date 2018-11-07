@@ -38,7 +38,7 @@ function Headline({ headlineImg }) {
             weight="500"
             tag="h3"
           >
-            Simplest winning investment strategy in a complex world
+            Simple, time-proven investment strategies in a complex world
           </Heading>
           <div
             className={css`
@@ -64,7 +64,7 @@ function Headline({ headlineImg }) {
                 </Heading>
                 <p>
                   Nothing beats diversification like a portfolio owning the
-                  whole world markets. We build your portfolio with low-cost
+                  global markets. We build your portfolio with low-cost
                   investment funds so you can earn the closest possible to the
                   total market returns.
                 </p>
@@ -104,11 +104,26 @@ function Headline({ headlineImg }) {
                 `}
               >
                 <Heading marginBottom={spacing.space0} tag="h4">
-                  Blah blah blah
+                  Passive investing on autopilot
                 </Heading>
                 <p>
-                  hole shit check it out my man this is crazy!!!!hole shit check
-                  it out my man this is crazy!!!!{" "}
+                  Chasing the market is a loser&apos;s game over the long term.
+                  <sup>
+                    <cite>
+                      <a
+                        className="citation"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://us.spindices.com/documents/spiva/spiva-us-mid-year-2017.pdf"
+                      >
+                        1
+                      </a>
+                    </cite>
+                  </sup>{" "}
+                  Instead, what works is long-term investing. And we are here to
+                  help you take the first step to building your wealth within
+                  your risk comfort zone, and staying the course with
+                  automation.
                 </p>
               </div>
             </div>
@@ -124,11 +139,13 @@ function Headline({ headlineImg }) {
                 `}
               >
                 <Heading marginBottom={spacing.space0} tag="h4">
-                  Blah blah blah
+                  Bringing out the best version of you
                 </Heading>
                 <p>
-                  hole shit check it out my man this is crazy!!!!hole shit check
-                  it out my man this is crazy!!!!{" "}
+                  Every decision and design we have made here was driven by
+                  empathy and humanity. We are always within reach to chat for
+                  advises if your life circumstances change or just having a bad
+                  day.
                 </p>
               </div>
             </div>
