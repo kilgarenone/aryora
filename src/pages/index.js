@@ -20,31 +20,31 @@ import HomePageHero from "../components/indexPage/HomePageHero";
 import Headline from "../components/indexPage/Headline";
 import HowItWorks from "../components/indexPage/HowItWorks";
 
-const HIGHCOST = 0.0575;
-const LOWCOST = 0.078;
-const initialFundVal = 1000;
-const years = 30;
+// const HIGHCOST = 0.0575;
+// const LOWCOST = 0.078;
+// const initialFundVal = 1000;
+// const years = 30;
 
-function fundPerf() {
-  const results = [];
-  let futureValueLowCost = initialFundVal;
-  let futureValueHighCost = initialFundVal;
+// function fundPerf() {
+//   const results = [];
+//   let futureValueLowCost = initialFundVal;
+//   let futureValueHighCost = initialFundVal;
 
-  for (let i = 0; i <= years; i++) {
-    const data = { name: i, lowCost: 0, highCost: 0, amt: 0 };
-    if (i === 0) {
-      futureValueHighCost *= 1 - HIGHCOST; // simulate saleload
-    } else {
-      futureValueHighCost *= 1 + HIGHCOST;
-      futureValueLowCost *= 1 + LOWCOST;
-    }
-    data.highCost = Math.round(futureValueHighCost);
-    data.lowCost = Math.round(futureValueLowCost);
-    data.amt = data.highCost + data.lowCost;
-    results.push(data);
-  }
-  return results;
-}
+//   for (let i = 0; i <= years; i++) {
+//     const data = { name: i, lowCost: 0, highCost: 0, amt: 0 };
+//     if (i === 0) {
+//       futureValueHighCost *= 1 - HIGHCOST; // simulate saleload
+//     } else {
+//       futureValueHighCost *= 1 + HIGHCOST;
+//       futureValueLowCost *= 1 + LOWCOST;
+//     }
+//     data.highCost = Math.round(futureValueHighCost);
+//     data.lowCost = Math.round(futureValueLowCost);
+//     data.amt = data.highCost + data.lowCost;
+//     results.push(data);
+//   }
+//   return results;
+// }
 
 class IndexPage extends Component {
   state = {};
