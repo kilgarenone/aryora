@@ -60,9 +60,14 @@ function Headline({ headlineImg }) {
                 `}
               >
                 <Heading marginBottom={spacing.space0} tag="h4">
-                  Passive over active management
+                  Own the whole market
                 </Heading>
-                <p />
+                <p>
+                  Nothing beats diversification like a portfolio owning the
+                  whole world markets. We build your portfolio with low-cost
+                  investment funds so you can earn the closest possible to the
+                  total market returns.
+                </p>
               </div>
             </div>
             <div
@@ -77,11 +82,13 @@ function Headline({ headlineImg }) {
                 `}
               >
                 <Heading marginBottom={spacing.space0} tag="h4">
-                  Blah blah blah
+                  Keep more of your money
                 </Heading>
                 <p>
-                  hole shit check it out my man this is crazy!!!!hole shit check
-                  it out my man this is crazy!!!!{" "}
+                  We are against paying for hidden or unnecessary costs and
+                  fees. Other than the low intrinsic fund fees themselves, we
+                  charge only a 0.15% annual advisory fee on what you invest.
+                  That&apos;s all.
                 </p>
               </div>
             </div>
