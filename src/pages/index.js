@@ -18,6 +18,7 @@ import {
 import Layout from "../components/Layout";
 import HomePageHero from "../components/indexPage/HomePageHero";
 import Headline from "../components/indexPage/Headline";
+import HowItWorks from "../components/indexPage/HowItWorks";
 
 const HIGHCOST = 0.0575;
 const LOWCOST = 0.078;
@@ -55,6 +56,7 @@ class IndexPage extends Component {
       <Layout location={location}>
         <HomePageHero />
         <Headline headlineImg={data.headlineImg.childImageSharp.fluid} />
+        <HowItWorks />
         {/* <section
           role="main"
           aria-labelledby="aria-hero-section"
