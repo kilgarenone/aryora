@@ -60,13 +60,14 @@ function Headline({ headlineImg }) {
                 `}
               >
                 <Heading marginBottom={spacing.space0} tag="h4">
-                  Own the whole market
+                  Own global markets at low cost
                 </Heading>
                 <p>
-                  Nothing beats diversification like a portfolio owning the
-                  global markets. We build your portfolio with low-cost
-                  investment funds so you can earn the closest possible to the
-                  total market returns.
+                  We build your portfolio with low-cost index funds that span
+                  the entire world&apos;s market so you can earn the closest
+                  possible to the total market returns. No hidden costs or
+                  unnecessary fees. We charge only a 0.15% annual advisory fee
+                  on what you invest. That&apos;s all.
                 </p>
               </div>
             </div>
@@ -82,29 +83,7 @@ function Headline({ headlineImg }) {
                 `}
               >
                 <Heading marginBottom={spacing.space0} tag="h4">
-                  Keep more of your money
-                </Heading>
-                <p>
-                  We are against paying for hidden or unnecessary costs and
-                  fees. Other than the low intrinsic fund fees themselves, we
-                  charge only a 0.15% annual advisory fee on what you invest.
-                  That&apos;s all.
-                </p>
-              </div>
-            </div>
-            <div
-              className={css`
-                flex: 1 0 50%;
-                padding: 0 30px;
-              `}
-            >
-              <div
-                className={css`
-                  padding-top: 25px;
-                `}
-              >
-                <Heading marginBottom={spacing.space0} tag="h4">
-                  Passive investing on autopilot
+                  Delightful passive investing
                 </Heading>
                 <p>
                   Chasing the market is a loser&apos;s game over the long term.
@@ -120,32 +99,10 @@ function Headline({ headlineImg }) {
                       </a>
                     </cite>
                   </sup>{" "}
-                  Instead, what works is long-term investing. And we are here to
-                  help you take the first step to building your wealth within
-                  your risk comfort zone, and staying the course with
-                  automation.
-                </p>
-              </div>
-            </div>
-            <div
-              className={css`
-                flex: 1 0 50%;
-                padding: 0 30px;
-              `}
-            >
-              <div
-                className={css`
-                  padding-top: 25px;
-                `}
-              >
-                <Heading marginBottom={spacing.space0} tag="h4">
-                  Bringing out the best version of you
-                </Heading>
-                <p>
-                  Every decision and design we have made here was driven by
-                  empathy and humanity. We are always within reach to chat for
-                  advises if your life circumstances change or just having a bad
-                  day.
+                  Instead, what works is long-term investing. And we make it
+                  easy and delightful for you. Every decision and design we have
+                  made aims to help you take the first step to building your
+                  wealth within your risk comfort zone, and staying the course.
                 </p>
               </div>
             </div>
