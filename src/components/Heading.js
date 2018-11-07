@@ -1,4 +1,3 @@
-// @flow
 import * as React from "react";
 import { css, cx } from "react-emotion";
 import {
@@ -20,6 +19,12 @@ const lowLineHeight = css`
 function fontWeightClass(weight) {
   return css`
     font-weight: ${weight};
+  `;
+}
+
+function marginBottomClass(mb) {
+  return css`
+    margin-bottom: ${mb};
   `;
 }
 
@@ -57,6 +62,7 @@ function Heading({
   isSerifFont = false,
   isLineHeightReduced = false,
   weight = null,
+  marginBottom = null,
   ...props
 }) {
   return (
@@ -65,6 +71,7 @@ function Heading({
         styles[tagMapping[Tag]],
         className,
         fontWeightClass(weight),
+        marginBottomClass(marginBottom),
         {
           [serifFont]: isSerifFont,
           [lowLineHeight]: isLineHeightReduced

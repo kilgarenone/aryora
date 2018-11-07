@@ -2,7 +2,17 @@ import React from "react";
 import { css } from "react-emotion";
 
 const Header = () => (
-  <header>
+  <header
+    className={css`
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      padding-top: 2rem;
+      /* z-index: 100; */
+    `}
+  >
     <div
       className={css`
         padding: 0.5rem 1.0875rem 0;

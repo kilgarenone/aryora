@@ -12,7 +12,8 @@ const spacing = {
   space2: `${computeGoldenRatio(spacingFactor, 2)}rem`, // 21
   space3: `${computeGoldenRatio(spacingFactor, 3)}rem`, // 34
   space4: `${computeGoldenRatio(spacingFactor, 4)}rem`, // 55
-  space5: `${computeGoldenRatio(spacingFactor, 5)}rem` // 89
+  space5: `${computeGoldenRatio(spacingFactor, 5)}rem`, // 89
+  space6: `${computeGoldenRatio(spacingFactor, 6)}rem` // 89
 };
 
 export default spacing;

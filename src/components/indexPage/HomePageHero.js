@@ -10,9 +10,9 @@ import Heading from "../Heading";
 const sectionCss = css`
   & {
     position: relative;
-    padding: ${spacing.space5} 0 0;
+    padding: ${spacing.space6} 0;
     /* background-color: #fff1e5; */
-    height: calc(100vh - 54px);
+    /* height: calc(100vh - 54px); */
   }
 
   &::before {
