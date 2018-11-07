@@ -60,14 +60,13 @@ function Headline({ headlineImg }) {
                 `}
               >
                 <Heading marginBottom={spacing.space0} tag="h4">
-                  Own global markets at low cost
+                  Buy the haystack
                 </Heading>
                 <p>
-                  We build your portfolio with low-cost index funds that span
-                  the entire world&apos;s market so you can earn the closest
-                  possible to the total market returns. No hidden costs or
-                  unnecessary fees. We charge only a 0.15% annual advisory fee
-                  on what you invest. That&apos;s all.
+                  We build your portfolio with low-cost index funds that simply
+                  holds every stock in several indexes. That takes emotions and
+                  theories out of the equation. We charge only a 0.15% annual
+                  advisory fee on what you invest. That&apos;s all.
                 </p>
               </div>
             </div>
@@ -83,7 +82,7 @@ function Headline({ headlineImg }) {
                 `}
               >
                 <Heading marginBottom={spacing.space0} tag="h4">
-                  Delightful passive investing
+                  Passive investing on autopilot
                 </Heading>
                 <p>
                   Chasing the market is a loser&apos;s game over the long term.
@@ -100,9 +99,9 @@ function Headline({ headlineImg }) {
                     </cite>
                   </sup>{" "}
                   Instead, what works is long-term investing. And we make it
-                  easy and delightful for you. Every decision and design we have
-                  made aims to help you take the first step to building your
-                  wealth within your risk comfort zone, and staying the course.
+                  easy and delightful to take the first step to building your
+                  wealth within your risk comfort zone, and staying the course
+                  for you.
                 </p>
               </div>
             </div>
