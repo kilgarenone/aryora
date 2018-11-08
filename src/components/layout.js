@@ -4,7 +4,7 @@ import Helmet from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const TemplateWrapper = ({ children, location }) => (
+const Layout = ({ children, location }) => (
   <div>
     <Helmet defaultTitle="Towernest - Simple and Low-cost Investing for Everyone">
       <html lang="en" />
@@ -37,4 +37,4 @@ const TemplateWrapper = ({ children, location }) => (
   </div>
 );
 
-export default TemplateWrapper;
+export default Layout;
