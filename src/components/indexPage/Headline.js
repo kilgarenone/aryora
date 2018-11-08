@@ -11,6 +11,7 @@ function Headline({ headlineImg }) {
       <Container
         className={css`
           display: flex;
+          margin-bottom: ${spacing.space5};
         `}
       >
         <div

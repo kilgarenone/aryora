@@ -4,20 +4,20 @@ import Container from "../Container";
 import Heading from "../Heading";
 import GridItem from "../GridItem";
 import GridParent from "../GridParent";
+import spacing from "../../css/spacing";
 
 const gridItemCss = css`
   &::before {
-    box-shadow: 0 0 0 2px #818fee inset;
     border-radius: 40px;
+    border: 1px solid #bdbdbd;
     content: counter(item) "";
     counter-increment: item;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     display: block;
-    margin-bottom: 20px;
-    color: #818fee;
+    margin-bottom: ${spacing.space1};
     font-weight: 500;
     font-size: 2.2rem;
   }
@@ -25,37 +25,46 @@ const gridItemCss = css`
 
 const gridParentCss = css`
   counter-reset: item;
-  list-style-type: none;
-  list-style: decimal inside;
 `;
+
 function HowItWorks() {
   return (
     <section>
       <Container>
-        <Heading tag="h3">How it works</Heading>
+        <Heading marginBottom={spacing.space3} weight="500" tag="h3">
+          How it works
+        </Heading>
         <GridParent tag="ol" className={gridParentCss}>
           <GridItem tag="li" width="33" className={gridItemCss}>
-            <Heading tag="h4">Get to know you</Heading>
+            <Heading marginBottom={spacing.space0} tag="h4">
+              Get to know you
+            </Heading>
             <p>
-              After filling out your online profile and syncing your accounts,
-              you'll speak with a CFP® who will get to know you, discuss your
-              current situation, and create your personalized financial plan.
+              Everyone&apos;s temperament and position in life is different. So,
+              first step is you will fill up a short questionnaire that allows
+              us to understand your risk tolerance and affordance level.
             </p>
           </GridItem>
           <GridItem tag="li" width="33" className={gridItemCss}>
-            <Heading tag="h4">Get to know you</Heading>
+            <Heading marginBottom={spacing.space0} tag="h4">
+              Get your plan
+            </Heading>
             <p>
-              After filling out your online profile and syncing your accounts,
-              you'll speak with a CFP® who will get to know you, discuss your
-              current situation, and create your personalized financial plan.
+              After having a clearer picture of you, we&apos;ll suggest a
+              portfolio with a particular composition of different asset
+              classes. At this point, if you like, you can chat with one of our
+              certified advisers for support.
             </p>
           </GridItem>
           <GridItem tag="li" width="33" className={gridItemCss}>
-            <Heading tag="h4">Get to know you</Heading>
+            <Heading marginBottom={spacing.space0} tag="h4">
+              Stay on track
+            </Heading>
             <p>
-              After filling out your online profile and syncing your accounts,
-              you'll speak with a CFP® who will get to know you, discuss your
-              current situation, and create your personalized financial plan.
+              Having funded your portfolio, it&apos;s recommended that you chose
+              to automate regular contribution to your portfolio. Towernest will
+              monitor and rebalance to your target portfolio quarterly for you.
+              Now, you&apos;re all set!
             </p>
           </GridItem>
         </GridParent>
