@@ -44,7 +44,12 @@ function JoinUsAction({ joinUsActionImg }) {
               )}
             </BetaSignup>
           </GridItem>
-          <GridItem width="30%">
+          <GridItem
+            className={css`
+              position: relative;
+            `}
+            width="25%"
+          >
             <Img
               title="Ornament image for headline section"
               alt="Reconcile the time-tested philosophy with modern technology"

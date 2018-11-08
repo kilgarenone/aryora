@@ -33,7 +33,21 @@ const Layout = ({ children, location }) => (
     </Helmet>
     <Header />
     <main>{children}</main>
-    <Footer>© 2018 Aryora.</Footer>
+    <Footer>
+      Made with{" "}
+      <span role="img" aria-label="made by love">
+        ❤️
+      </span>{" "}
+      by{" "}
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.linkedin.com/in/kheohyeewei/"
+      >
+        Kheoh Yee Wei
+      </a>
+      <br />© 2018 Towernest.
+    </Footer>
   </div>
 );
 
