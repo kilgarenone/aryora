@@ -40,6 +40,7 @@ const Layout = ({ children, location }) => (
       </span>{" "}
       by{" "}
       <a
+        style={{ textDecoration: "underline" }}
         rel="noopener noreferrer"
         target="_blank"
         href="https://www.linkedin.com/in/kheohyeewei/"
