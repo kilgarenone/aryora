@@ -5,6 +5,7 @@ import Heading from "../Heading";
 import GridItem from "../GridItem";
 import GridParent from "../GridParent";
 import spacing from "../../css/spacing";
+import Section from "../Section";
 
 const gridItemCss = css`
   &::before {
@@ -29,7 +30,12 @@ const gridParentCss = css`
 
 function HowItWorks() {
   return (
-    <section>
+    <Section
+      className={css`
+        padding: ${spacing.space3};
+        background-color: #f3f3f3;
+      `}
+    >
       <Container>
         <Heading marginBottom={spacing.space3} weight="500" tag="h3">
           How it works
@@ -69,7 +75,7 @@ function HowItWorks() {
           </GridItem>
         </GridParent>
       </Container>
-    </section>
+    </Section>
   );
 }
 

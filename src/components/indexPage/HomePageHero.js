@@ -6,13 +6,12 @@ import Container from "../Container";
 import spacing from "../../css/spacing";
 import { marginBottom3 } from "../../css/utilities";
 import Heading from "../Heading";
+import Section from "../Section";
 
 const sectionCss = css`
   & {
-    position: relative;
-    padding: ${spacing.space6} 0;
-    /* background-color: #fff1e5; */
-    /* height: calc(100vh - 54px); */
+    margin-top: ${spacing.space6};
+    padding-bottom: ${spacing.space5};
   }
 
   &::before {
@@ -66,7 +65,7 @@ const heroCopy = css`
 
 function HomePageHero() {
   return (
-    <section className={sectionCss}>
+    <Section className={sectionCss}>
       <Container>
         <div className={heroCss}>
           <Heading
@@ -98,7 +97,7 @@ function HomePageHero() {
           </BetaSignup>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }
 

@@ -4,20 +4,20 @@ import Img from "gatsby-image";
 import Container from "../Container";
 import Heading from "../Heading";
 import spacing from "../../css/spacing";
+import Section from "../Section";
 
 function Headline({ headlineImg }) {
   return (
-    <section>
+    <Section>
       <Container
         className={css`
           display: flex;
-          margin-bottom: ${spacing.space5};
         `}
       >
         <div
           className={css`
             flex: 1 0 30%;
-            padding: 0 30px;
+            padding-right: 30px;
           `}
         >
           <Img
@@ -109,7 +109,7 @@ function Headline({ headlineImg }) {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }
 

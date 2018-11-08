@@ -32,7 +32,7 @@ const Layout = ({ children, location }) => (
       />
     </Helmet>
     <Header />
-    {children}
+    <main>{children}</main>
     <Footer>© 2018 Aryora.</Footer>
   </div>
 );
