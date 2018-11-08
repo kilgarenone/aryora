@@ -67,7 +67,7 @@ function Headline({ headlineImg }) {
                   We build your portfolio with low-cost index funds that simply
                   holds every stock in several indexes. That takes emotions and
                   theories out of the equation. We charge only a 0.15% annual
-                  advisory fee on what you invest. That&apos;s all.
+                  advisory fee on what you invest. Period.
                 </p>
               </div>
             </div>

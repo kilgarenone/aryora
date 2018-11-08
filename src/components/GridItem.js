@@ -3,7 +3,7 @@ import { css, cx } from "react-emotion";
 
 function defaultCssClass(width) {
   return css`
-    flex-basis: ${width}%;
+    flex-basis: ${width};
     padding: 0 30px;
   `;
 }
