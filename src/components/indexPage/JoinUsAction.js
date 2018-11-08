@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
+import { css } from "react-emotion";
 import Section from "../Section";
 import Container from "../Container";
 import GridParent from "../GridParent";
@@ -7,6 +8,7 @@ import GridItem from "../GridItem";
 import Heading from "../Heading";
 import BetaSignup from "../BetaSignup";
 import InputButtonGroup from "../InputButtonGroup";
+import spacing from "../../css/spacing";
 
 function JoinUsAction({ joinUsActionImg }) {
   return (
@@ -14,14 +16,18 @@ function JoinUsAction({ joinUsActionImg }) {
       <Container>
         <GridParent>
           <GridItem width="60%">
-            <div>
-              <Heading isLineHeightReduced isSerifFont tag="h2">
-                We are cooking something awesome.
-              </Heading>
-              <Heading isLineHeightReduced isSerifFont tag="h2">
-                Surprise yourself when it&apos;s ready.
-              </Heading>
-            </div>
+            <Heading
+              className={css`
+                margin-bottom: ${spacing.space3};
+              `}
+              isLineHeightReduced
+              isSerifFont
+              tag="h2"
+            >
+              We are cooking something awesome.
+              <br />
+              Surprise yourself when it&apos;s ready.
+            </Heading>
             <BetaSignup>
               {({
                 handleSubmit,
@@ -38,9 +44,8 @@ function JoinUsAction({ joinUsActionImg }) {
               )}
             </BetaSignup>
           </GridItem>
-          <GridItem width="40%">
+          <GridItem width="30%">
             <Img
-              style={{ width: "20%" }}
               title="Ornament image for headline section"
               alt="Reconcile the time-tested philosophy with modern technology"
               fluid={joinUsActionImg}

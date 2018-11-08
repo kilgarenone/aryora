@@ -32,8 +32,7 @@ function HowItWorks() {
   return (
     <Section
       className={css`
-        padding: ${spacing.space3} 0;
-        margin: 0 ${spacing.space4};
+        padding: ${spacing.space3};
         background-color: #f3f3f3;
       `}
     >

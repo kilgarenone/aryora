@@ -5,7 +5,7 @@ import Input from "./Input";
 import media from "../css/breakpoints";
 
 const inputStyle = css`
-  flex: 1 1 auto;
+  flex: 1 1 60%;
   margin-right: 0;
 
   ${media.md2(css`
@@ -13,24 +13,16 @@ const inputStyle = css`
   `)};
 `;
 
-const formContStyle = css`
-  max-width: 420px;
-  margin: 0 auto;
-
-  /* ${media.md2(css`
-    margin: 0 0;
-  `)}; */
-`;
-
 const formStyle = css`
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 420px;
+  max-width: 470px;
 `;
 
 const btnStyle = css`
   color: #fff;
-  flex: 1 1 auto;
+  flex: 1 1 40%;
 `;
 
 class InputButtonGroup extends Component {
@@ -49,16 +41,12 @@ class InputButtonGroup extends Component {
       isSubmitting,
       inputValue,
       handleInputChange,
-      customFormStyleClass
+      formClassName
     } = this.props;
 
     return (
-      <form
-        onSubmit={this.handleButtonClicked}
-        autoComplete="off"
-        className={formContStyle}
-      >
-        <div className={cx("flex-row", formStyle, customFormStyleClass)}>
+      <form onSubmit={this.handleButtonClicked} autoComplete="off">
+        <div className={cx(formStyle, formClassName)}>
           <Input
             type="email"
             className={inputStyle}

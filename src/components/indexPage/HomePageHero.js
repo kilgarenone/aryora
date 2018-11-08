@@ -92,6 +92,9 @@ function HomePageHero() {
                 inputValue={inputValue}
                 handleInputChange={handleInputChange}
                 isSubmitting={isSubmitting}
+                formClassName={css`
+                  margin: 0 auto;
+                `}
               />
             )}
           </BetaSignup>
