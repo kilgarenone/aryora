@@ -9,7 +9,7 @@ const breakPoints = {
   tallPhone: "(max-width: 360px) and (min-height: 740px)"
 };
 
-const mq = Object.keys(breakPoints).reduce((accumulator, label) => {
+const media = Object.keys(breakPoints).reduce((accumulator, label) => {
   const prefix = typeof breakPoints[label] === "string" ? "" : "min-width:";
   const suffix = typeof breakPoints[label] === "string" ? "" : "em";
   // eslint-disable-next-line no-param-reassign
@@ -22,4 +22,4 @@ const mq = Object.keys(breakPoints).reduce((accumulator, label) => {
   return accumulator;
 }, {});
 
-export default mq;
+export default media;
