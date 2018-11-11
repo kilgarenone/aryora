@@ -7,11 +7,17 @@ import spacing from "../../css/spacing";
 import { marginBottom3 } from "../../css/utilities";
 import Heading from "../Heading";
 import Section from "../Section";
+import media from "../../css/mediaQueries";
 
 const sectionCss = css`
   & {
     margin-top: ${spacing.space6};
-    padding-bottom: ${spacing.space5};
+
+    ${media.lg(
+      css`
+        padding-bottom: ${spacing.space5};
+      `
+    )}
   }
 
   &::before {

@@ -36,26 +36,22 @@ function Headline({ headlineImg }) {
             <Heading
               className={css`
                 max-width: 40rem;
+                text-align: center;
+                margin: 0 auto;
+
+                ${media.lg(
+                  css`
+                    text-align: left;
+                  `
+                )}
               `}
               weight="500"
               tag="h3"
             >
               Simple, time-proven investment strategies in a complex world
             </Heading>
-            <div
-              className={css`
-                display: flex;
-                flex-wrap: wrap;
-                margin-left: -30px;
-                margin-right: -30px;
-              `}
-            >
-              <div
-                className={css`
-                  flex: 1 0 50%;
-                  padding: 0 30px;
-                `}
-              >
+            <GridParent>
+              <GridItem width="50%">
                 <div
                   className={css`
                     padding-top: 25px;
@@ -71,13 +67,8 @@ function Headline({ headlineImg }) {
                     0.15% annual advisory fee on what you invest. Period.
                   </p>
                 </div>
-              </div>
-              <div
-                className={css`
-                  flex: 1 0 50%;
-                  padding: 0 30px;
-                `}
-              >
+              </GridItem>
+              <GridItem width="50%">
                 <div
                   className={css`
                     padding-top: 25px;
@@ -107,8 +98,8 @@ function Headline({ headlineImg }) {
                     for you.
                   </p>
                 </div>
-              </div>
-            </div>
+              </GridItem>
+            </GridParent>
           </GridItem>
         </GridParent>
       </Container>
