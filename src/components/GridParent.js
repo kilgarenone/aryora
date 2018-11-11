@@ -3,6 +3,7 @@ import { css, cx } from "react-emotion";
 
 const defaultCssClass = css`
   display: flex;
+  flex-wrap: wrap;
   margin-right: -30px;
   margin-left: -30px;
 `;
