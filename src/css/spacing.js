@@ -1,5 +1,3 @@
-// @flow
-
 function computeGoldenRatio(spacingFactor, exp) {
   return Math.floor(((spacingFactor * 1.618 ** exp) / 16) * 100) / 100;
 }
