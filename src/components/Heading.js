@@ -6,14 +6,11 @@ import {
   fontWeight,
   lineHeight
 } from "../css/typography";
-import { colors } from "../css/colors";
+import colors from "../css/colors";
+import media from "../css/mediaQueries";
 
 const serifFont = css`
   font-family: "Times New Roman", Times, serif;
-`;
-
-const lowLineHeight = css`
-  line-height: 1.2;
 `;
 
 function fontWeightClass(weight) {
@@ -30,28 +27,44 @@ function marginBottomClass(mb) {
 
 const styles = {
   headingXL: css`
-    font-size: ${fontSize.headingXL};
+    font-size: ${fontSize.headingL};
     font-weight: ${fontWeight.bold};
     line-height: ${lineHeight.headingXL};
     color: ${colors.headerColor};
+
+    ${media.md(css`
+      font-size: ${fontSize.headingXL};
+    `)}
   `,
   headingL: css`
-    font-size: ${fontSize.headingL};
+    font-size: ${fontSize.heading};
     font-weight: ${fontWeight.bold};
     line-height: ${lineHeight.headingL};
     color: ${colors.headerColor};
+
+    ${media.md(css`
+      font-size: ${fontSize.headingL};
+    `)}
   `,
   heading: css`
-    font-size: ${fontSize.heading};
+    font-size: ${fontSize.headingS};
     font-weight: ${fontWeight.bold};
     line-height: ${lineHeight.heading};
     color: ${colors.headerColor};
+
+    ${media.md(css`
+      font-size: ${fontSize.heading};
+    `)}
   `,
-  subheading: css`
-    font-size: ${fontSize.subheading};
+  headingS: css`
+    font-size: ${fontSize.textL};
     font-weight: ${fontWeight.bold};
-    line-height: ${lineHeight.subheading};
+    line-height: ${lineHeight.headingS};
     color: ${colors.headerColor};
+
+    ${media.md(css`
+      font-size: ${fontSize.headingS};
+    `)}
   `
 };
 
@@ -60,7 +73,6 @@ function Heading({
   tag: Tag,
   className,
   isSerifFont = false,
-  isLineHeightReduced = false,
   weight = null,
   marginBottom = null,
   ...props
@@ -73,8 +85,7 @@ function Heading({
         fontWeightClass(weight),
         marginBottomClass(marginBottom),
         {
-          [serifFont]: isSerifFont,
-          [lowLineHeight]: isLineHeightReduced
+          [serifFont]: isSerifFont
         }
       )}
       {...props}
