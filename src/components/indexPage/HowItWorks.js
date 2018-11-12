@@ -9,13 +9,13 @@ import Section from "../Section";
 
 const gridItemCss = css`
   &::before {
-    border-radius: 40px;
+    border-radius: 50%;
     border: 1px solid #bdbdbd;
     content: counter(item) "";
     counter-increment: item;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 3.3rem;
+    height: 3.3rem;
+    line-height: 3.3rem;
     text-align: center;
     display: block;
     margin-bottom: ${spacing.space1};
@@ -32,7 +32,6 @@ function HowItWorks() {
   return (
     <Section
       className={css`
-        padding: ${spacing.space3};
         background-color: #f3f3f3;
       `}
     >
