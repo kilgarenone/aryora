@@ -38,6 +38,7 @@ function Headline({ headlineImg }) {
                 max-width: 40rem;
                 text-align: center;
                 margin: 0 auto;
+                margin-bottom: ${spacing.space3};
 
                 ${media.lg(
                   css`
@@ -52,52 +53,39 @@ function Headline({ headlineImg }) {
             </Heading>
             <GridParent>
               <GridItem width="50%">
-                <div
-                  className={css`
-                    padding-top: 25px;
-                  `}
-                >
-                  <Heading marginBottom={spacing.space0} tag="h4">
-                    Buy the haystack
-                  </Heading>
-                  <p>
-                    We build your portfolio with low-cost index funds that
-                    simply holds every stock in several indexes. That takes
-                    emotions and theories out of the equation. We charge only a
-                    0.15% annual advisory fee on what you invest. Period.
-                  </p>
-                </div>
+                <Heading marginBottom={spacing.space0} tag="h4">
+                  Buy the haystack
+                </Heading>
+                <p>
+                  We build your portfolio with low-cost index funds that simply
+                  holds every stock in several indexes. That takes emotions and
+                  theories out of the equation. We charge only a 0.15% annual
+                  advisory fee on what you invest. Period.
+                </p>
               </GridItem>
               <GridItem width="50%">
-                <div
-                  className={css`
-                    padding-top: 25px;
-                  `}
-                >
-                  <Heading marginBottom={spacing.space0} tag="h4">
-                    Passive investing on autopilot
-                  </Heading>
-                  <p>
-                    Chasing the market is a loser&apos;s game over the long
-                    term.
-                    <sup>
-                      <cite>
-                        <a
-                          className="citation"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          href="https://us.spindices.com/documents/spiva/spiva-us-mid-year-2017.pdf"
-                        >
-                          1
-                        </a>
-                      </cite>
-                    </sup>{" "}
-                    Instead, what works is long-term investing. And we make it
-                    easy and delightful to take the first step to building your
-                    wealth within your risk comfort zone, and staying the course
-                    for you.
-                  </p>
-                </div>
+                <Heading marginBottom={spacing.space0} tag="h4">
+                  Autopilot
+                </Heading>
+                <p>
+                  Chasing the market is a loser&apos;s game over the long term.
+                  <sup>
+                    <cite>
+                      <a
+                        className="citation"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://us.spindices.com/documents/spiva/spiva-us-mid-year-2017.pdf"
+                      >
+                        1
+                      </a>
+                    </cite>
+                  </sup>{" "}
+                  Instead, what works is long-term investing. And we make it
+                  easy and delightful to take the first step to building your
+                  wealth within your risk comfort zone, and staying the course
+                  for you.
+                </p>
               </GridItem>
             </GridParent>
           </GridItem>
