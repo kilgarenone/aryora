@@ -17,6 +17,7 @@ function Headline({ headlineImg }) {
           className={css`
             flex-direction: column;
             align-items: center;
+            justify-content: center;
 
             ${media.lg(
               css`

@@ -2,7 +2,7 @@ function computeGoldenRatio(spacingFactor, exp) {
   return Math.floor(((spacingFactor * 1.618 ** exp) / 16) * 100) / 100;
 }
 
-const spacingFactor = 8;
+const spacingFactor = 9;
 
 const spacing = {
   space0: `${computeGoldenRatio(spacingFactor, 0)}rem`, // 8

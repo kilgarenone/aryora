@@ -57,10 +57,10 @@ injectGlobal`
     color: rgba(0,0,0,.84);
   }
 
-  body {
+  /* body {
     max-width: 100%;
     overflow-x: hidden;
-  }
+  } */
 
   /* CSS Reset */
   blockquote, body, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, legend, ol, p, pre, ul {

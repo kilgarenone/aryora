@@ -8,9 +8,9 @@ const Container = styled("div")`
   padding: ${spacing.space2};
   max-width: 1300px;
 
-  ${media.lg(
+  ${media.md2(
     css`
-      padding: ${spacing.space4};
+      padding: ${spacing.space3};
     `
   )}
 `;

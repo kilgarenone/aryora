@@ -11,11 +11,11 @@ import media from "../../css/mediaQueries";
 
 const sectionCss = css`
   & {
-    margin-top: ${spacing.space4};
+    margin-top: ${spacing.space3};
 
     ${media.lg(
       css`
-        margin-top: ${spacing.space5};
+        margin-top: ${spacing.space4};
       `
     )}
   }

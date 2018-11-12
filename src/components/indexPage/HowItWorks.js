@@ -35,7 +35,12 @@ function HowItWorks() {
         background-color: #f3f3f3;
       `}
     >
-      <Container>
+      <Container
+        className={css`
+          padding-top: ${spacing.space4};
+          padding-bottom: ${spacing.space4};
+        `}
+      >
         <Heading marginBottom={spacing.space3} weight="500" tag="h3">
           How it works
         </Heading>
