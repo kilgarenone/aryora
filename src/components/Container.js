@@ -5,12 +5,12 @@ import media from "../css/mediaQueries";
 const Container = styled("div")`
   margin: 0 auto;
   position: relative;
-  padding: 0 ${spacing.space2};
+  padding: ${spacing.space2};
   max-width: 1300px;
 
   ${media.lg(
     css`
-      padding: 0 ${spacing.space4};
+      padding: ${spacing.space4};
     `
   )}
 `;
