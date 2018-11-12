@@ -20,7 +20,6 @@ function JoinUsAction({ joinUsActionImg }) {
               className={css`
                 margin-bottom: ${spacing.space3};
               `}
-              isLineHeightReduced
               isSerifFont
               tag="h2"
             >
