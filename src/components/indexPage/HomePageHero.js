@@ -11,11 +11,11 @@ import media from "../../css/mediaQueries";
 
 const sectionCss = css`
   & {
-    margin-top: ${spacing.space5};
+    margin-top: ${spacing.space4};
 
     ${media.lg(
       css`
-        padding-bottom: ${spacing.space5};
+        margin-top: ${spacing.space5};
       `
     )}
   }
@@ -28,13 +28,6 @@ const sectionCss = css`
     height: 90%;
     width: 25%;
     border-radius: 19% 71% 38% 36% / 38% 44% 56% 27%;
-    border: 1px solid lightgrey;
-    /* background: rgb(250, 250, 250);
-    background: linear-gradient(
-      346deg,
-      rgba(250, 250, 250, 1) 45%,
-      rgba(232, 243, 236, 1) 68%
-    ); */
   }
 
   &::after {
@@ -45,13 +38,6 @@ const sectionCss = css`
     height: 100%;
     width: 50%;
     border-radius: 73% 28% 14% 44% / 40% 34% 43% 72%;
-    border: 1px solid lightgrey;
-    /* background: rgb(252, 231, 221);
-    background: linear-gradient(
-      236deg,
-      rgba(252, 231, 221, 1) 0%,
-      rgba(250, 250, 250, 1) 61%
-    ); */
   }
 `;
 
@@ -59,8 +45,12 @@ const heroCss = css`
   position: relative;
   z-index: 1;
   text-align: center;
-  max-width: 60%;
+  max-width: 100%;
   margin: 0 auto;
+
+  ${media.md(css`
+    max-width: 60%;
+  `)}
 `;
 
 const heroCopy = css`
@@ -74,17 +64,12 @@ function HomePageHero() {
     <Section className={sectionCss}>
       <Container>
         <div className={heroCss}>
-          <Heading
-            tag="h1"
-            isSerifFont
-            isLineHeightReduced
-            className={marginBottom3}
-          >
-            A simple, low-cost place that builds your long-term wealth
+          <Heading tag="h1" isSerifFont className={marginBottom3}>
+            A simple and low-cost way for passive investing
           </Heading>
           <p className={heroCopy}>
-            Get the most out of stock market return by investing in broad-based
-            index funds and rebalance automatically.
+            Build more wealth by investing in broad-based index funds, rebalance
+            automatically, and stop paying extra fees.
           </p>
           <BetaSignup>
             {({
