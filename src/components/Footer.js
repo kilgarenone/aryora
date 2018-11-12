@@ -1,6 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
-
 import { css } from "react-emotion";
 
 function Footer(props) {
@@ -10,8 +8,8 @@ function Footer(props) {
     <footer>
       <div
         className={css`
-          text-align: right;
-          padding-right: 30px;
+          text-align: left;
+          padding-left: 30px;
           padding-bottom: 10px;
         `}
       >
@@ -22,10 +20,3 @@ function Footer(props) {
 }
 
 export default Footer;
-
-Footer.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-};
-Footer.defaultProps = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-};

@@ -6,14 +6,14 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-eslint',
+    // 'gatsby-plugin-eslint',  // this will allow eslint error to fail compilation
     'gatsby-plugin-postcss',
     'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'img',
-        path: path.join(__dirname, 'src', 'img'),
+        path: path.join(__dirname, 'src','img'),
       },
     },
     'gatsby-transformer-sharp',
