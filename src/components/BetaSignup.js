@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { checkStatus, parseJSON } from "../utils/functions";
+import { checkStatus } from "../utils/functions";
 
 class BetaSignup extends Component {
   state = {
@@ -20,9 +20,9 @@ class BetaSignup extends Component {
 
   handlePrelaunchEmailSubmit = async (event, submitBtnRef) => {
     event.preventDefault();
-    const { isSubmitting, prelaunchEmail } = this.state;
+    const { prelaunchEmail } = this.state;
 
-    this.setState({ isSubmitting: !isSubmitting });
+    this.setState({ isSubmitting: true });
     try {
       const res = await fetch(
         "https://exrosqik52.execute-api.ap-southeast-1.amazonaws.com/dev/addToBetaUserList",
@@ -36,26 +36,26 @@ class BetaSignup extends Component {
       );
 
       checkStatus(res);
-      parseJSON(res);
 
       this.setState({
-        isSubmitting: !isSubmitting,
+        isSubmitting: false,
         prelaunchEmailSuccess: true,
         prelaunchEmail: ""
       });
+
       // re-enable the submit btn in the <InputButtonGroup />
       submitBtnRef.removeAttribute("disabled");
     } catch (e) {
       const errStatusCode = e.response.status;
       if (errStatusCode === 400) {
         this.setState({
-          isSubmitting: !isSubmitting,
+          isSubmitting: false,
           prelaunchEmailSuccess: false,
           prelaunchEmailFail: true
         });
       } else {
         this.setState({
-          isSubmitting: !isSubmitting,
+          isSubmitting: false,
           prelaunchEmailSuccess: false,
           prelaunchEmailFail: false,
           letUsHelpYou: true
