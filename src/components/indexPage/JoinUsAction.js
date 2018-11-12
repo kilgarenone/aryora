@@ -24,9 +24,8 @@ function JoinUsAction({ joinUsActionImg }) {
               isSerifFont
               tag="h2"
             >
-              We are cooking something awesome.
-              <br />
-              Surprise yourself when it&apos;s ready.
+              Own your finances. <br />
+              Take action now.
             </Heading>
             <BetaSignup>
               {({

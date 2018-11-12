@@ -2,27 +2,37 @@ import React, { Component } from "react";
 import { css, cx } from "react-emotion";
 import Button from "./Button";
 import Input from "./Input";
-import media from "../css/breakpoints";
+import media from "../css/mediaQueries";
+import spacing from "../css/spacing";
 
 const inputStyle = css`
-  flex: 1 1 60%;
+  flex-basis: 100%;
   margin-right: 0;
+  margin-bottom: ${spacing.space0};
 
   ${media.md2(css`
+    flex-basis: 60%;
     margin-right: 8px;
   `)};
 `;
 
 const formStyle = css`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
   max-width: 470px;
+
+  ${media.md2(css`
+    flex-wrap: nowrap;
+  `)};
 `;
 
 const btnStyle = css`
   color: #fff;
-  flex: 1 1 40%;
+  flex-basis: 100%;
+
+  ${media.md2(css`
+    flex-basis: 40%;
+  `)};
 `;
 
 class InputButtonGroup extends Component {

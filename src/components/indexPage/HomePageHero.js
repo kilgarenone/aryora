@@ -11,7 +11,7 @@ import media from "../../css/mediaQueries";
 
 const sectionCss = css`
   & {
-    margin-top: ${spacing.space6};
+    margin-top: ${spacing.space5};
 
     ${media.lg(
       css`

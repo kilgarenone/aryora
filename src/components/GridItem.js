@@ -1,14 +1,16 @@
 import React from "react";
 import { css, cx } from "react-emotion";
 import media from "../css/mediaQueries";
+import spacing from "../css/spacing";
 
 function defaultCssClass(width) {
   return css`
     min-width: 100%;
     flex-basis: 100%;
     padding: 0 30px;
+    margin-bottom: ${spacing.space3};
 
-    ${media.md(css`
+    ${media.md2(css`
       min-width: ${width};
       flex-basis: ${width};
     `)}

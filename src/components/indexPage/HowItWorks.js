@@ -41,7 +41,7 @@ function HowItWorks() {
           How it works
         </Heading>
         <GridParent tag="ol" className={gridParentCss}>
-          <GridItem tag="li" width="33" className={gridItemCss}>
+          <GridItem tag="li" width="33%" className={gridItemCss}>
             <Heading marginBottom={spacing.space0} tag="h4">
               Get to know you
             </Heading>
@@ -51,7 +51,7 @@ function HowItWorks() {
               us to understand your risk tolerance and affordance level.
             </p>
           </GridItem>
-          <GridItem tag="li" width="33" className={gridItemCss}>
+          <GridItem tag="li" width="33%" className={gridItemCss}>
             <Heading marginBottom={spacing.space0} tag="h4">
               Get your plan
             </Heading>
@@ -62,7 +62,7 @@ function HowItWorks() {
               certified advisers for support.
             </p>
           </GridItem>
-          <GridItem tag="li" width="33" className={gridItemCss}>
+          <GridItem tag="li" width="33%" className={gridItemCss}>
             <Heading marginBottom={spacing.space0} tag="h4">
               Stay on track
             </Heading>

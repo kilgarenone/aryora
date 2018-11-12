@@ -4,12 +4,12 @@ import { css } from "react-emotion";
 const Header = () => (
   <header
     className={css`
-      position: fixed;
+      /* position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      background-color: #fff;
-      padding-top: 2rem;
+      background-color: #fff; */
+      /* padding-top: 2rem; */
       /* z-index: 100; */
     `}
   >
