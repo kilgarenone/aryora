@@ -12,14 +12,14 @@ const inputStyle = css`
 
   ${media.md2(css`
     flex-basis: 60%;
-    margin-right: 8px;
+    margin-right: 0.5rem;
   `)};
 `;
 
 const formStyle = css`
   display: flex;
   flex-wrap: wrap;
-  max-width: 470px;
+  max-width: 29.375rem;
 
   ${media.md2(css`
     flex-wrap: nowrap;
