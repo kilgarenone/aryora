@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const Layout = ({ children, location }) => (
-  <div>
+  <>
     <Helmet defaultTitle="Towernest - Simple and Low-cost Investing for Everyone">
       <html lang="en" />
       <meta
@@ -49,7 +49,7 @@ const Layout = ({ children, location }) => (
       </a>
       <br />© 2018 Towernest.
     </Footer>
-  </div>
+  </>
 );
 
 export default Layout;

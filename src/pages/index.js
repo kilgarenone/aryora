@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import HomePageHero from "../components/indexPage/HomePageHero";
@@ -7,23 +7,17 @@ import HowItWorks from "../components/indexPage/HowItWorks";
 import JoinUsAction from "../components/indexPage/JoinUsAction";
 import "../css/globalStyles";
 
-class IndexPage extends Component {
-  state = {};
-
-  render() {
-    const { data, location } = this.props;
-
-    return (
-      <Layout location={location}>
-        <HomePageHero />
-        <Headline headlineImg={data.headlineImg.childImageSharp.fluid} />
-        <HowItWorks />
-        <JoinUsAction
-          joinUsActionImg={data.joinUsActionImg.childImageSharp.fluid}
-        />
-      </Layout>
-    );
-  }
+function IndexPage({ data, location }) {
+  return (
+    <Layout location={location}>
+      <HomePageHero />
+      <Headline headlineImg={data.headlineImg.childImageSharp.fluid} />
+      <HowItWorks />
+      <JoinUsAction
+        joinUsActionImg={data.joinUsActionImg.childImageSharp.fluid}
+      />
+    </Layout>
+  );
 }
 
 export default IndexPage;

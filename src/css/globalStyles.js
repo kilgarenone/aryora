@@ -35,7 +35,6 @@ injectGlobal`
     box-sizing: inherit;
   }
 
-  body,
   html {
     font-family: "Inter UI", "Helvetica Neue", HelveticaNeue, Helvetica, Arial,
       sans-serif, sans-serif;
@@ -53,23 +52,18 @@ injectGlobal`
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     line-height: 1.5;
     word-wrap: break-word;
     color: rgba(0,0,0,.84);
   }
 
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   /* CSS Reset */
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  blockquote,
-  figure,
-  ol,
-  ul {
+  blockquote, body, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, legend, ol, p, pre, ul {
     margin: 0;
     padding: 0;
   }
