@@ -7,8 +7,12 @@ function defaultCssClass(width) {
   return css`
     min-width: 100%;
     flex-basis: 100%;
-    padding: 0 30px;
+    padding: 0 1.8rem;
     margin-bottom: ${spacing.space3};
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     ${media.md2(css`
       min-width: ${width};
