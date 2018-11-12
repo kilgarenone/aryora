@@ -5,14 +5,14 @@ const postcssReporter = require(`postcss-reporter`);
 
 module.exports = () => ({
   plugins: [
-    postcssImport(),
-    postcssPresetEnv({
-      features: {
-        "custom-media-queries": true,
-        "nesting-rules": true
-      }
-    }),
-    postcssBrowserReporter(),
-    postcssReporter()
+    // postcssImport(),
+    // postcssPresetEnv({
+    //   features: {
+    //     "custom-media-queries": true,
+    //     "nesting-rules": true
+    //   }
+    // }),
+    // postcssBrowserReporter(),
+    // postcssReporter()
   ]
 });
