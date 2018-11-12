@@ -2,6 +2,7 @@ module.exports = {
   parser: "babel-eslint",
   extends: ["airbnb", "plugin:prettier/recommended", "prettier/react"],
   rules: {
+    "no-unused-expressions": ["error", { allowTaggedTemplates: true }],
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
     "react/prop-types": "off",
     "react/destructuring-assignment": "off",
