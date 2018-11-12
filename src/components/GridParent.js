@@ -4,8 +4,8 @@ import { css, cx } from "react-emotion";
 const defaultCssClass = css`
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-left: -30px;
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
 `;
 
 function GridParent({
