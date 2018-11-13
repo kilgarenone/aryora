@@ -14,11 +14,11 @@ const Layout = ({ children, location }) => (
       />
       <meta
         name="keywords"
-        content="investing, index funds malaysia, index funds, passive investing, investing DIY, passive wealth, passive wealth management"
+        content="malaysia, investing, index funds malaysia, index funds, passive investing, investing DIY, passive wealth, digital investment management"
       />
       <meta
         property="og:title"
-        content="Aryora - Passive Investing for Everyone"
+        content="Towernest - Simple Passive Investing for Everyone"
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://towernest.com" />
