@@ -21,7 +21,7 @@ function JoinUsAction({ joinUsActionImg }) {
                 margin-bottom: ${spacing.space3};
               `}
               isSerifFont
-              tag="h2"
+              tag="h3"
             >
               Own your finances. <br />
               Take action now.
@@ -31,13 +31,15 @@ function JoinUsAction({ joinUsActionImg }) {
                 handleSubmit,
                 inputValue,
                 handleInputChange,
-                isSubmitting
+                isSubmitting,
+                submissionSuccess
               }) => (
                 <InputButtonGroup
                   handleSubmit={handleSubmit}
                   inputValue={inputValue}
                   handleInputChange={handleInputChange}
                   isSubmitting={isSubmitting}
+                  submissionSuccess={submissionSuccess}
                 />
               )}
             </BetaSignup>
