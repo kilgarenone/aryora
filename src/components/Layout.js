@@ -47,7 +47,7 @@ const Layout = ({ children, location }) => (
       >
         Kheoh Yee Wei
       </a>
-      <br />© 2018 Towernest.
+      <br />© 2018 Towernest. All rights reserved.
     </Footer>
   </>
 );

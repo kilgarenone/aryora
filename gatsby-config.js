@@ -32,6 +32,12 @@ module.exports = {
         // exclude: ["/preview/**", "/do-not-track/me/too/"],
       },
     },
+    {
+      resolve: 'gatsby-plugin-drift',
+      options: {
+        appId: 'p764htn8sd7a',
+      },
+    },
     // {
     //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
     //   options: {

@@ -6,7 +6,8 @@ const Header = () => (
   <header>
     <div
       className={css`
-        padding: 0.5rem 1.0875rem 0;
+        padding: 2rem 2.0875rem 0;
+        background-color: #fce7dd;
       `}
     >
       <Heading

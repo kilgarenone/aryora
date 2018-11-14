@@ -81,21 +81,15 @@ class BetaSignup extends Component {
           handleSubmit: this.handlePrelaunchEmailSubmit,
           inputValue: prelaunchEmail,
           handleInputChange: this.handlePrelaunchEmailChange,
-          isSubmitting
+          isSubmitting,
+          submissionSuccess: prelaunchEmailSuccess
         })}
-        {prelaunchEmailSuccess && (
-          <p>
-            Neato! We&apos;ll be in touch soon.&nbsp;
-            <span role="img" aria-label="rejoice emoji">
-              🎉
-            </span>
-          </p>
-        )}
+        {prelaunchEmailSuccess && <p>Neato! We&apos;ll be in touch soon.</p>}
         {prelaunchEmailFail && <p>Please try a different email address.</p>}
         {letUsHelpYou && (
           <p>
             Let us help you.{" "}
-            <a href="mailto:kwei88@gmail.com?subject=Trouble with signing up to the Aryora beta release">
+            <a href="mailto:yeewei@towernest.com?subject=Trouble with signing up to the Towernest beta release">
               Contact us.
             </a>
           </p>

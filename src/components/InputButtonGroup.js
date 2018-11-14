@@ -1,9 +1,18 @@
 import React, { Component } from "react";
 import { css, cx } from "react-emotion";
+import Confetti from "react-dom-confetti";
 import Button from "./Button";
 import Input from "./Input";
 import media from "../css/mediaQueries";
 import spacing from "../css/spacing";
+
+const confettiConfig = {
+  angle: 92,
+  spread: 133,
+  startVelocity: 49,
+  elementCount: 46,
+  decay: 0.73
+};
 
 const inputStyle = css`
   flex-basis: 100%;
@@ -51,7 +60,8 @@ class InputButtonGroup extends Component {
       isSubmitting,
       inputValue,
       handleInputChange,
-      formClassName
+      formClassName,
+      submissionSuccess
     } = this.props;
 
     return (
@@ -73,6 +83,7 @@ class InputButtonGroup extends Component {
             type="submit"
           >
             Get Notified
+            <Confetti active={submissionSuccess} config={confettiConfig} />
           </Button>
         </div>
       </form>
