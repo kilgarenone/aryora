@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Aryora- Passive Investing',
+    title: 'Towernest- Passive Investing for Everyone',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -30,12 +30,6 @@ module.exports = {
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
         // exclude: ["/preview/**", "/do-not-track/me/too/"],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-drift',
-      options: {
-        appId: 'p764htn8sd7a',
       },
     },
     // {
